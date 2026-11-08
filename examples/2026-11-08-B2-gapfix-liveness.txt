@@ -1,0 +1,23 @@
+# built against nym-sdk 1.21.6 with the experimental gap-skip patch (NYM_STREAM_GAP_SKIP_MS=1500 where set); not what nymdial ships
+2026-11-08T11:46:52Z
+$ NYM_STREAM_GAP_SKIP_MS=1500 nymdial -v bench https://api.ipify.org/?format=json -n 12 --interval 10
+2026-11-08T11:46:52.686912Z  INFO nymdial::dialer: nym-api lists 100 IPR exits
+2026-11-08T11:46:53.903282Z  WARN nym_gateway_client::client: Not enough bandwidth. Trying to get more bandwidth, this might take a while
+2026-11-08T11:46:57.977424Z  INFO nymdial::dialer: health check: DoH via quad9 in 3.5s
+2026-11-08T11:46:57.977471Z  INFO nymdial::rotate: node 2205 (FR): tunnel up in 5.3s
+  exit node 2205 (FR)           up after 5.29s (incl. health check)
+tunnel up via node 2205 (FR) [103.82.101.72] in 5.80s (tunnel IP 10.0.142.31)
+[+    0s, exit node 2205 (FR)]   1  HTTP 200       22 B  connect 2.45s  request 0.84s  total 3.30s
+[+   13s, exit node 2205 (FR)]   2  HTTP 200       22 B  connect 4.13s  request 0.71s  total 4.84s
+[+   28s, exit node 2205 (FR)]   3  HTTP 200       22 B  connect 3.18s  request 0.63s  total 3.81s
+[+   42s, exit node 2205 (FR)]   4  HTTP 200       22 B  connect 2.57s  request 0.74s  total 3.31s
+[+   55s, exit node 2205 (FR)]   5  HTTP 200       22 B  connect 2.48s  request 0.92s  total 3.40s
+[+   69s, exit node 2205 (FR)]   6  HTTP 200       22 B  connect 3.62s  request 0.68s  total 4.30s
+[+   83s, exit node 2205 (FR)]   7  HTTP 200       22 B  connect 2.04s  request 1.33s  total 3.37s
+[+   96s, exit node 2205 (FR)]   8  HTTP 200       22 B  connect 3.54s  request 0.82s  total 4.36s
+[+  111s, exit node 2205 (FR)]   9  HTTP 200       22 B  connect 3.43s  request 0.80s  total 4.24s
+[+  125s, exit node 2205 (FR)]  10  HTTP 200       22 B  connect 2.40s  request 0.50s  total 2.89s
+[+  138s, exit node 2205 (FR)]  11  HTTP 200       22 B  connect 2.50s  request 0.58s  total 3.08s
+[+  151s, exit node 2205 (FR)]  12  HTTP 200       22 B  connect 2.39s  request 0.80s  total 3.19s
+ok 12/12  median 3.40s  min 2.90s  max 4.84s
+exit=0 wall=159.912064318s

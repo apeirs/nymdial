@@ -1,0 +1,13 @@
+# stock nym-sdk 1.21.6
+attempt	setup_s	first_probe	probes_ok	probes_failed	last_ok_s	end	exit_ip
+1	4.3	fail	0	2	-	2 fails (timeout 15s)	-
+2	1.7	ok	11	2	65	2 fails (timeout 15s)	103.82.101.73
+3	6.0	ok	5	2	32	2 fails (timeout 15s)	217.118.194.68
+4	3.1	ok	19	0	116	max_life	5.188.183.170
+5	3.5	ok	4	2	21	2 fails (timeout 15s)	185.254.197.123
+6	1.6	ok	1	2	3	2 fails (timeout 15s)	88.210.37.199
+7	1.4	ok	4	2	21	2 fails (timeout 15s)	185.254.197.159
+8	2.0	ok	6	2	38	2 fails (timeout 15s)	185.191.239.194
+9	4.3	fail	0	2	-	2 fails (timeout 15s)	-
+10	4.0	ok	18	0	119	max_life	85.17.239.33
+exit=0

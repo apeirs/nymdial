@@ -18,12 +18,12 @@ let dialer = nymdial::Dialer::start(nymdial::Config::default()).await?;
 let stream = dialer.connect_tls("blockstream.info", 443).await?;   // tokio AsyncRead + AsyncWrite
 ```
 
-> **Status, 2026-11-08: works, but the IPR path is not reliable enough for a wallet yet.** Every success below
-> was a real mainnet stream, and every exit IP checked out as a Nym node. But in my runs, most new IPR tunnels
-> (nym-sdk / nym-smolmix 1.21.6) complete the handshake and then carry no traffic. The ones that work stop
-> receiving after a few seconds to about a minute. nymdial's health check and failover hide this, at the cost
-> of long waits. Details and numbers are in "Proof it works" and "Known problem". Don't ship this in a wallet
-> until that is understood.
+> **Status, 2026-11-08: works on mainnet, but the stock IPR path stalls; the cause is upstream and found.** On
+> nym-sdk / nym-smolmix 1.21.6, an IPR tunnel stops receiving for good as soon as one reply frame from the exit
+> is lost: the SDK's `MixnetStream` waits for the missing sequence number and holds every later frame behind it.
+> A raw nym-smolmix loop with no nymdial code stalls the same way (2 of 10 tunnels lived 2 minutes). With a
+> 1.5 s gap skip patched into the SDK, 10 of 10 did. See "Known problem". nymdial ships on stock nym-sdk with a
+> liveness probe that fails over quickly; for long-lived connections, wait for the upstream fix.
 
 ## Why
 
@@ -128,7 +128,8 @@ The CLI is the reference for each pattern (`get`, `whoami`, `connect --tls`, `be
    hostname, over HTTP/2 connections that stay open. Queries carry ID 0, no client subnet, no cookie, and are
    padded to 128 bytes (RFC 8467). Answers are cached for their TTL (30 s to 1 h). NXDOMAIN is final; if every
    resolver fails, that counts against the tunnel, not the name.
-6. **Connect.** TCP through the tunnel within `connect_timeout` (30 s). If it times out, nymdial runs the
+6. **Connect.** If the tunnel has been quiet for 10 s, a quick DoH probe first, and a new exit if it fails
+   (see "Known problem"). Then TCP through the tunnel within `connect_timeout` (30 s). If it times out, nymdial runs the
    health check. If the tunnel fails it (or the tunnel's channel is closed), nymdial moves to the next exit
    and tries the connect once more. If the tunnel is fine, the error is yours: the server is down, or the
    exit policy blocks the port.
@@ -150,9 +151,13 @@ the nym-api node list. My own IP never appeared.
 | `bench --interval 15` (api.ipify.org) | 5 of 8 ok; one tunnel (node 2570) served 4 requests over about 70 s, 3.3-15 s each, then stopped receiving |
 | `connect electrum.blockstream.info 50002 --tls` | **failed**: 6 exits in a row came up and then failed the health check |
 
-Over all runs: **16 of 47 exit attempts gave a working tunnel**, 28 completed the IPR handshake and then
-carried nothing (not one DoH answer, even with a 60 s budget per resolver on a re-check), and 3 didn't answer
-the handshake in time. A working tunnel came up in a median 8.4 s (5.0-12.7 s) including the health check. On
+Over the morning runs: **16 of 47 exit attempts gave a working tunnel**, 28 completed the IPR handshake and
+then carried nothing (not one DoH answer, even with a 60 s budget per resolver on a re-check), and 3 didn't
+answer the handshake in time. Most of those "dead exits" were the stall described below, hitting before the first
+answer. In the afternoon, stock nym-sdk: 11 of 18 exit attempts passed the health check, 7 of 8 `whoami` runs
+succeeded, and a 12-request soak got 11 of 12 answered thanks to the liveness failover. The same runs with the
+SDK patched to skip lost frames: **10 of 10 exits passed on the first try, 8 of 8 `whoami` runs and 24 of 24
+soak requests succeeded**, each soak on a single exit for about 160 s. A working tunnel came up in a median 8.4 s (5.0-12.7 s) including the health check. On
 a warm tunnel, a new HTTPS connection (DoH lookup, TCP, TLS) took 2-4.5 s and a request 0.6-1 s.
 
 The network-requester path for comparison (`nymdial whoami-nr`: nym-sdk's in-process `Socks5MixnetClient`):
@@ -161,17 +166,34 @@ third run, `NetworkRequesterSelector::any()` picked a requester on a gateway tha
 ("no node with identity … is known"), and nothing could be sent at all. It chooses from all 892 described
 nodes, not only the active ones.
 
-## Known problem: IPR tunnels stop receiving
+## Known problem: IPR tunnels stop receiving (upstream, cause found)
 
-With bridge and IPR debug logs on (`examples/2026-11-08-soak-diag.txt`), the shape is always the same. The
-handshake succeeds, packets flow both ways, and then **inbound packets stop**, here 13 s and 5 s after the
-tunnel came up, while smoltcp keeps sending (83 packets out, 39 in on the first tunnel). The bridge and the
-`IpMixStream` report no error, so the app sees a stalled connection, not a closed one. I haven't found the cause
-yet. Candidates: reply-SURB supply to the IPR in stream mode (each outbound message carries 10), the free
-"testnet" bandwidth that ephemeral clients claim at the gateway, or the exit's IPR itself. The next step is a
-debug run with the gateway's bandwidth and SURB counters, then a report to Nym with the logs. Until then,
-nymdial's health check and failover keep it usable for short operations like a broadcast or a lookup, but not
-for a long-lived connection.
+**Symptom.** The handshake succeeds, packets flow both ways, then inbound stops for good while outbound goes on
+(83 packets out, 39 in on one tunnel). Nothing returns an error, so the app sees a stalled connection.
+
+**It isn't nymdial.** `src/bin/smolmix_repro.rs` is a loop on raw nym-smolmix 1.21.6 (`Tunnel::new()`, then a
+plain-HTTP request to Cloudflare every 5 s by IP, no DNS, no TLS, up to 120 s per tunnel). Ten tunnels on stock
+1.21.6: **2 lived the full 120 s**, 6 stalled after 3, 21, 21, 32, 38 and 65 s, and 2 never received a single
+packet. Bandwidth and reply SURBs look fine in the logs: each client
+claims its free bandwidth once and never reports running low, and the reply controller logs nothing unusual.
+
+**Cause.** The IPR wraps every reply in a stream frame with a sequence number, and nym-sdk's `MixnetStream`
+delivers frames strictly in order. A missing frame is only skipped when 256 later frames are waiting (8 MiB of
+data on `develop`), which a tunnel with a few TCP connections never reaches. So one reply frame lost in the
+mixnet blocks every frame after it. With one debug line added to the SDK, the stall looks like this: seq 54
+never arrives, and 55, 56, … 77 pile up behind it (22 pending) while the probes time out.
+
+**Fix, measured.** The same repro on an SDK patched to skip a gap once later frames have waited 1.5 s: **10 of
+10 tunnels lived the full 120 s**, 174 of 175 probes answered, with 29 gaps skipped along the way. For IP packets
+that is safe: TCP retransmits what was in the lost frame. The patch, the logs and a ready issue for Nym are
+in this build's notes. Until Nym ships a fix, nymdial depends on stock nym-sdk.
+
+**Mitigation in nymdial.** A tunnel that hasn't proved it is alive for 10 s gets a quick DoH probe (8 s budget)
+before the next connect, and is replaced at once if the probe fails (`Config::liveness_after`). Noticing a stall
+then takes the 8 s probe instead of up to 54 s (connect timeout plus health check). In a live run on stock
+nym-sdk, the call after a stall completed in 18 s, failover included (`examples/2026-11-08-A2-stock-liveness.txt`). It can't rescue a stream that is already open on the
+stalled tunnel: **streams have no read timeout of their own, so put a timeout on every read or request**, as the
+CLI does (30 s per HTTP exchange).
 
 ## Limits, plainly
 
@@ -184,10 +206,9 @@ for a long-lived connection.
   example one exit per transaction broadcast.
 - **What leaves outside the mixnet:** the nym-api directory fetch, and nym-sdk's own lookup of the entry
   gateway's hostname. Both say "this IP uses Nym", nothing more.
-- **Detecting a dead tunnel takes time.** A tunnel that dies quietly gives no error. nymdial notices when a
-  connect times out (30 s), then confirms with the health check (up to 24 s). An app that wants faster
-  detection can call `check()` on its own schedule. Streams already open on a dead tunnel stall; they are not
-  moved to the new one.
+- **A stalled tunnel gives no error.** nymdial probes a tunnel that has been quiet for 10 s before the next
+  connect, and fails over when the probe fails. Streams already open on a stalled tunnel stay stalled; they
+  are not moved to the new one. Put your own timeout on reads.
 - **Exit policy.** Exits enforce the Nym exit policy, so some ports are refused at the exit. The common wallet
   ports (443, 50002) worked in the runs below.
 - **Dependency pins.** nym-sdk 1.21.6 asks for its sibling crates as `^1.21.6`, and the 1.22.x siblings that a

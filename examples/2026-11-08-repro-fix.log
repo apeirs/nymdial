@@ -1,0 +1,135 @@
+# built against nym-sdk 1.21.6 with the experimental gap-skip patch (NYM_STREAM_GAP_SKIP_MS=1500 where set); not what nymdial ships
+2026-11-08T11:26:04.145473Z  INFO nym_sdk::ip_packet_client::discovery: Found 644 Exit Gateways
+2026-11-08T11:26:04.145515Z  INFO nym_sdk::ip_packet_client::discovery: Using IPR: B5HYNUbfT4AvPj13t253EvCqo18ZPQ4egAmUqmH2NYPu.FAvkkZxfDmtR7ciaG5sAJpsATjiVtU1tPKvwz7C7MC7K@B3Ec1NMSU11eNPvttmWbzcHBW56xbmX9nHo1zPb9i9Ti (Gateway: B3Ec1NMSU11eNPvttmWbzcHBW56xbmX9nHo1zPb9i9Ti, version: 1.43.0)
+2026-11-08T11:26:04.860137Z  WARN nym_gateway_client::client: Not enough bandwidth. Trying to get more bandwidth, this might take a while
+2026-11-08T11:26:05.561189Z  INFO nym_smolmix::tunnel: Tunnel ready, allocated IP: 10.0.8.5
+2026-11-08T11:26:05.561253Z  INFO nym_smolmix::bridge: Starting bridge
+2026-11-08T11:26:31.871286Z  WARN nym_sdk::mixnet::stream: Stream StreamId(0x82f25739f7ab010f): [gap] seq 18 missing for 2.096233419s, skipping to 19 (2 pending)
+2026-11-08T11:26:37.206651Z  WARN nym_sdk::mixnet::stream: Stream StreamId(0x82f25739f7ab010f): [gap] seq 21 missing for 2.27428535s, skipping to 22 (4 pending)
+2026-11-08T11:27:02.315909Z  WARN nym_sdk::mixnet::stream: Stream StreamId(0x82f25739f7ab010f): [gap] seq 38 missing for 1.953931094s, skipping to 39 (3 pending)
+2026-11-08T11:27:04.286006Z  WARN nym_sdk::mixnet::stream: Stream StreamId(0x82f25739f7ab010f): [gap] seq 41 missing for 1.869795637s, skipping to 42 (4 pending)
+attempt 1: probe failed at +68s: timeout 15s
+2026-11-08T11:27:19.771717Z  WARN nym_sdk::mixnet::stream: Stream StreamId(0x82f25739f7ab010f): [gap] seq 45 missing for 9.942202267s, skipping to 46 (3 pending)
+2026-11-08T11:27:23.298986Z  WARN nym_sdk::mixnet::stream: Stream StreamId(0x82f25739f7ab010f): [gap] seq 50 missing for 2.852940775s, skipping to 51 (5 pending)
+2026-11-08T11:27:30.295983Z  WARN nym_sdk::mixnet::stream: Stream StreamId(0x82f25739f7ab010f): dropping old seq 50 (expected >= 59)
+2026-11-08T11:27:39.050770Z  WARN nym_sdk::mixnet::stream: Stream StreamId(0x82f25739f7ab010f): [gap] seq 62 missing for 1.959956422s, skipping to 63 (3 pending)
+2026-11-08T11:27:55.549360Z  WARN nym_sdk::mixnet::stream: Stream StreamId(0x82f25739f7ab010f): [gap] seq 75 missing for 1.520835087s, skipping to 76 (3 pending)
+2026-11-08T11:28:08.118316Z  INFO nym_smolmix::tunnel: Shutting down tunnel
+2026-11-08T11:28:08.118336Z  INFO nym_smolmix::bridge: Bridge received shutdown signal packets_sent=115 packets_received=100
+2026-11-08T11:28:08.118345Z  INFO nym_smolmix::bridge: Disconnecting from mixnet...
+2026-11-08T11:28:08.118482Z  INFO nym_smolmix::bridge: Disconnected
+2026-11-08T11:28:08.118560Z  INFO nym_smolmix::tunnel: Tunnel shut down
+2026-11-08T11:28:08.587886Z  INFO nym_sdk::ip_packet_client::discovery: Found 644 Exit Gateways
+2026-11-08T11:28:08.587917Z  INFO nym_sdk::ip_packet_client::discovery: Using IPR: DyRg1uhhDpqZSaqAMvAc82kYN89zjToCUJHsVSSS81XB.8ZQUYVXBjqQrL6DJ3KWK9ask6HQByAJqiMQxk7QbCSRu@HJk2MwiwZiRXCdV74thguZr6p3RQEETTPKcBSFxYSoh1 (Gateway: HJk2MwiwZiRXCdV74thguZr6p3RQEETTPKcBSFxYSoh1, version: 1.43.0)
+2026-11-08T11:28:09.069043Z  WARN nym_gateway_client::client: Not enough bandwidth. Trying to get more bandwidth, this might take a while
+2026-11-08T11:28:10.318301Z  INFO nym_smolmix::bridge: Starting bridge
+2026-11-08T11:28:10.318302Z  INFO nym_smolmix::tunnel: Tunnel ready, allocated IP: 10.0.79.103
+2026-11-08T11:28:22.292388Z  WARN nym_sdk::mixnet::stream: Stream StreamId(0xf0a92db87a4326e0): [gap] seq 5 missing for 2.955959814s, skipping to 6 (4 pending)
+2026-11-08T11:29:12.925125Z  WARN nym_sdk::mixnet::stream: Stream StreamId(0xf0a92db87a4326e0): [gap] seq 39 missing for 1.714137593s, skipping to 40 (3 pending)
+2026-11-08T11:29:23.836325Z  WARN nym_sdk::mixnet::stream: Stream StreamId(0xf0a92db87a4326e0): [gap] seq 46 missing for 2.696815778s, skipping to 47 (6 pending)
+2026-11-08T11:29:44.971268Z  WARN nym_sdk::mixnet::stream: Stream StreamId(0xf0a92db87a4326e0): [gap] seq 62 missing for 2.326407483s, skipping to 63 (4 pending)
+2026-11-08T11:29:55.095462Z  WARN nym_sdk::mixnet::stream: Stream StreamId(0xf0a92db87a4326e0): [gap] seq 71 missing for 2.110109004s, skipping to 72 (5 pending)
+2026-11-08T11:30:07.015530Z  WARN nym_sdk::mixnet::stream: Stream StreamId(0xf0a92db87a4326e0): [gap] seq 80 missing for 2.518599336s, skipping to 81 (2 pending)
+2026-11-08T11:30:12.016719Z  INFO nym_smolmix::tunnel: Shutting down tunnel
+2026-11-08T11:30:12.016776Z  INFO nym_smolmix::bridge: Bridge received shutdown signal packets_sent=105 packets_received=98
+2026-11-08T11:30:12.016784Z  INFO nym_smolmix::bridge: Disconnecting from mixnet...
+2026-11-08T11:30:12.016935Z  INFO nym_smolmix::bridge: Disconnected
+2026-11-08T11:30:12.016946Z  INFO nym_smolmix::tunnel: Tunnel shut down
+2026-11-08T11:30:12.628424Z  INFO nym_sdk::ip_packet_client::discovery: Found 644 Exit Gateways
+2026-11-08T11:30:12.628453Z  INFO nym_sdk::ip_packet_client::discovery: Using IPR: E64SNDkorSM7RGi4siUiWMyRxgCjuWWQvJdqJ3XQu74j.HUSbBQvQnnj1Hgpd1MicUf47tpDHWChj8r3PZRJUeEt4@7xvsdyFLpmfFMiCahZraSt96htJbhX76sSs9vGRhcRRr (Gateway: 7xvsdyFLpmfFMiCahZraSt96htJbhX76sSs9vGRhcRRr, version: 1.43.0)
+2026-11-08T11:30:13.480095Z  WARN nym_gateway_client::client: Not enough bandwidth. Trying to get more bandwidth, this might take a while
+2026-11-08T11:30:14.368979Z  INFO nym_smolmix::bridge: Starting bridge
+2026-11-08T11:30:14.368980Z  INFO nym_smolmix::tunnel: Tunnel ready, allocated IP: 10.0.209.143
+2026-11-08T11:30:37.289881Z  WARN nym_sdk::mixnet::stream: Stream StreamId(0x90446a38198de1b7): [gap] seq 12 missing for 1.679411072s, skipping to 13 (3 pending)
+2026-11-08T11:31:25.536590Z  WARN nym_sdk::mixnet::stream: Stream StreamId(0x90446a38198de1b7): [gap] seq 45 missing for 2.256471236s, skipping to 46 (7 pending)
+2026-11-08T11:32:17.044180Z  INFO nym_smolmix::tunnel: Shutting down tunnel
+2026-11-08T11:32:17.044202Z  INFO nym_smolmix::bridge: Bridge received shutdown signal packets_sent=103 packets_received=110
+2026-11-08T11:32:17.044213Z  INFO nym_smolmix::bridge: Disconnecting from mixnet...
+2026-11-08T11:32:17.044378Z  INFO nym_smolmix::bridge: Disconnected
+2026-11-08T11:32:17.044393Z  INFO nym_smolmix::tunnel: Tunnel shut down
+2026-11-08T11:32:17.521154Z  INFO nym_sdk::ip_packet_client::discovery: Found 644 Exit Gateways
+2026-11-08T11:32:17.521180Z  INFO nym_sdk::ip_packet_client::discovery: Using IPR: Ao196ric7CMkRtjQAzjXqjLJW3P2PoR5arL6kxNj6Jaf.2ZCE61PtcUPsJhwsGc6HyXYMy1bPSWuMtQd5WXrgvbdm@HDsXYNPKkGW8wpXP6YqReu72mZsbVb8PEm7S8KuwvMW8 (Gateway: HDsXYNPKkGW8wpXP6YqReu72mZsbVb8PEm7S8KuwvMW8, version: 1.43.0)
+2026-11-08T11:32:18.831991Z  WARN nym_gateway_client::client: Not enough bandwidth. Trying to get more bandwidth, this might take a while
+2026-11-08T11:32:19.494627Z  INFO nym_smolmix::bridge: Starting bridge
+2026-11-08T11:32:19.494627Z  INFO nym_smolmix::tunnel: Tunnel ready, allocated IP: 10.0.161.201
+2026-11-08T11:33:59.571776Z  WARN nym_sdk::mixnet::stream: Stream StreamId(0xd635447f73f27865): [gap] seq 59 missing for 1.838178985s, skipping to 60 (3 pending)
+2026-11-08T11:34:23.308557Z  INFO nym_smolmix::tunnel: Shutting down tunnel
+2026-11-08T11:34:23.308577Z  INFO nym_smolmix::bridge: Bridge received shutdown signal packets_sent=88 packets_received=104
+2026-11-08T11:34:23.308589Z  INFO nym_smolmix::bridge: Disconnecting from mixnet...
+2026-11-08T11:34:23.309103Z  INFO nym_smolmix::bridge: Disconnected
+2026-11-08T11:34:23.309129Z  INFO nym_smolmix::tunnel: Tunnel shut down
+2026-11-08T11:34:23.831656Z  INFO nym_sdk::ip_packet_client::discovery: Found 644 Exit Gateways
+2026-11-08T11:34:23.831686Z  INFO nym_sdk::ip_packet_client::discovery: Using IPR: HnradaqTVgvADWFQP4ub8AHCwjj8oXDru78WtfneLofS.Hs7vbbJCih7dxGCGoJCQYNJWWjcM34ZYjjHPwmCDLxc6@74cCucxULXWze8XwELkBiJzewDMFX689th1DXRZhLysS (Gateway: 74cCucxULXWze8XwELkBiJzewDMFX689th1DXRZhLysS, version: 1.43.0)
+2026-11-08T11:34:23.867813Z  WARN nym_http_api_client::dns: primary DNS failed w/ error: receiver was canceled
+2026-11-08T11:34:23.867835Z  WARN nym_gateway_client::client::websockets: Main endpoint failed ws://exits-nl-20.aurorasky.org:9000/ : resolution failed: hickory-dns resolver error: receiver was canceled, trying fallback : ws://85.17.180.115:9000/
+2026-11-08T11:34:24.410091Z  WARN nym_gateway_client::client: Not enough bandwidth. Trying to get more bandwidth, this might take a while
+2026-11-08T11:34:25.329096Z  INFO nym_smolmix::bridge: Starting bridge
+2026-11-08T11:34:25.329103Z  INFO nym_smolmix::tunnel: Tunnel ready, allocated IP: 10.0.23.31
+2026-11-08T11:34:42.435038Z  WARN nym_sdk::mixnet::stream: Stream StreamId(0x86a448e6f6edc2a8): [gap] seq 11 missing for 2.390949761s, skipping to 12 (6 pending)
+2026-11-08T11:36:06.424634Z  WARN nym_sdk::mixnet::stream: Stream StreamId(0x86a448e6f6edc2a8): [gap] seq 64 missing for 2.021808093s, skipping to 65 (2 pending)
+2026-11-08T11:36:10.284552Z  WARN nym_sdk::mixnet::stream: Stream StreamId(0x86a448e6f6edc2a8): [gap] seq 66 missing for 1.553557885s, skipping to 67 (4 pending)
+2026-11-08T11:36:29.395729Z  INFO nym_smolmix::tunnel: Shutting down tunnel
+2026-11-08T11:36:29.395757Z  INFO nym_smolmix::bridge: Bridge received shutdown signal packets_sent=105 packets_received=111
+2026-11-08T11:36:29.395773Z  INFO nym_smolmix::bridge: Disconnecting from mixnet...
+2026-11-08T11:36:29.395996Z  INFO nym_smolmix::bridge: Disconnected
+2026-11-08T11:36:29.396019Z  INFO nym_smolmix::tunnel: Tunnel shut down
+2026-11-08T11:36:29.900787Z  INFO nym_sdk::ip_packet_client::discovery: Found 644 Exit Gateways
+2026-11-08T11:36:29.900828Z  INFO nym_sdk::ip_packet_client::discovery: Using IPR: HmBuUk7VrD7qC2nvMZ9iduJMRW1HikbdEr4Pzk23mqs9.5bSUk5syCVDFW5vKN1Ggp7DcLX4Vzui6AkQtBmsGvLDv@E2ksGpeHLTGrYPD4YpasCWKvg7HN9QM1XQkY9T4JLPGh (Gateway: E2ksGpeHLTGrYPD4YpasCWKvg7HN9QM1XQkY9T4JLPGh, version: 1.43.0)
+2026-11-08T11:36:30.336707Z  WARN nym_gateway_client::client: Not enough bandwidth. Trying to get more bandwidth, this might take a while
+2026-11-08T11:36:31.037421Z  INFO nym_smolmix::bridge: Starting bridge
+2026-11-08T11:36:31.037425Z  INFO nym_smolmix::tunnel: Tunnel ready, allocated IP: 10.0.94.145
+2026-11-08T11:36:59.103564Z  WARN nym_sdk::mixnet::stream: Stream StreamId(0xe57490967859c83a): [gap] seq 16 missing for 1.792910795s, skipping to 17 (4 pending)
+2026-11-08T11:37:45.818757Z  WARN nym_sdk::mixnet::stream: Stream StreamId(0xe57490967859c83a): [gap] seq 44 missing for 2.279882402s, skipping to 45 (4 pending)
+2026-11-08T11:38:35.120081Z  INFO nym_smolmix::tunnel: Shutting down tunnel
+2026-11-08T11:38:35.120107Z  INFO nym_smolmix::bridge: Bridge received shutdown signal packets_sent=89 packets_received=102
+2026-11-08T11:38:35.120119Z  INFO nym_smolmix::bridge: Disconnecting from mixnet...
+2026-11-08T11:38:35.120254Z  INFO nym_smolmix::bridge: Disconnected
+2026-11-08T11:38:35.120270Z  INFO nym_smolmix::tunnel: Tunnel shut down
+2026-11-08T11:38:35.582439Z  INFO nym_sdk::ip_packet_client::discovery: Found 644 Exit Gateways
+2026-11-08T11:38:35.582470Z  INFO nym_sdk::ip_packet_client::discovery: Using IPR: 9qxEB2riEMDiUcMVPLcY1FK7wqwuq2Va9NZ18jmVCyWF.CevMeJ5LvDQh4Qafs94oDhqF3jjVhHSb4Euxj5jBvJoh@DbufxY7wZuARAGwEqMwLqxU5GqzPjeGtDbcWE9yEhfyn (Gateway: DbufxY7wZuARAGwEqMwLqxU5GqzPjeGtDbcWE9yEhfyn, version: 1.43.0)
+2026-11-08T11:38:36.595504Z  WARN nym_gateway_client::client: Not enough bandwidth. Trying to get more bandwidth, this might take a while
+2026-11-08T11:38:37.382372Z  INFO nym_smolmix::bridge: Starting bridge
+2026-11-08T11:38:37.382372Z  INFO nym_smolmix::tunnel: Tunnel ready, allocated IP: 10.0.79.170
+2026-11-08T11:39:00.151210Z  WARN nym_sdk::mixnet::stream: Stream StreamId(0xc0aca34fb91fc9b1): [gap] seq 12 missing for 1.67366992s, skipping to 13 (3 pending)
+2026-11-08T11:39:24.125334Z  WARN nym_sdk::mixnet::stream: Stream StreamId(0xc0aca34fb91fc9b1): [gap] seq 30 missing for 2.946981583s, skipping to 31 (3 pending)
+2026-11-08T11:40:36.033242Z  WARN nym_sdk::mixnet::stream: Stream StreamId(0xc0aca34fb91fc9b1): [gap] seq 78 missing for 3.273307269s, skipping to 79 (3 pending)
+2026-11-08T11:40:43.312885Z  INFO nym_smolmix::tunnel: Shutting down tunnel
+2026-11-08T11:40:43.312932Z  INFO nym_smolmix::bridge: Bridge received shutdown signal packets_sent=106 packets_received=114
+2026-11-08T11:40:43.312944Z  INFO nym_smolmix::bridge: Disconnecting from mixnet...
+2026-11-08T11:40:43.313115Z  INFO nym_smolmix::bridge: Disconnected
+2026-11-08T11:40:43.313192Z  INFO nym_smolmix::tunnel: Tunnel shut down
+2026-11-08T11:40:43.822588Z  INFO nym_sdk::ip_packet_client::discovery: Found 644 Exit Gateways
+2026-11-08T11:40:43.822625Z  INFO nym_sdk::ip_packet_client::discovery: Using IPR: 7XYzorVxxsZKssGYkij91kUxFNpNokNJHhJsz29FXGGh.B1m6BBnWwdYu2hdqPkq4mBFPzEWVBJrzsh2iYzRKtsGw@7P2NBAUSpMCR3fXVfxEmcju9kiRFxrQEpej8wFCgRKDK (Gateway: 7P2NBAUSpMCR3fXVfxEmcju9kiRFxrQEpej8wFCgRKDK, version: 1.43.0)
+2026-11-08T11:40:45.774901Z  WARN nym_gateway_client::client: Not enough bandwidth. Trying to get more bandwidth, this might take a while
+2026-11-08T11:40:46.910134Z  INFO nym_smolmix::bridge: Starting bridge
+2026-11-08T11:40:46.910141Z  INFO nym_smolmix::tunnel: Tunnel ready, allocated IP: 10.0.53.195
+2026-11-08T11:42:38.823944Z  WARN nym_sdk::mixnet::stream: Stream StreamId(0x29feb01d87d46f6e): [gap] seq 82 missing for 1.689673117s, skipping to 83 (4 pending)
+2026-11-08T11:42:50.728028Z  INFO nym_smolmix::tunnel: Shutting down tunnel
+2026-11-08T11:42:50.728051Z  INFO nym_smolmix::bridge: Bridge received shutdown signal packets_sent=133 packets_received=125
+2026-11-08T11:42:50.728065Z  INFO nym_smolmix::bridge: Disconnecting from mixnet...
+2026-11-08T11:42:50.728242Z  INFO nym_smolmix::bridge: Disconnected
+2026-11-08T11:42:50.728258Z  INFO nym_smolmix::tunnel: Tunnel shut down
+2026-11-08T11:42:51.228871Z  INFO nym_sdk::ip_packet_client::discovery: Found 644 Exit Gateways
+2026-11-08T11:42:51.228903Z  INFO nym_sdk::ip_packet_client::discovery: Using IPR: FJo3sixfzRF2pxiVU8Y2wFqSXXsU5LWVkkVKS4J7LpJq.D9z5w2mvPf5wzy6DVRudYo9Brr2VJeREYhbpjTGX97Kd@8j3kbDrnGh13JCbGAocgdxG4LupirFAaA4y4weUSTfqD (Gateway: 8j3kbDrnGh13JCbGAocgdxG4LupirFAaA4y4weUSTfqD, version: 1.43.0)
+2026-11-08T11:42:51.851074Z  WARN nym_gateway_client::client: Not enough bandwidth. Trying to get more bandwidth, this might take a while
+2026-11-08T11:42:52.337787Z  INFO nym_smolmix::bridge: Starting bridge
+2026-11-08T11:42:52.337791Z  INFO nym_smolmix::tunnel: Tunnel ready, allocated IP: 10.0.168.125
+2026-11-08T11:43:45.785026Z  WARN nym_sdk::mixnet::stream: Stream StreamId(0x8759fb42a0874a2a): [gap] seq 39 missing for 1.743640184s, skipping to 40 (4 pending)
+2026-11-08T11:43:46.033407Z  WARN nym_sdk::mixnet::stream: Stream StreamId(0x8759fb42a0874a2a): dropping old seq 39 (expected >= 44)
+2026-11-08T11:44:02.936279Z  WARN nym_sdk::mixnet::stream: Stream StreamId(0x8759fb42a0874a2a): [gap] seq 51 missing for 1.51565656s, skipping to 52 (3 pending)
+2026-11-08T11:44:54.081646Z  INFO nym_smolmix::tunnel: Shutting down tunnel
+2026-11-08T11:44:54.081669Z  INFO nym_smolmix::bridge: Bridge received shutdown signal packets_sent=116 packets_received=110
+2026-11-08T11:44:54.081681Z  INFO nym_smolmix::bridge: Disconnecting from mixnet...
+2026-11-08T11:44:54.081852Z  INFO nym_smolmix::bridge: Disconnected
+2026-11-08T11:44:54.081866Z  INFO nym_smolmix::tunnel: Tunnel shut down
+2026-11-08T11:44:54.553836Z  INFO nym_sdk::ip_packet_client::discovery: Found 644 Exit Gateways
+2026-11-08T11:44:54.553869Z  INFO nym_sdk::ip_packet_client::discovery: Using IPR: 6fTHKLuz4QRZBWVs2UfoQTuHyp4gbmSW7yF6dZCcuf4q.4VXtsUoLwT9vVfHULdpc1W2SzHXfgW2c8vptbFgpEPVs@4mDXCAFNbHxhvayffcgvpRUTwjxTDy9AFZ3neQjNb8po (Gateway: 4mDXCAFNbHxhvayffcgvpRUTwjxTDy9AFZ3neQjNb8po, version: 1.43.0)
+2026-11-08T11:44:55.374624Z  WARN nym_gateway_client::client: Not enough bandwidth. Trying to get more bandwidth, this might take a while
+2026-11-08T11:44:56.025444Z  INFO nym_smolmix::bridge: Starting bridge
+2026-11-08T11:44:56.025446Z  INFO nym_smolmix::tunnel: Tunnel ready, allocated IP: 10.0.207.250
+2026-11-08T11:46:28.211834Z  WARN nym_sdk::mixnet::stream: Stream StreamId(0xb6015eb54c556ded): [gap] seq 57 missing for 1.55975481s, skipping to 58 (3 pending)
+2026-11-08T11:46:59.907267Z  INFO nym_smolmix::tunnel: Shutting down tunnel
+2026-11-08T11:46:59.907331Z  INFO nym_smolmix::bridge: Bridge received shutdown signal packets_sent=102 packets_received=112
+2026-11-08T11:46:59.907343Z  INFO nym_smolmix::bridge: Disconnecting from mixnet...
+2026-11-08T11:46:59.907511Z  INFO nym_smolmix::bridge: Disconnected
+2026-11-08T11:46:59.907534Z  INFO nym_smolmix::tunnel: Tunnel shut down

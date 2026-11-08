@@ -1,0 +1,26 @@
+# built against nym-sdk 1.21.6 with the experimental gap-skip patch (NYM_STREAM_GAP_SKIP_MS=1500 where set); not what nymdial ships
+2026-11-08T11:31:49Z
+$  nymdial -v bench https://api.ipify.org/?format=json -n 12 --interval 10
+2026-11-08T11:31:50.513655Z  INFO nymdial::dialer: nym-api lists 100 IPR exits
+2026-11-08T11:31:51.734261Z  WARN nym_gateway_client::client: Not enough bandwidth. Trying to get more bandwidth, this might take a while
+2026-11-08T11:31:55.889071Z  INFO nymdial::dialer: health check: DoH via quad9 in 3.3s
+2026-11-08T11:31:55.889130Z  INFO nymdial::rotate: node 3351 (BG): tunnel up in 5.4s
+  exit node 3351 (BG)           up after 5.38s (incl. health check)
+tunnel up via node 3351 (BG) [213.183.63.41] in 5.98s (tunnel IP 10.0.207.250)
+[+    0s, exit node 3351 (BG)]   1  HTTP 200       22 B  connect 3.17s  request 0.52s  total 3.69s
+[+   14s, exit node 3351 (BG)]   2  HTTP 200       22 B  connect 2.14s  request 0.90s  total 3.04s
+[+   27s, exit node 3351 (BG)]   3  HTTP 200       22 B  connect 2.61s  request 0.50s  total 3.10s
+[+   40s, exit node 3351 (BG)]   4  HTTP 200       22 B  connect 3.11s  request 0.80s  total 3.91s
+[+   54s, exit node 3351 (BG)]   5  HTTP 200       22 B  connect 2.37s  request 0.74s  total 3.10s
+[+   67s, exit node 3351 (BG)] 2026-11-08T11:33:07.174560Z  WARN nym_sdk::mixnet::stream: Stream StreamId(0xf99a5e755754449d): [gap] seq 70 missing for 1.779777587s, skipping to 71 (3 pending)
+  6  HTTP 200       22 B  connect 4.43s  request 0.85s  total 5.28s
+[+   82s, exit node 3351 (BG)]   7  HTTP 200       22 B  connect 3.22s  request 0.72s  total 3.94s
+[+   96s, exit node 3351 (BG)]   8  HTTP 200       22 B  connect 4.14s  request 0.52s  total 4.66s
+[+  111s, exit node 3351 (BG)]   9  HTTP 200       22 B  connect 2.46s  request 1.96s  total 4.41s
+[+  125s, exit node 3351 (BG)]  10  HTTP 200       22 B  connect 3.65s  request 0.82s  total 4.47s
+[+  140s, exit node 3351 (BG)] 2026-11-08T11:34:19.701501Z  WARN nym_sdk::mixnet::stream: Stream StreamId(0xf99a5e755754449d): [gap] seq 120 missing for 1.89349658s, skipping to 121 (4 pending)
+ 11  HTTP 200       22 B  connect 6.16s  request 0.81s  total 6.97s
+[+  157s, exit node 3351 (BG)] 2026-11-08T11:34:38.430884Z  WARN nym_sdk::mixnet::stream: Stream StreamId(0xf99a5e755754449d): [gap] seq 138 missing for 2.278945482s, skipping to 139 (3 pending)
+ 12  HTTP 200       22 B  connect 2.79s  request 3.16s  total 5.95s
+ok 12/12  median 4.41s  min 3.04s  max 6.97s
+exit=0 wall=168.529694942s

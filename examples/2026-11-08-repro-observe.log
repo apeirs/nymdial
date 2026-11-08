@@ -1,0 +1,51 @@
+# built against nym-sdk 1.21.6 with the experimental gap-skip patch (NYM_STREAM_GAP_SKIP_MS=1500 where set); not what nymdial ships
+2026-11-08T11:23:54.365633Z  INFO nym_sdk::ip_packet_client::discovery: Found 644 Exit Gateways
+2026-11-08T11:23:54.365675Z  INFO nym_sdk::ip_packet_client::discovery: Using IPR: J7Z3StFUDnDD7MZdv1oUYCWv9S3jshCs3ADLognhMh9D.6mGPVse35T9ToKVos3Bsj9fvZdZX76KGk4obX3a67GXW@AcPkvUHG8AxXkMFhLu8XuTFs4SBNcWe2HkQ59pUDUHw7 (Gateway: AcPkvUHG8AxXkMFhLu8XuTFs4SBNcWe2HkQ59pUDUHw7, version: 1.43.0)
+2026-11-08T11:23:55.035708Z  WARN nym_gateway_client::client: Not enough bandwidth. Trying to get more bandwidth, this might take a while
+2026-11-08T11:23:55.624325Z  INFO nym_smolmix::bridge: Starting bridge
+2026-11-08T11:23:55.624333Z  INFO nym_smolmix::tunnel: Tunnel ready, allocated IP: 10.0.142.41
+2026-11-08T11:23:56.833547Z DEBUG nym_sdk::mixnet::stream: Stream StreamId(0x0f4c138d8bc58c3b): [gap] got seq 3, waiting for seq 2 (1 pending)
+2026-11-08T11:24:16.769571Z DEBUG nym_sdk::mixnet::stream: Stream StreamId(0x0f4c138d8bc58c3b): [gap] got seq 15, waiting for seq 14 (1 pending)
+2026-11-08T11:25:13.484529Z DEBUG nym_sdk::mixnet::stream: Stream StreamId(0x0f4c138d8bc58c3b): [gap] got seq 50, waiting for seq 49 (1 pending)
+2026-11-08T11:25:21.646762Z DEBUG nym_sdk::mixnet::stream: Stream StreamId(0x0f4c138d8bc58c3b): [gap] got seq 55, waiting for seq 54 (1 pending)
+2026-11-08T11:25:21.969134Z DEBUG nym_sdk::mixnet::stream: Stream StreamId(0x0f4c138d8bc58c3b): [gap] got seq 56, waiting for seq 54 (2 pending)
+2026-11-08T11:25:22.047287Z DEBUG nym_sdk::mixnet::stream: Stream StreamId(0x0f4c138d8bc58c3b): [gap] got seq 57, waiting for seq 54 (3 pending)
+2026-11-08T11:25:23.750889Z DEBUG nym_sdk::mixnet::stream: Stream StreamId(0x0f4c138d8bc58c3b): [gap] got seq 59, waiting for seq 54 (4 pending)
+2026-11-08T11:25:26.105223Z DEBUG nym_sdk::mixnet::stream: Stream StreamId(0x0f4c138d8bc58c3b): [gap] got seq 60, waiting for seq 54 (5 pending)
+2026-11-08T11:25:26.341443Z DEBUG nym_sdk::mixnet::stream: Stream StreamId(0x0f4c138d8bc58c3b): [gap] got seq 61, waiting for seq 54 (6 pending)
+2026-11-08T11:25:27.995244Z DEBUG nym_sdk::mixnet::stream: Stream StreamId(0x0f4c138d8bc58c3b): [gap] got seq 62, waiting for seq 54 (7 pending)
+2026-11-08T11:25:29.494859Z DEBUG nym_sdk::mixnet::stream: Stream StreamId(0x0f4c138d8bc58c3b): [gap] got seq 63, waiting for seq 54 (8 pending)
+2026-11-08T11:25:32.419733Z DEBUG nym_sdk::mixnet::stream: Stream StreamId(0x0f4c138d8bc58c3b): [gap] got seq 64, waiting for seq 54 (9 pending)
+attempt 1: probe failed at +98s: timeout 15s
+2026-11-08T11:25:38.954098Z DEBUG nym_sdk::mixnet::stream: Stream StreamId(0x0f4c138d8bc58c3b): [gap] got seq 65, waiting for seq 54 (10 pending)
+2026-11-08T11:25:39.550726Z DEBUG nym_sdk::mixnet::stream: Stream StreamId(0x0f4c138d8bc58c3b): [gap] got seq 66, waiting for seq 54 (11 pending)
+2026-11-08T11:25:40.449724Z DEBUG nym_sdk::mixnet::stream: Stream StreamId(0x0f4c138d8bc58c3b): [gap] got seq 67, waiting for seq 54 (12 pending)
+2026-11-08T11:25:41.236394Z DEBUG nym_sdk::mixnet::stream: Stream StreamId(0x0f4c138d8bc58c3b): [gap] got seq 68, waiting for seq 54 (13 pending)
+2026-11-08T11:25:43.232415Z DEBUG nym_sdk::mixnet::stream: Stream StreamId(0x0f4c138d8bc58c3b): [gap] got seq 70, waiting for seq 54 (14 pending)
+2026-11-08T11:25:44.423657Z DEBUG nym_sdk::mixnet::stream: Stream StreamId(0x0f4c138d8bc58c3b): [gap] got seq 71, waiting for seq 54 (15 pending)
+2026-11-08T11:25:45.278479Z DEBUG nym_sdk::mixnet::stream: Stream StreamId(0x0f4c138d8bc58c3b): [gap] got seq 72, waiting for seq 54 (16 pending)
+2026-11-08T11:25:47.492786Z DEBUG nym_sdk::mixnet::stream: Stream StreamId(0x0f4c138d8bc58c3b): [gap] got seq 73, waiting for seq 54 (17 pending)
+2026-11-08T11:25:48.477726Z DEBUG nym_sdk::mixnet::stream: Stream StreamId(0x0f4c138d8bc58c3b): [gap] got seq 74, waiting for seq 54 (18 pending)
+2026-11-08T11:25:49.170729Z DEBUG nym_sdk::mixnet::stream: Stream StreamId(0x0f4c138d8bc58c3b): [gap] got seq 75, waiting for seq 54 (19 pending)
+2026-11-08T11:25:51.600828Z DEBUG nym_sdk::mixnet::stream: Stream StreamId(0x0f4c138d8bc58c3b): [gap] got seq 76, waiting for seq 54 (20 pending)
+2026-11-08T11:25:52.507767Z DEBUG nym_sdk::mixnet::stream: Stream StreamId(0x0f4c138d8bc58c3b): [gap] got seq 69, waiting for seq 54 (21 pending)
+2026-11-08T11:25:52.954202Z DEBUG nym_sdk::mixnet::stream: Stream StreamId(0x0f4c138d8bc58c3b): [gap] got seq 77, waiting for seq 54 (22 pending)
+attempt 1: probe failed at +118s: timeout 15s
+2026-11-08T11:25:53.526930Z  INFO nym_smolmix::tunnel: Shutting down tunnel
+2026-11-08T11:25:53.526967Z  INFO nym_smolmix::bridge: Bridge received shutdown signal packets_sent=90 packets_received=78
+2026-11-08T11:25:53.526980Z  INFO nym_smolmix::bridge: Disconnecting from mixnet...
+2026-11-08T11:25:53.528004Z  INFO nym_smolmix::bridge: Disconnected
+2026-11-08T11:25:53.528021Z  INFO nym_smolmix::tunnel: Tunnel shut down
+2026-11-08T11:25:53.991886Z  INFO nym_sdk::ip_packet_client::discovery: Found 644 Exit Gateways
+2026-11-08T11:25:53.991914Z  INFO nym_sdk::ip_packet_client::discovery: Using IPR: 3oaYNgc2vERcbXaoQeBu2uxSy8SfjnVp7jyJiC1bVDFR.3yZxS6WqTHfG6bZnvhsBUFtbBedrqD3LfjpFBHYRfjLK@3t83YJsoV8MefmBr7Ntc9H4DN4qvtP8BQjuqYKGQAjyW (Gateway: 3t83YJsoV8MefmBr7Ntc9H4DN4qvtP8BQjuqYKGQAjyW, version: 1.43.0)
+2026-11-08T11:25:54.607785Z  WARN nym_gateway_client::client: Not enough bandwidth. Trying to get more bandwidth, this might take a while
+2026-11-08T11:25:55.262500Z  INFO nym_smolmix::bridge: Starting bridge
+2026-11-08T11:25:55.262503Z  INFO nym_smolmix::tunnel: Tunnel ready, allocated IP: 10.0.35.149
+2026-11-08T11:25:56.626130Z DEBUG nym_sdk::mixnet::stream: Stream StreamId(0x7e04d05c34ac858b): [gap] got seq 3, waiting for seq 2 (1 pending)
+2026-11-08T11:25:56.647872Z DEBUG nym_sdk::mixnet::stream: Stream StreamId(0x7e04d05c34ac858b): [gap] got seq 4, waiting for seq 2 (2 pending)
+2026-11-08T11:25:56.806053Z DEBUG nym_sdk::mixnet::stream: Stream StreamId(0x7e04d05c34ac858b): [gap] got seq 5, waiting for seq 2 (3 pending)
+2026-11-08T11:25:57.666932Z DEBUG nym_sdk::mixnet::stream: Stream StreamId(0x7e04d05c34ac858b): [gap] got seq 6, waiting for seq 2 (4 pending)
+2026-11-08T11:25:58.325555Z DEBUG nym_sdk::mixnet::stream: Stream StreamId(0x7e04d05c34ac858b): [gap] got seq 7, waiting for seq 2 (5 pending)
+2026-11-08T11:25:58.894243Z DEBUG nym_sdk::mixnet::stream: Stream StreamId(0x7e04d05c34ac858b): [gap] got seq 8, waiting for seq 2 (6 pending)
+2026-11-08T11:25:59.020227Z DEBUG nym_sdk::mixnet::stream: Stream StreamId(0x7e04d05c34ac858b): [gap] got seq 9, waiting for seq 2 (7 pending)
+2026-11-08T11:25:59.981241Z DEBUG nym_sdk::mixnet::stream: Stream StreamId(0x7e04d05c34ac858b): [gap] got seq 10, waiting for seq 2 (8 pending)

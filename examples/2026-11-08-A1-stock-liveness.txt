@@ -1,0 +1,16 @@
+# stock nym-sdk 1.21.6
+2026-11-08T11:31:49Z
+$  nymdial -v bench https://api.ipify.org/?format=json -n 12 --interval 10
+2026-11-08T11:31:50.412019Z  INFO nymdial::dialer: nym-api lists 100 IPR exits
+2026-11-08T11:31:52.985980Z  WARN nym_gateway_client::client: Not enough bandwidth. Trying to get more bandwidth, this might take a while
+2026-11-08T11:32:18.452954Z  WARN nymdial::rotate: node 3281 (HU): IPR handshake ok, but the health check failed (quad9: no answer within 12s; mullvad: no answer within 12s) after 28.0s; trying the next exit
+2026-11-08T11:32:19.164194Z  WARN nym_gateway_client::client: Not enough bandwidth. Trying to get more bandwidth, this might take a while
+2026-11-08T11:32:27.737455Z  INFO nymdial::dialer: health check: DoH via quad9 in 6.7s
+2026-11-08T11:32:27.737493Z  INFO nymdial::rotate: node 2938 (JP): tunnel up in 9.3s
+  exit node 3281 (HU)           failed after 28.04s: IPR handshake ok, but the health check failed (quad9: no answer within 12s; mullvad: no answer within 12s)
+  exit node 2938 (JP)           up after 9.28s (incl. health check)
+tunnel up via node 2938 (JP) [142.91.109.111] in 37.82s (tunnel IP 10.0.93.157)
+[+    0s, exit node 2938 (JP)]   1  HTTP 200       23 B  connect 4.08s  request 0.82s  total 4.89s
+[+   15s, exit node 2938 (JP)]   2  HTTP 200       23 B  connect 3.33s  request 0.86s  total 4.19s
+[+   29s, exit node 2938 (JP)] Terminated                 timeout 900 env $ENVV $b "$@" 2>&1
+exit=143 wall=827.237136718s

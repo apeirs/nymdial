@@ -1,0 +1,11 @@
+# stock nym-sdk 1.21.6
+2026-11-08T11:50:20Z
+2026-11-08T11:50:21.458631Z  INFO nymdial::dialer: nym-api lists 100 IPR exits
+2026-11-08T11:50:22.646628Z  WARN nym_gateway_client::client: Not enough bandwidth. Trying to get more bandwidth, this might take a while
+2026-11-08T11:50:26.192409Z  INFO nymdial::dialer: health check: DoH via quad9 in 2.9s
+2026-11-08T11:50:26.192475Z  INFO nymdial::rotate: node 3366 (NL): tunnel up in 4.7s
+  exit node 3366 (NL)           up after 4.73s (incl. health check)
+tunnel up via node 3366 (NL) [85.17.180.151] in 5.30s (tunnel IP 10.0.44.252)
+GET https://cloudflare.com/cdn-cgi/trace -> HTTP 200 via exit node 3366 (NL) (DNS+TCP+TLS 3.28s, request 0.60s)
+  the server saw 85.17.180.151 = Nym node 3366 (NL) in the nym-api node list
+exit=0

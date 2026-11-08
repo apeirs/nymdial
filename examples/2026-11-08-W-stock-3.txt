@@ -1,0 +1,17 @@
+# stock nym-sdk 1.21.6
+2026-11-08T11:50:42Z
+2026-11-08T11:50:42.623780Z  INFO nymdial::dialer: nym-api lists 100 IPR exits
+2026-11-08T11:50:44.630315Z  WARN nym_gateway_client::client: Not enough bandwidth. Trying to get more bandwidth, this might take a while
+2026-11-08T11:51:09.431317Z  WARN nymdial::rotate: node 3150 (CH): IPR handshake ok, but the health check failed (quad9: no answer within 12s; mullvad: no answer within 12s) after 26.8s; trying the next exit
+2026-11-08T11:51:10.360104Z  WARN nym_gateway_client::client: Not enough bandwidth. Trying to get more bandwidth, this might take a while
+2026-11-08T11:51:35.220309Z  WARN nymdial::rotate: node 1926 (US): IPR handshake ok, but the health check failed (quad9: no answer within 12s; mullvad: no answer within 12s) after 25.8s; trying the next exit
+2026-11-08T11:51:36.752544Z  WARN nym_gateway_client::client: Not enough bandwidth. Trying to get more bandwidth, this might take a while
+2026-11-08T11:51:41.877911Z  INFO nymdial::dialer: health check: DoH via quad9 in 4.2s
+2026-11-08T11:51:41.877949Z  INFO nymdial::rotate: node 2647 (CZ): tunnel up in 6.7s
+  exit node 3150 (CH)           failed after 26.81s: IPR handshake ok, but the health check failed (quad9: no answer within 12s; mullvad: no answer within 12s)
+  exit node 1926 (US)           failed after 25.79s: IPR handshake ok, but the health check failed (quad9: no answer within 12s; mullvad: no answer within 12s)
+  exit node 2647 (CZ)           up after 6.66s (incl. health check)
+tunnel up via node 2647 (CZ) [141.227.135.154] in 59.74s (tunnel IP 10.0.234.208)
+GET https://cloudflare.com/cdn-cgi/trace -> HTTP 200 via exit node 2647 (CZ) (DNS+TCP+TLS 3.09s, request 0.89s)
+  the server saw 141.227.135.154 = Nym node 2647 (CZ) in the nym-api node list
+exit=0

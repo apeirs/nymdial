@@ -1,0 +1,13 @@
+# built against nym-sdk 1.21.6 with the experimental gap-skip patch (NYM_STREAM_GAP_SKIP_MS=1500 where set); not what nymdial ships
+attempt	setup_s	first_probe	probes_ok	probes_failed	last_ok_s	end	exit_ip
+1	2.2	ok	13	1	118	max_life	85.17.236.136
+2	2.2	ok	15	0	117	max_life	45.9.168.28
+3	2.4	ok	18	0	118	max_life	176.122.141.67
+4	2.5	ok	19	0	119	max_life	185.246.188.214
+5	2.0	ok	18	0	119	max_life	138.226.252.52
+6	1.6	ok	19	0	119	max_life	132.243.172.123
+7	2.3	ok	19	0	121	max_life	195.58.137.160
+8	3.6	ok	17	0	119	max_life	128.127.180.145
+9	1.6	ok	17	0	117	max_life	138.226.252.48
+10	1.9	ok	19	0	119	max_life	46.62.247.165
+exit=0

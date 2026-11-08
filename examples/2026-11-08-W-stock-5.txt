@@ -1,0 +1,14 @@
+# stock nym-sdk 1.21.6
+2026-11-08T11:52:24Z
+2026-11-08T11:52:25.374047Z  INFO nymdial::dialer: nym-api lists 100 IPR exits
+2026-11-08T11:52:26.560499Z  WARN nym_gateway_client::client: Not enough bandwidth. Trying to get more bandwidth, this might take a while
+2026-11-08T11:52:51.335459Z  WARN nymdial::rotate: node 2666 (GE): IPR handshake ok, but the health check failed (quad9: no answer within 12s; mullvad: no answer within 12s) after 26.0s; trying the next exit
+2026-11-08T11:52:52.480444Z  WARN nym_gateway_client::client: Not enough bandwidth. Trying to get more bandwidth, this might take a while
+2026-11-08T11:52:56.897361Z  INFO nymdial::dialer: health check: DoH via quad9 in 3.5s
+2026-11-08T11:52:56.897400Z  INFO nymdial::rotate: node 3130 (NL): tunnel up in 5.6s
+  exit node 2666 (GE)           failed after 25.96s: IPR handshake ok, but the health check failed (quad9: no answer within 12s; mullvad: no answer within 12s)
+  exit node 3130 (NL)           up after 5.56s (incl. health check)
+tunnel up via node 3130 (NL) [185.246.188.219] in 31.98s (tunnel IP 10.0.97.173)
+GET https://cloudflare.com/cdn-cgi/trace -> HTTP 200 via exit node 3130 (NL) (DNS+TCP+TLS 2.48s, request 1.91s)
+  the server saw 185.246.188.219 = Nym node 3130 (NL) in the nym-api node list
+exit=0

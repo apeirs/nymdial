@@ -42,6 +42,9 @@ struct Opts {
     /// Seconds per resolver for the health check on a new tunnel (two resolvers at most).
     #[arg(long, global = true, default_value_t = 12)]
     health_timeout: u64,
+    /// Probe a tunnel that has been quiet this many seconds before the next connect (0 = off).
+    #[arg(long, global = true, default_value_t = 10)]
+    liveness_after: u64,
     /// DoH resolver as [name=]IP@hostname; repeat to replace the defaults (quad9, mullvad, cloudflare).
     #[arg(long = "doh", global = true)]
     doh: Vec<String>,
@@ -169,17 +172,33 @@ where
     Ok((status, body))
 }
 
+/// Budget for the HTTP exchange once the connection is up. Streams have no read timeout of their own: on a
+/// tunnel that stalls mid-request, a read would otherwise wait forever.
+const HTTP_TIMEOUT: Duration = Duration::from_secs(30);
+
+async fn http_get_bounded<S>(stream: S, url: &Url) -> Result<(u16, Bytes), Error>
+where
+    S: AsyncRead + AsyncWrite + Unpin + Send + 'static,
+{
+    tokio::time::timeout(HTTP_TIMEOUT, http_get(stream, url)).await.unwrap_or_else(|_| {
+        Err(Error::Connect {
+            addr: SocketAddr::from(([0, 0, 0, 0], url.port)),
+            reason: format!("HTTP: no complete response within {HTTP_TIMEOUT:?} (tunnel stalled mid-request?)"),
+        })
+    })
+}
+
 async fn fetch(d: &Dialer, url: &Url) -> Result<(u16, Bytes, Duration, Duration), Error> {
     let t = Instant::now();
     let (status, body, connected) = if url.https {
         let s = d.connect_tls(&url.host, url.port).await?;
         let c = t.elapsed();
-        let (st, b) = http_get(s, url).await?;
+        let (st, b) = http_get_bounded(s, url).await?;
         (st, b, c)
     } else {
         let s = d.connect(&url.host, url.port).await?;
         let c = t.elapsed();
-        let (st, b) = http_get(s, url).await?;
+        let (st, b) = http_get_bounded(s, url).await?;
         (st, b, c)
     };
     Ok((status, body, connected, t.elapsed() - connected))
@@ -217,6 +236,7 @@ fn config(o: &Opts) -> Result<Config, Error> {
         pinned_only: o.pinned_only,
         attempt_timeout: Duration::from_secs(o.attempt_timeout),
         health_timeout: Duration::from_secs(o.health_timeout),
+        liveness_after: (o.liveness_after > 0).then(|| Duration::from_secs(o.liveness_after)),
         ..Default::default()
     };
     c.selection.countries = o.countries.clone();
@@ -476,7 +496,7 @@ async fn whoami_nr(o: &Opts, url: &Url, n: usize, interval: u64) -> Result<(), E
             .await
             .map_err(|e| Error::Tls { host: url.host.clone(), reason: e.to_string() })?;
         let c2 = t.elapsed();
-        let (status, body) = http_get(tls, url).await?;
+        let (status, body) = http_get_bounded(tls, url).await?;
         Ok::<_, Error>((status, body, c, c2))
     };
     let r = tokio::time::timeout(Duration::from_secs(120), r).await;

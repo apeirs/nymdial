@@ -1,0 +1,27 @@
+# stock nym-sdk 1.21.6
+2026-11-08T11:46:52Z
+$ X=1 nymdial -v bench https://api.ipify.org/?format=json -n 12 --interval 10
+2026-11-08T11:46:54.039358Z  INFO nymdial::dialer: nym-api lists 100 IPR exits
+2026-11-08T11:46:55.919409Z  WARN nym_gateway_client::client: Not enough bandwidth. Trying to get more bandwidth, this might take a while
+2026-11-08T11:47:00.642166Z  INFO nymdial::dialer: health check: DoH via quad9 in 3.7s
+2026-11-08T11:47:00.642220Z  INFO nymdial::rotate: node 973: tunnel up in 6.6s
+  exit node 973                 up after 6.60s (incl. health check)
+tunnel up via node 973 [13.140.190.166] in 8.46s (tunnel IP 10.0.236.99)
+[+    0s, exit node 973]   1  HTTP 200       23 B  connect 3.10s  request 0.80s  total 3.90s
+[+   14s, exit node 973]   2  HTTP 200       23 B  connect 4.47s  request 0.70s  total 5.16s
+[+   29s, exit node 973]   3  HTTP 200       23 B  connect 2.88s  request 0.87s  total 3.75s
+[+   43s, exit node 973]   4  HTTP 200       23 B  connect 3.00s  request 0.82s  total 3.83s
+[+   57s, exit node 973]   5  error after 31.29s: TLS with api.ipify.org: no handshake within 30s
+[+   98s, exit node 973] 2026-11-08T11:48:46.583163Z  WARN nymdial::dialer: failover from node 973: tunnel quiet for 48s and the liveness probe failed (quad9: no answer within 8s)
+2026-11-08T11:48:47.448937Z  WARN nym_gateway_client::client: Not enough bandwidth. Trying to get more bandwidth, this might take a while
+2026-11-08T11:48:52.942759Z  INFO nymdial::dialer: health check: DoH via quad9 in 4.8s
+2026-11-08T11:48:52.942800Z  INFO nymdial::rotate: node 3000 (DE): tunnel up in 6.4s
+  6  HTTP 200       23 B  connect 17.38s  request 0.64s  total 18.01s
+[+  126s, exit node 3000 (DE)]   7  HTTP 200       23 B  connect 2.29s  request 0.65s  total 2.94s
+[+  139s, exit node 3000 (DE)]   8  HTTP 200       23 B  connect 2.44s  request 0.77s  total 3.20s
+[+  152s, exit node 3000 (DE)]   9  HTTP 200       23 B  connect 5.00s  request 0.55s  total 5.56s
+[+  168s, exit node 3000 (DE)]  10  HTTP 200       23 B  connect 4.20s  request 0.97s  total 5.18s
+[+  183s, exit node 3000 (DE)]  11  HTTP 200       23 B  connect 2.94s  request 2.12s  total 5.07s
+[+  198s, exit node 3000 (DE)]  12  HTTP 200       23 B  connect 2.44s  request 0.58s  total 3.02s
+ok 11/12  median 3.90s  min 2.94s  max 18.01s
+exit=0 wall=209.400440407s

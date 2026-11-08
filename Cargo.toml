@@ -121,3 +121,8 @@ tokio = { version = "1.47", features = ["test-util", "macros", "rt-multi-thread"
 [[bin]]
 name = "nymdial"
 path = "src/bin/nymdial.rs"
+
+# Liveness repro on raw nym-smolmix (no nymdial code in the path).
+[[bin]]
+name = "smolmix_repro"
+path = "src/bin/smolmix_repro.rs"

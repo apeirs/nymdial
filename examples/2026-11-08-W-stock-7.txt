@@ -1,0 +1,13 @@
+# stock nym-sdk 1.21.6
+2026-11-08T11:54:08Z
+2026-11-08T11:54:09.084934Z  INFO nymdial::dialer: nym-api lists 100 IPR exits
+2026-11-08T11:54:09.904096Z  WARN nym_gateway_client::client::websockets: Main endpoint failed ws://uzo02.turquoiselab.io:9000/ : connection failed: ws://uzo02.turquoiselab.io:9000/: IO error: Network is unreachable (os error 101), trying fallback : ws://85.155.186.123:9000/
+2026-11-08T11:54:11.035283Z  WARN nym_gateway_client::client::websockets: Main endpoint failed ws://uzo02.turquoiselab.io:9000/ : connection failed: ws://uzo02.turquoiselab.io:9000/: IO error: Network is unreachable (os error 101), trying fallback : ws://85.155.186.123:9000/
+2026-11-08T11:54:11.535806Z  WARN nym_gateway_client::client: Not enough bandwidth. Trying to get more bandwidth, this might take a while
+2026-11-08T11:54:17.429713Z  INFO nymdial::dialer: health check: DoH via quad9 in 4.9s
+2026-11-08T11:54:17.429750Z  INFO nymdial::rotate: node 2409 (NG): tunnel up in 8.3s
+  exit node 2409 (NG)           up after 8.34s (incl. health check)
+tunnel up via node 2409 (NG) [103.97.91.245, 2a06:f901:4001:100::a98b:7191] in 8.82s (tunnel IP 10.0.70.247)
+GET https://cloudflare.com/cdn-cgi/trace -> HTTP 200 via exit node 2409 (NG) (DNS+TCP+TLS 4.38s, request 0.83s)
+  the server saw 103.97.91.245 = Nym node 2409 (NG) in the nym-api node list
+exit=0

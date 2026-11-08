@@ -37,6 +37,12 @@ pub struct Config {
     /// Health check: budget per resolver (at most two are asked). A cold probe (TCP + TLS + HTTP/2 + one
     /// query through the mixnet) took 4-6 s in live runs.
     pub health_timeout: Duration,
+    /// A tunnel that hasn't shown it is alive for this long gets a quick probe before the next connect, and is
+    /// replaced if the probe fails. nym-sdk 1.21.6 tunnels can stop receiving for good after one lost reply
+    /// frame (see the README), so an idle tunnel can't be trusted. `None` turns this off.
+    pub liveness_after: Option<Duration>,
+    /// Budget for that probe (one DoH query on the warm resolver connection).
+    pub liveness_timeout: Duration,
     /// DoH resolvers, tried in order.
     pub doh: Vec<DohServer>,
     /// Reading the nym-api.
@@ -56,6 +62,8 @@ impl Default for Config {
             tls_timeout: Duration::from_secs(30),
             dns_timeout: Duration::from_secs(15),
             health_timeout: Duration::from_secs(12),
+            liveness_after: Some(Duration::from_secs(10)),
+            liveness_timeout: Duration::from_secs(8),
             doh: dns::default_servers(),
             directory_timeout: Duration::from_secs(30),
         }
@@ -78,6 +86,17 @@ struct Active {
     tunnel: Tunnel,
     doh: DohClient,
     info: ExitInfo,
+    /// Last time traffic came back through this tunnel (health check, DNS answer, completed connect).
+    alive_at: std::sync::Mutex<Instant>,
+}
+
+impl Active {
+    fn saw_traffic(&self) {
+        *self.alive_at.lock().unwrap() = Instant::now();
+    }
+    fn quiet_for(&self) -> Duration {
+        self.alive_at.lock().unwrap().elapsed()
+    }
 }
 
 struct State {
@@ -226,7 +245,7 @@ impl Dialer {
             setup: started.elapsed(),
             generation: st.generation,
         };
-        let a = Arc::new(Active { tunnel, doh, info });
+        let a = Arc::new(Active { tunnel, doh, info, alive_at: std::sync::Mutex::new(Instant::now()) });
         *self.active.write().unwrap() = Some(a.clone());
         Ok(a)
     }
@@ -260,7 +279,11 @@ impl Dialer {
 
     /// Is this tunnel still carrying traffic? One uncached DoH lookup through it.
     async fn healthy(&self, a: &Active) -> bool {
-        a.doh.probe(&a.tunnel, "nym.com", 2, self.cfg.health_timeout).await.is_ok()
+        let ok = a.doh.probe(&a.tunnel, "nym.com", 2, self.cfg.health_timeout).await.is_ok();
+        if ok {
+            a.saw_traffic();
+        }
+        ok
     }
 
     /// Run the health check on the current tunnel now; on failure, fail over. Returns the exit in use after.
@@ -306,6 +329,7 @@ impl Dialer {
             match a.doh.resolve(&a.tunnel, host, 0).await {
                 Ok((ips, ttl, by)) => {
                     tracing::debug!("{host} -> {ips:?} via {by}");
+                    a.saw_traffic();
                     self.cache.put(host, ips.clone(), ttl, Instant::now());
                     return Ok((ips, a));
                 }
@@ -341,6 +365,21 @@ impl Dialer {
     /// next exit and tries once more.
     pub async fn connect(&self, host: &str, port: u16) -> Result<TcpStream, Error> {
         let mut a = self.current().await?;
+        if let Some(after) = self.cfg.liveness_after {
+            if a.quiet_for() >= after {
+                let t = Instant::now();
+                match a.doh.probe(&a.tunnel, "nym.com", 1, self.cfg.liveness_timeout).await {
+                    Ok(_) => {
+                        tracing::debug!("liveness probe ok in {:.1?}", t.elapsed());
+                        a.saw_traffic();
+                    }
+                    Err(e) => {
+                        let why = format!("tunnel quiet for {:.0?} and the liveness probe failed ({e})", a.quiet_for());
+                        a = self.failover(&a, &why).await?;
+                    }
+                }
+            }
+        }
         for round in 0..2 {
             let ips = match host.parse::<IpAddr>() {
                 Ok(IpAddr::V4(v4)) => vec![v4],
@@ -353,7 +392,10 @@ impl Dialer {
             };
             let addr = SocketAddr::new(IpAddr::V4(ips[0]), port);
             match tokio::time::timeout(self.cfg.connect_timeout, a.tunnel.tcp_connect(addr)).await {
-                Ok(Ok(s)) => return Ok(s),
+                Ok(Ok(s)) => {
+                    a.saw_traffic(); // the SYN-ACK came back through the tunnel
+                    return Ok(s);
+                }
                 Ok(Err(e)) => {
                     let msg = e.to_string();
                     let tunnel_gone = matches!(e, nym_smolmix::SmolmixError::ChannelClosed | nym_smolmix::SmolmixError::NotConnected)

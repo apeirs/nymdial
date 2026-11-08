@@ -1,0 +1,199 @@
+# stock nym-sdk 1.21.6
+2026-11-08T11:18:48.658176Z  INFO nym_sdk::ip_packet_client::discovery: Found 644 Exit Gateways
+2026-11-08T11:18:48.658218Z  INFO nym_sdk::ip_packet_client::discovery: Using IPR: 5kdGtqQCTHUQyV4TTaHYUcP34b2t3QaFhMycehcuVWVU.8UzJEcHFtveB3NEgnd2XZxLVxEfpfc3bHzTiajNSMcVS@EcjsAfMRpS5AGTQASTiyiEv2vk5BLaBvZ3HBRpfPbeFu (Gateway: EcjsAfMRpS5AGTQASTiyiEv2vk5BLaBvZ3HBRpfPbeFu, version: 1.43.0)
+2026-11-08T11:18:49.462873Z  INFO perform_initial_authentication{gateway=71MEMpLaVFDcS4d2qCxmDQ2hH8eDbYL9FHUm1ezcms44 gateway_address=ws://norway1.nymgateway.com:9000/}: nym_gateway_client::bandwidth: remaining bandwidth: 0.00 B. in 'upgrade mode': false
+2026-11-08T11:18:49.462900Z  INFO nym_gateway_client::client: Claiming more bandwidth with existing credentials. Stop the process now if you don't want that to happen.
+2026-11-08T11:18:49.462903Z  WARN nym_gateway_client::client: Not enough bandwidth. Trying to get more bandwidth, this might take a while
+2026-11-08T11:18:49.462904Z  INFO nym_gateway_client::client: The client is running in disabled credentials mode - attempting to claim bandwidth without a credential
+2026-11-08T11:18:49.508912Z  INFO nym_gateway_client::client: managed to claim testnet bandwidth
+2026-11-08T11:18:49.509071Z DEBUG nym_client_core::client::replies::reply_controller: Started ReplyController with graceful shutdown support
+2026-11-08T11:18:49.509102Z  INFO nym_sdk::ipr_wrapper::ip_mix_stream: Connecting to IP packet router at 5kdGtqQCTHUQyV4TTaHYUcP34b2t3QaFhMycehcuVWVU.8UzJEcHFtveB3NEgnd2XZxLVxEfpfc3bHzTiajNSMcVS@EcjsAfMRpS5AGTQASTiyiEv2vk5BLaBvZ3HBRpfPbeFu
+2026-11-08T11:18:52.103040Z  INFO nym_sdk::ipr_wrapper::ip_mix_stream: Connected — IPv4: 10.0.53.91, IPv6: fc00::355b, MTU: 1500
+2026-11-08T11:18:52.103181Z  INFO nym_smolmix::bridge: Starting bridge
+2026-11-08T11:18:52.103194Z  INFO nym_smolmix::tunnel: Tunnel ready, allocated IP: 10.0.53.91
+attempt 1: probe failed at +15s: timeout 15s
+attempt 1: probe failed at +35s: timeout 15s
+2026-11-08T11:19:27.106819Z  INFO nym_smolmix::tunnel: Shutting down tunnel
+2026-11-08T11:19:27.106858Z  INFO nym_smolmix::bridge: Bridge received shutdown signal packets_sent=22 packets_received=0
+2026-11-08T11:19:27.106872Z  INFO nym_smolmix::bridge: Disconnecting from mixnet...
+2026-11-08T11:19:27.106923Z DEBUG nym_client_core::client::replies::reply_controller: ReplyController: Exiting
+2026-11-08T11:19:27.107099Z  INFO nym_smolmix::bridge: Disconnected
+2026-11-08T11:19:27.107113Z  INFO nym_smolmix::tunnel: Tunnel shut down
+2026-11-08T11:19:27.395370Z  INFO nym_sdk::ip_packet_client::discovery: Found 644 Exit Gateways
+2026-11-08T11:19:27.395396Z  INFO nym_sdk::ip_packet_client::discovery: Using IPR: 5CFZ2mGRqgtMRuqtyXtgC547A7xCDQabpXheWTJEZ2F2.45mULgUqytfGCPdmvuATdN1jXkKUzqLFJo1m5dU815iE@JAkTnWGXcXxfVJF2Pok2BDci7ce9WiYfrpAVrE39cwr5 (Gateway: JAkTnWGXcXxfVJF2Pok2BDci7ce9WiYfrpAVrE39cwr5, version: 1.43.0)
+2026-11-08T11:19:28.143750Z  INFO perform_initial_authentication{gateway=4M6Q21MyEmXtGBh7sb1Hcq4EsPMB57gzfuLLDeobGLky gateway_address=ws://nym-exit.ch-17.spectredao.net:9000/}: nym_gateway_client::bandwidth: remaining bandwidth: 0.00 B. in 'upgrade mode': false
+2026-11-08T11:19:28.143788Z  INFO nym_gateway_client::client: Claiming more bandwidth with existing credentials. Stop the process now if you don't want that to happen.
+2026-11-08T11:19:28.143791Z  WARN nym_gateway_client::client: Not enough bandwidth. Trying to get more bandwidth, this might take a while
+2026-11-08T11:19:28.143793Z  INFO nym_gateway_client::client: The client is running in disabled credentials mode - attempting to claim bandwidth without a credential
+2026-11-08T11:19:28.178214Z  INFO nym_gateway_client::client: managed to claim testnet bandwidth
+2026-11-08T11:19:28.178326Z DEBUG nym_client_core::client::replies::reply_controller: Started ReplyController with graceful shutdown support
+2026-11-08T11:19:28.178336Z  INFO nym_sdk::ipr_wrapper::ip_mix_stream: Connecting to IP packet router at 5CFZ2mGRqgtMRuqtyXtgC547A7xCDQabpXheWTJEZ2F2.45mULgUqytfGCPdmvuATdN1jXkKUzqLFJo1m5dU815iE@JAkTnWGXcXxfVJF2Pok2BDci7ce9WiYfrpAVrE39cwr5
+2026-11-08T11:19:28.824802Z  INFO nym_sdk::ipr_wrapper::ip_mix_stream: Connected — IPv4: 10.0.71.121, IPv6: fc00::4779, MTU: 1500
+2026-11-08T11:19:28.824839Z  INFO nym_smolmix::tunnel: Tunnel ready, allocated IP: 10.0.71.121
+2026-11-08T11:19:28.824837Z  INFO nym_smolmix::bridge: Starting bridge
+attempt 2: probe failed at +85s: timeout 15s
+attempt 2: probe failed at +105s: timeout 15s
+2026-11-08T11:21:14.308390Z  INFO nym_smolmix::tunnel: Shutting down tunnel
+2026-11-08T11:21:14.308428Z  INFO nym_smolmix::bridge: Bridge received shutdown signal packets_sent=75 packets_received=59
+2026-11-08T11:21:14.308443Z  INFO nym_smolmix::bridge: Disconnecting from mixnet...
+2026-11-08T11:21:14.308465Z DEBUG nym_client_core::client::replies::reply_controller: ReplyController: Exiting
+2026-11-08T11:21:14.308588Z  INFO nym_smolmix::bridge: Disconnected
+2026-11-08T11:21:14.308601Z  INFO nym_smolmix::tunnel: Tunnel shut down
+2026-11-08T11:21:14.773376Z  INFO nym_sdk::ip_packet_client::discovery: Found 644 Exit Gateways
+2026-11-08T11:21:14.773409Z  INFO nym_sdk::ip_packet_client::discovery: Using IPR: DRkfb3JE7Eeq95fxoCHzAqj7mddencWjnL8imKmD5Ywo.2EfQFWhpUyC5XUs7iBnVesJmzBnujpiTqfUeSefe5QbJ@4ej3eKmGG5qpBEVs7Z6XGAqu9scDdyXTjirdZVENpQkT (Gateway: 4ej3eKmGG5qpBEVs7Z6XGAqu9scDdyXTjirdZVENpQkT, version: 1.43.0)
+2026-11-08T11:21:17.519967Z  INFO perform_initial_authentication{gateway=Eb15FTXQgnenwLmqdfCQNj6PmKjMszrmHhtXqKKRafMW gateway_address=ws://gateway.pedromadeira.dev:9000/}: nym_gateway_client::bandwidth: remaining bandwidth: 0.00 B. in 'upgrade mode': false
+2026-11-08T11:21:17.519997Z  INFO nym_gateway_client::client: Claiming more bandwidth with existing credentials. Stop the process now if you don't want that to happen.
+2026-11-08T11:21:17.520000Z  WARN nym_gateway_client::client: Not enough bandwidth. Trying to get more bandwidth, this might take a while
+2026-11-08T11:21:17.520002Z  INFO nym_gateway_client::client: The client is running in disabled credentials mode - attempting to claim bandwidth without a credential
+2026-11-08T11:21:17.852518Z  INFO nym_gateway_client::client: managed to claim testnet bandwidth
+2026-11-08T11:21:17.852602Z DEBUG nym_client_core::client::replies::reply_controller: Started ReplyController with graceful shutdown support
+2026-11-08T11:21:17.852627Z  INFO nym_sdk::ipr_wrapper::ip_mix_stream: Connecting to IP packet router at DRkfb3JE7Eeq95fxoCHzAqj7mddencWjnL8imKmD5Ywo.2EfQFWhpUyC5XUs7iBnVesJmzBnujpiTqfUeSefe5QbJ@4ej3eKmGG5qpBEVs7Z6XGAqu9scDdyXTjirdZVENpQkT
+2026-11-08T11:21:20.266328Z  INFO nym_sdk::ipr_wrapper::ip_mix_stream: Connected — IPv4: 10.0.71.5, IPv6: fc00::4705, MTU: 1500
+2026-11-08T11:21:20.266366Z  INFO nym_smolmix::bridge: Starting bridge
+2026-11-08T11:21:20.266371Z  INFO nym_smolmix::tunnel: Tunnel ready, allocated IP: 10.0.71.5
+attempt 3: probe failed at +52s: timeout 15s
+attempt 3: probe failed at +72s: timeout 15s
+2026-11-08T11:22:32.052666Z  INFO nym_smolmix::tunnel: Shutting down tunnel
+2026-11-08T11:22:32.052687Z  INFO nym_smolmix::bridge: Bridge received shutdown signal packets_sent=63 packets_received=39
+2026-11-08T11:22:32.052700Z  INFO nym_smolmix::bridge: Disconnecting from mixnet...
+2026-11-08T11:22:32.052736Z DEBUG nym_client_core::client::replies::reply_controller: ReplyController: Exiting
+2026-11-08T11:22:32.053722Z  INFO nym_smolmix::bridge: Disconnected
+2026-11-08T11:22:32.053752Z  INFO nym_smolmix::tunnel: Tunnel shut down
+2026-11-08T11:22:32.555475Z  INFO nym_sdk::ip_packet_client::discovery: Found 644 Exit Gateways
+2026-11-08T11:22:32.555509Z  INFO nym_sdk::ip_packet_client::discovery: Using IPR: Eg79rzcK8x4PbywRqvLeaipRvVxmLENa8QE47m3K8dBB.4gtzDRVS3iHWmR6CH7BshshRNnigN6jeznRanYESN7rz@FLmQbD4c1fyxnGGYAbCFi5D6FyoL2imUfAZMJGzJygyD (Gateway: FLmQbD4c1fyxnGGYAbCFi5D6FyoL2imUfAZMJGzJygyD, version: 1.43.0)
+2026-11-08T11:22:33.161535Z  INFO perform_initial_authentication{gateway=H9pUbzCwSK8RyTpxjgivLPVyaUMkiJmr2iqb8QPwEbbP gateway_address=ws://gateway5.petroff-staking.space:9000/}: nym_gateway_client::bandwidth: remaining bandwidth: 0.00 B. in 'upgrade mode': false
+2026-11-08T11:22:33.161572Z  INFO nym_gateway_client::client: Claiming more bandwidth with existing credentials. Stop the process now if you don't want that to happen.
+2026-11-08T11:22:33.161574Z  WARN nym_gateway_client::client: Not enough bandwidth. Trying to get more bandwidth, this might take a while
+2026-11-08T11:22:33.161576Z  INFO nym_gateway_client::client: The client is running in disabled credentials mode - attempting to claim bandwidth without a credential
+2026-11-08T11:22:33.189525Z  INFO nym_gateway_client::client: managed to claim testnet bandwidth
+2026-11-08T11:22:33.189594Z DEBUG nym_client_core::client::replies::reply_controller: Started ReplyController with graceful shutdown support
+2026-11-08T11:22:33.189620Z  INFO nym_sdk::ipr_wrapper::ip_mix_stream: Connecting to IP packet router at Eg79rzcK8x4PbywRqvLeaipRvVxmLENa8QE47m3K8dBB.4gtzDRVS3iHWmR6CH7BshshRNnigN6jeznRanYESN7rz@FLmQbD4c1fyxnGGYAbCFi5D6FyoL2imUfAZMJGzJygyD
+2026-11-08T11:22:35.197583Z  INFO nym_sdk::ipr_wrapper::ip_mix_stream: Connected — IPv4: 10.0.237.50, IPv6: fc00::ed32, MTU: 1500
+2026-11-08T11:22:35.197622Z  INFO nym_smolmix::tunnel: Tunnel ready, allocated IP: 10.0.237.50
+2026-11-08T11:22:35.197624Z  INFO nym_smolmix::bridge: Starting bridge
+2026-11-08T11:24:36.102087Z  INFO nym_smolmix::tunnel: Shutting down tunnel
+2026-11-08T11:24:36.102110Z  INFO nym_smolmix::bridge: Bridge received shutdown signal packets_sent=93 packets_received=106
+2026-11-08T11:24:36.102122Z  INFO nym_smolmix::bridge: Disconnecting from mixnet...
+2026-11-08T11:24:36.102151Z DEBUG nym_client_core::client::replies::reply_controller: ReplyController: Exiting
+2026-11-08T11:24:36.102258Z  INFO nym_smolmix::bridge: Disconnected
+2026-11-08T11:24:36.102268Z  INFO nym_smolmix::tunnel: Tunnel shut down
+2026-11-08T11:24:36.605677Z  INFO nym_sdk::ip_packet_client::discovery: Found 644 Exit Gateways
+2026-11-08T11:24:36.605710Z  INFO nym_sdk::ip_packet_client::discovery: Using IPR: 5zJXzbLoMZemcyKVGn65BSNHkTpQ9nZ35ntkJPMGbxqW.6rKQViuVyZJ5xDtb8zZpjSahbDQe17d3kyTer2f5vY5s@7vT96fR5iPsBks6apH6wRbJ9yJREdH3ceKTbLL4bNbVY (Gateway: 7vT96fR5iPsBks6apH6wRbJ9yJREdH3ceKTbLL4bNbVY, version: 1.43.0)
+2026-11-08T11:24:37.430903Z  INFO perform_initial_authentication{gateway=H7LPKs2HtRHLfTrAYduUzGy8nGccMyF67zEaNBi61VUi gateway_address=ws://nym-exit.ch-15.spectredao.net:9000/}: nym_gateway_client::bandwidth: remaining bandwidth: 0.00 B. in 'upgrade mode': false
+2026-11-08T11:24:37.430930Z  INFO nym_gateway_client::client: Claiming more bandwidth with existing credentials. Stop the process now if you don't want that to happen.
+2026-11-08T11:24:37.430933Z  WARN nym_gateway_client::client: Not enough bandwidth. Trying to get more bandwidth, this might take a while
+2026-11-08T11:24:37.430935Z  INFO nym_gateway_client::client: The client is running in disabled credentials mode - attempting to claim bandwidth without a credential
+2026-11-08T11:24:37.466346Z  INFO nym_gateway_client::client: managed to claim testnet bandwidth
+2026-11-08T11:24:37.466409Z DEBUG nym_client_core::client::replies::reply_controller: Started ReplyController with graceful shutdown support
+2026-11-08T11:24:37.466431Z  INFO nym_sdk::ipr_wrapper::ip_mix_stream: Connecting to IP packet router at 5zJXzbLoMZemcyKVGn65BSNHkTpQ9nZ35ntkJPMGbxqW.6rKQViuVyZJ5xDtb8zZpjSahbDQe17d3kyTer2f5vY5s@7vT96fR5iPsBks6apH6wRbJ9yJREdH3ceKTbLL4bNbVY
+2026-11-08T11:24:39.588501Z  INFO nym_sdk::ipr_wrapper::ip_mix_stream: Connected — IPv4: 10.0.211.74, IPv6: fc00::d34a, MTU: 1500
+2026-11-08T11:24:39.588537Z  INFO nym_smolmix::bridge: Starting bridge
+2026-11-08T11:24:39.588540Z  INFO nym_smolmix::tunnel: Tunnel ready, allocated IP: 10.0.211.74
+attempt 5: probe failed at +41s: timeout 15s
+attempt 5: probe failed at +61s: timeout 15s
+2026-11-08T11:25:40.820110Z  INFO nym_smolmix::tunnel: Shutting down tunnel
+2026-11-08T11:25:40.820140Z  INFO nym_smolmix::bridge: Bridge received shutdown signal packets_sent=44 packets_received=23
+2026-11-08T11:25:40.820155Z  INFO nym_smolmix::bridge: Disconnecting from mixnet...
+2026-11-08T11:25:40.820196Z DEBUG nym_client_core::client::replies::reply_controller: ReplyController: Exiting
+2026-11-08T11:25:40.820350Z  INFO nym_smolmix::bridge: Disconnected
+2026-11-08T11:25:40.820359Z  INFO nym_smolmix::tunnel: Tunnel shut down
+2026-11-08T11:25:41.088008Z  INFO nym_sdk::ip_packet_client::discovery: Found 644 Exit Gateways
+2026-11-08T11:25:41.088043Z  INFO nym_sdk::ip_packet_client::discovery: Using IPR: 4d6TGhpbcmwCABXjk58eQ8DQJAmPkZSPL6foc5BCbUrG.FSMcNR2zC5jFUYKwj5z1WfeMdBFfdKbnmiuopgZfUVL6@2vUmeYe1hvuoxXG9wANMX1VSC4uF4fYgbakiTjTizcJS (Gateway: 2vUmeYe1hvuoxXG9wANMX1VSC4uF4fYgbakiTjTizcJS, version: 1.43.0)
+2026-11-08T11:25:41.652841Z  INFO perform_initial_authentication{gateway=ENTbuhvnkydCkZ1W3GLSCf4vtqpmM9xDkCN2vz3Vs4Vu gateway_address=ws://nym-gateway-06.swisscryptonodes.ch:9000/}: nym_gateway_client::bandwidth: remaining bandwidth: 0.00 B. in 'upgrade mode': false
+2026-11-08T11:25:41.652874Z  INFO nym_gateway_client::client: Claiming more bandwidth with existing credentials. Stop the process now if you don't want that to happen.
+2026-11-08T11:25:41.652878Z  WARN nym_gateway_client::client: Not enough bandwidth. Trying to get more bandwidth, this might take a while
+2026-11-08T11:25:41.652881Z  INFO nym_gateway_client::client: The client is running in disabled credentials mode - attempting to claim bandwidth without a credential
+2026-11-08T11:25:41.682852Z  INFO nym_gateway_client::client: managed to claim testnet bandwidth
+2026-11-08T11:25:41.682935Z DEBUG nym_client_core::client::replies::reply_controller: Started ReplyController with graceful shutdown support
+2026-11-08T11:25:41.682968Z  INFO nym_sdk::ipr_wrapper::ip_mix_stream: Connecting to IP packet router at 4d6TGhpbcmwCABXjk58eQ8DQJAmPkZSPL6foc5BCbUrG.FSMcNR2zC5jFUYKwj5z1WfeMdBFfdKbnmiuopgZfUVL6@2vUmeYe1hvuoxXG9wANMX1VSC4uF4fYgbakiTjTizcJS
+2026-11-08T11:25:42.429662Z  INFO nym_sdk::ipr_wrapper::ip_mix_stream: Connected — IPv4: 10.0.58.12, IPv6: fc00::3a0c, MTU: 1500
+2026-11-08T11:25:42.429701Z  INFO nym_smolmix::bridge: Starting bridge
+2026-11-08T11:25:42.429704Z  INFO nym_smolmix::tunnel: Tunnel ready, allocated IP: 10.0.58.12
+attempt 6: probe failed at +23s: timeout 15s
+attempt 6: probe failed at +43s: timeout 15s
+2026-11-08T11:26:25.214579Z  INFO nym_smolmix::tunnel: Shutting down tunnel
+2026-11-08T11:26:25.214606Z  INFO nym_smolmix::bridge: Bridge received shutdown signal packets_sent=30 packets_received=7
+2026-11-08T11:26:25.214623Z  INFO nym_smolmix::bridge: Disconnecting from mixnet...
+2026-11-08T11:26:25.214668Z DEBUG nym_client_core::client::replies::reply_controller: ReplyController: Exiting
+2026-11-08T11:26:25.214782Z  INFO nym_smolmix::bridge: Disconnected
+2026-11-08T11:26:25.214793Z  INFO nym_smolmix::tunnel: Tunnel shut down
+2026-11-08T11:26:25.499217Z  INFO nym_sdk::ip_packet_client::discovery: Found 644 Exit Gateways
+2026-11-08T11:26:25.499249Z  INFO nym_sdk::ip_packet_client::discovery: Using IPR: 43ap13NZMr3MmdNS8GzaovXcXY4DgBDkdmRUqQj7mKkt.82poEWDHPKktoVxD2r3BNSFv4sfB7h4qVpg9sJ7yNrW8@Afm2ey7qZSncpoaHGbFDQQvkfvP8uXqTRDbz11d68FdT (Gateway: Afm2ey7qZSncpoaHGbFDQQvkfvP8uXqTRDbz11d68FdT, version: 1.43.0)
+2026-11-08T11:26:25.535849Z  WARN nym_http_api_client::dns: primary DNS failed w/ error: receiver was canceled
+2026-11-08T11:26:25.535871Z  WARN nym_gateway_client::client::websockets: Main endpoint failed ws://exit-node.finland-9.nym.cat:9000/ : resolution failed: hickory-dns resolver error: receiver was canceled, trying fallback : ws://185.100.86.114:9000/
+2026-11-08T11:26:26.063447Z  INFO perform_initial_authentication{gateway=7txJh7wY3ASoanNFTFEnTKoodiLHRFkzHxD9AuKfhpa5 gateway_address=ws://exit-node.finland-9.nym.cat:9000/}: nym_gateway_client::bandwidth: remaining bandwidth: 0.00 B. in 'upgrade mode': false
+2026-11-08T11:26:26.063479Z  INFO nym_gateway_client::client: Claiming more bandwidth with existing credentials. Stop the process now if you don't want that to happen.
+2026-11-08T11:26:26.063482Z  WARN nym_gateway_client::client: Not enough bandwidth. Trying to get more bandwidth, this might take a while
+2026-11-08T11:26:26.063484Z  INFO nym_gateway_client::client: The client is running in disabled credentials mode - attempting to claim bandwidth without a credential
+2026-11-08T11:26:26.101444Z  INFO nym_gateway_client::client: managed to claim testnet bandwidth
+2026-11-08T11:26:26.101523Z DEBUG nym_client_core::client::replies::reply_controller: Started ReplyController with graceful shutdown support
+2026-11-08T11:26:26.101548Z  INFO nym_sdk::ipr_wrapper::ip_mix_stream: Connecting to IP packet router at 43ap13NZMr3MmdNS8GzaovXcXY4DgBDkdmRUqQj7mKkt.82poEWDHPKktoVxD2r3BNSFv4sfB7h4qVpg9sJ7yNrW8@Afm2ey7qZSncpoaHGbFDQQvkfvP8uXqTRDbz11d68FdT
+2026-11-08T11:26:26.589988Z  INFO nym_sdk::ipr_wrapper::ip_mix_stream: Connected — IPv4: 10.0.84.50, IPv6: fc00::5432, MTU: 1500
+2026-11-08T11:26:26.590027Z  INFO nym_smolmix::tunnel: Tunnel ready, allocated IP: 10.0.84.50
+2026-11-08T11:26:26.590080Z  INFO nym_smolmix::bridge: Starting bridge
+attempt 7: probe failed at +41s: timeout 15s
+attempt 7: probe failed at +61s: timeout 15s
+2026-11-08T11:27:27.959703Z  INFO nym_smolmix::tunnel: Shutting down tunnel
+2026-11-08T11:27:27.959726Z  INFO nym_smolmix::bridge: Bridge received shutdown signal packets_sent=49 packets_received=27
+2026-11-08T11:27:27.959741Z  INFO nym_smolmix::bridge: Disconnecting from mixnet...
+2026-11-08T11:27:27.959771Z DEBUG nym_client_core::client::replies::reply_controller: ReplyController: Exiting
+2026-11-08T11:27:27.959905Z  INFO nym_smolmix::bridge: Disconnected
+2026-11-08T11:27:27.959917Z  INFO nym_smolmix::tunnel: Tunnel shut down
+2026-11-08T11:27:28.247474Z  INFO nym_sdk::ip_packet_client::discovery: Found 644 Exit Gateways
+2026-11-08T11:27:28.247507Z  INFO nym_sdk::ip_packet_client::discovery: Using IPR: Ek6WczjCY6yGtuuHojb39gTU4QWsEGFKeaaMguckZkD9.BzdWqirX9Sys2d53tYPNjoTRCTGCX5nnq4DRH5Htkv8G@77aRs7y33css1aE9Xc5HNXYCtMbDEq9mNZjob7Y4jDVD (Gateway: 77aRs7y33css1aE9Xc5HNXYCtMbDEq9mNZjob7Y4jDVD, version: 1.43.0)
+2026-11-08T11:27:28.912713Z  INFO perform_initial_authentication{gateway=5McntWo67TgE4D2kKsFtnCyuNEVnRigpsPnASEQJiyB1 gateway_address=ws://node-34.privacymeow.fyi:9000/}: nym_gateway_client::bandwidth: remaining bandwidth: 0.00 B. in 'upgrade mode': false
+2026-11-08T11:27:28.912743Z  INFO nym_gateway_client::client: Claiming more bandwidth with existing credentials. Stop the process now if you don't want that to happen.
+2026-11-08T11:27:28.912746Z  WARN nym_gateway_client::client: Not enough bandwidth. Trying to get more bandwidth, this might take a while
+2026-11-08T11:27:28.912748Z  INFO nym_gateway_client::client: The client is running in disabled credentials mode - attempting to claim bandwidth without a credential
+2026-11-08T11:27:28.950679Z  INFO nym_gateway_client::client: managed to claim testnet bandwidth
+2026-11-08T11:27:28.950770Z DEBUG nym_client_core::client::replies::reply_controller: Started ReplyController with graceful shutdown support
+2026-11-08T11:27:28.950821Z  INFO nym_sdk::ipr_wrapper::ip_mix_stream: Connecting to IP packet router at Ek6WczjCY6yGtuuHojb39gTU4QWsEGFKeaaMguckZkD9.BzdWqirX9Sys2d53tYPNjoTRCTGCX5nnq4DRH5Htkv8G@77aRs7y33css1aE9Xc5HNXYCtMbDEq9mNZjob7Y4jDVD
+2026-11-08T11:27:29.970056Z  INFO nym_sdk::ipr_wrapper::ip_mix_stream: Connected — IPv4: 10.0.93.217, IPv6: fc00::5dd9, MTU: 1500
+2026-11-08T11:27:29.970104Z  INFO nym_smolmix::tunnel: Tunnel ready, allocated IP: 10.0.93.217
+2026-11-08T11:27:29.970175Z  INFO nym_smolmix::bridge: Starting bridge
+attempt 8: probe failed at +58s: timeout 15s
+attempt 8: probe failed at +78s: timeout 15s
+2026-11-08T11:28:48.134371Z  INFO nym_smolmix::tunnel: Shutting down tunnel
+2026-11-08T11:28:48.134400Z  INFO nym_smolmix::bridge: Bridge received shutdown signal packets_sent=68 packets_received=39
+2026-11-08T11:28:48.134428Z  INFO nym_smolmix::bridge: Disconnecting from mixnet...
+2026-11-08T11:28:48.134472Z DEBUG nym_client_core::client::replies::reply_controller: ReplyController: Exiting
+2026-11-08T11:28:48.134587Z  INFO nym_smolmix::bridge: Disconnected
+2026-11-08T11:28:48.134602Z  INFO nym_smolmix::tunnel: Tunnel shut down
+2026-11-08T11:28:48.610623Z  INFO nym_sdk::ip_packet_client::discovery: Found 644 Exit Gateways
+2026-11-08T11:28:48.610665Z  INFO nym_sdk::ip_packet_client::discovery: Using IPR: 4ute7kPgmRFKq1EmXX27ZbZtNbfaoiS213YHD7F1TGEm.Hnv3vJMezVYDurwCegVuzFhcUX1Cscx18kxYzGabVtku@5MnESKSpjHovBDAs4N6MwHa3JcaL9tVwtf22qVoXStpi (Gateway: 5MnESKSpjHovBDAs4N6MwHa3JcaL9tVwtf22qVoXStpi, version: 1.43.0)
+2026-11-08T11:28:51.163814Z  INFO perform_initial_authentication{gateway=EZLFq5HGXFKRpxu78nVjf7kuuUaKPLAbezR6mXbZrP6y gateway_address=ws://nym-exit.node1.vinlexnodes.xyz:9000/}: nym_gateway_client::bandwidth: remaining bandwidth: 0.00 B. in 'upgrade mode': false
+2026-11-08T11:28:51.163847Z  INFO nym_gateway_client::client: Claiming more bandwidth with existing credentials. Stop the process now if you don't want that to happen.
+2026-11-08T11:28:51.163849Z  WARN nym_gateway_client::client: Not enough bandwidth. Trying to get more bandwidth, this might take a while
+2026-11-08T11:28:51.163850Z  INFO nym_gateway_client::client: The client is running in disabled credentials mode - attempting to claim bandwidth without a credential
+2026-11-08T11:28:51.385563Z  INFO nym_gateway_client::client: managed to claim testnet bandwidth
+2026-11-08T11:28:51.385641Z DEBUG nym_client_core::client::replies::reply_controller: Started ReplyController with graceful shutdown support
+2026-11-08T11:28:51.385679Z  INFO nym_sdk::ipr_wrapper::ip_mix_stream: Connecting to IP packet router at 4ute7kPgmRFKq1EmXX27ZbZtNbfaoiS213YHD7F1TGEm.Hnv3vJMezVYDurwCegVuzFhcUX1Cscx18kxYzGabVtku@5MnESKSpjHovBDAs4N6MwHa3JcaL9tVwtf22qVoXStpi
+2026-11-08T11:28:52.394571Z  INFO nym_sdk::ipr_wrapper::ip_mix_stream: Connected — IPv4: 10.0.21.125, IPv6: fc00::157d, MTU: 1500
+2026-11-08T11:28:52.394610Z  INFO nym_smolmix::bridge: Starting bridge
+2026-11-08T11:28:52.394616Z  INFO nym_smolmix::tunnel: Tunnel ready, allocated IP: 10.0.21.125
+attempt 9: probe failed at +15s: timeout 15s
+attempt 9: probe failed at +35s: timeout 15s
+2026-11-08T11:29:27.398841Z  INFO nym_smolmix::tunnel: Shutting down tunnel
+2026-11-08T11:29:27.398858Z  INFO nym_smolmix::bridge: Bridge received shutdown signal packets_sent=22 packets_received=0
+2026-11-08T11:29:27.398868Z  INFO nym_smolmix::bridge: Disconnecting from mixnet...
+2026-11-08T11:29:27.398892Z DEBUG nym_client_core::client::replies::reply_controller: ReplyController: Exiting
+2026-11-08T11:29:27.399018Z  INFO nym_smolmix::bridge: Disconnected
+2026-11-08T11:29:27.399102Z  INFO nym_smolmix::tunnel: Tunnel shut down
+2026-11-08T11:29:27.694377Z  INFO nym_sdk::ip_packet_client::discovery: Found 644 Exit Gateways
+2026-11-08T11:29:27.694407Z  INFO nym_sdk::ip_packet_client::discovery: Using IPR: 5yXj12kjgFRpibLuPf7UY8gAFvEg6GMNHcoPTY2fAoY6.5xeKxK73mfLAerGU68cuVq4T9AnoiuwyRUHmSUALnHbH@9Z5dGUqLHVSgYFZ8G4gEwiQFYyjhnMHn7JiZDadbuMmZ (Gateway: 9Z5dGUqLHVSgYFZ8G4gEwiQFYyjhnMHn7JiZDadbuMmZ, version: 1.43.0)
+2026-11-08T11:29:29.621884Z  INFO perform_initial_authentication{gateway=5wF5wN7T2UuSsiUcQyL77NwdnXwAXxFttpZ1dR1nu4kR gateway_address=ws://nym-jap.turquoiselab.io:9000/}: nym_gateway_client::bandwidth: remaining bandwidth: 0.00 B. in 'upgrade mode': false
+2026-11-08T11:29:29.621918Z  INFO nym_gateway_client::client: Claiming more bandwidth with existing credentials. Stop the process now if you don't want that to happen.
+2026-11-08T11:29:29.621922Z  WARN nym_gateway_client::client: Not enough bandwidth. Trying to get more bandwidth, this might take a while
+2026-11-08T11:29:29.621925Z  INFO nym_gateway_client::client: The client is running in disabled credentials mode - attempting to claim bandwidth without a credential
+2026-11-08T11:29:29.788119Z  INFO nym_gateway_client::client: managed to claim testnet bandwidth
+2026-11-08T11:29:29.788219Z  INFO nym_sdk::ipr_wrapper::ip_mix_stream: Connecting to IP packet router at 5yXj12kjgFRpibLuPf7UY8gAFvEg6GMNHcoPTY2fAoY6.5xeKxK73mfLAerGU68cuVq4T9AnoiuwyRUHmSUALnHbH@9Z5dGUqLHVSgYFZ8G4gEwiQFYyjhnMHn7JiZDadbuMmZ
+2026-11-08T11:29:29.788241Z DEBUG nym_client_core::client::replies::reply_controller: Started ReplyController with graceful shutdown support
+2026-11-08T11:29:31.369694Z  INFO nym_sdk::ipr_wrapper::ip_mix_stream: Connected — IPv4: 10.0.112.6, IPv6: fc00::7006, MTU: 1500
+2026-11-08T11:29:31.369735Z  INFO nym_smolmix::bridge: Starting bridge
+2026-11-08T11:29:31.369742Z  INFO nym_smolmix::tunnel: Tunnel ready, allocated IP: 10.0.112.6
+2026-11-08T11:31:35.063437Z  INFO nym_smolmix::tunnel: Shutting down tunnel
+2026-11-08T11:31:35.063458Z  INFO nym_smolmix::bridge: Bridge received shutdown signal packets_sent=137 packets_received=123
+2026-11-08T11:31:35.063486Z  INFO nym_smolmix::bridge: Disconnecting from mixnet...
+2026-11-08T11:31:35.063531Z DEBUG nym_client_core::client::replies::reply_controller: ReplyController: Exiting
+2026-11-08T11:31:35.063650Z  INFO nym_smolmix::bridge: Disconnected
+2026-11-08T11:31:35.063660Z  INFO nym_smolmix::tunnel: Tunnel shut down

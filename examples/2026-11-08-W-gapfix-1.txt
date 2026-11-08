@@ -1,0 +1,12 @@
+# built against nym-sdk 1.21.6 with the experimental gap-skip patch (NYM_STREAM_GAP_SKIP_MS=1500 where set); not what nymdial ships
+2026-11-08T11:50:20Z
+2026-11-08T11:50:21.532525Z  INFO nymdial::dialer: nym-api lists 100 IPR exits
+2026-11-08T11:50:22.698381Z  WARN nym_gateway_client::client: Not enough bandwidth. Trying to get more bandwidth, this might take a while
+2026-11-08T11:50:29.939691Z  WARN nym_sdk::mixnet::stream: Stream StreamId(0xd688f198c953653d): [gap] seq 4 missing for 3.135206768s, skipping to 6 (4 pending)
+2026-11-08T11:50:33.727643Z  INFO nymdial::dialer: health check: DoH via quad9 in 8.9s
+2026-11-08T11:50:33.727683Z  INFO nymdial::rotate: node 3464 (AT): tunnel up in 12.2s
+  exit node 3464 (AT)           up after 12.20s (incl. health check)
+tunnel up via node 3464 (AT) [188.137.153.141] in 12.83s (tunnel IP 10.0.241.252)
+GET https://cloudflare.com/cdn-cgi/trace -> HTTP 200 via exit node 3464 (AT) (DNS+TCP+TLS 3.90s, request 0.64s)
+  the server saw 188.137.153.141 = Nym node 3464 (AT) in the nym-api node list
+exit=0
