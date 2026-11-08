@@ -97,9 +97,26 @@ Plugging the stream into other libraries:
   self-signed certificates, which `connect_tls` rejects; for those, use `connect` and your own rustls config
   (pin the certificate, as Electrum clients do).
 - **gRPC (lightwalletd):** `connect_tls_alpn(host, 443, &[b"h2"])` inside a tonic `Endpoint::connect_with_connector`
-  service. I haven't run this recipe yet; it's the next step for zecmix.
+  service.
 
 The CLI is the reference for each pattern (`get`, `whoami`, `connect --tls`, `bench`).
+
+### From other languages: `nymdial connect --events`
+
+Programs that aren't written in Rust can run `nymdial connect HOST PORT --events` as a child process, one per
+connection, and talk to the server over its stdin and stdout. mixpool (Python) and zecmix (Go) do this.
+
+- Give the child one end of a socketpair as both stdin and stdout, and keep the other end: it is then an
+  ordinary socket for your HTTP, TLS or gRPC library (TLS stays in your process, end to end with the server).
+- With `--events`, stderr carries one JSON object per line: an `attempt` per exit tried, then
+  `{"event":"connected","exit":{"node_id":..,"country":..,"ips":[..]},"tunnel_s":..,"connect_s":..}` once the
+  stream is open, or `{"event":"error","step":"exit|dns|tcp|tls|directory|input","message":..}`. Other lines
+  are the human log. Wait for `connected` before you count the stream as open.
+- `HOST` is passed unresolved; nymdial looks it up with DoH through its own tunnel.
+- The process exits when the server closes the stream. Closing your end ends its stdin; the write side is then
+  shut down and the reply still read to the end.
+- Each process is a new ephemeral mixnet client, so each connection gets a fresh Nym identity and its own exit
+  draw. That costs a tunnel setup (typically 5-15 s) per connection.
 
 ## What happens on a connect
 
@@ -219,11 +236,12 @@ CLI does (30 s per HTTP exchange).
 
 ## Tests
 
-`cargo test`: 21 unit tests and 1 doc test, all offline tests (no network): exit parsing against real nym-api records and the SDK's
+`cargo test`: 24 unit tests and 1 doc test, all offline (no network): exit parsing against real nym-api records and the SDK's
 filter rules, the weighted order (permutation, preference for performance, zero-score exits last, filters),
 rotation with fake exits on a paused clock (a dead exit, a failing exit, the attempt cap, a late success that
 must be shut down rather than leaked), DoH query building (ID 0, padding, no client subnet) and answer parsing
-(CNAME chains, NXDOMAIN, SERVFAIL, garbage), the TTL cache, and URL and IP parsing in the CLI.
+(CNAME chains, NXDOMAIN, SERVFAIL, garbage), the TTL cache, URL and IP parsing in the CLI, the `connect` pipe (returns when the server closes, half-closes when
+the input ends) and the `--events` lines.
 
 ## License
 

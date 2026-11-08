@@ -76,12 +76,17 @@ enum Cmd {
     Get { url: String },
     /// Resolve names through the mixnet (DoH via the exit).
     Resolve { names: Vec<String> },
-    /// Pipe stdin/stdout to HOST:PORT through the mixnet.
+    /// Pipe stdin/stdout to HOST:PORT through the mixnet. Exits when the server closes the stream.
     Connect {
         host: String,
         port: u16,
         #[arg(long)]
         tls: bool,
+        /// Also write one JSON object per line to stderr: each exit attempt, then `connected` (with the exit's
+        /// node id, country and IPs) once the stream is open, or `error`. For programs that drive nymdial as a
+        /// child process (mixpool, zecmix): wait for `connected`, then talk over stdin/stdout.
+        #[arg(long)]
+        events: bool,
     },
     /// Repeat an HTTPS GET N times on one tunnel and print the timings.
     Bench {
@@ -344,23 +349,17 @@ async fn run(cli: Cli) -> Result<(), Error> {
             }
             d.shutdown().await;
         }
-        Cmd::Connect { host, port, tls } => {
-            let d = dial(o).await?;
-            let (mut stdin, mut stdout) = (tokio::io::stdin(), tokio::io::stdout());
-            if *tls {
-                let s = d.connect_tls(host, *port).await?;
-                let (mut r, mut w) = tokio::io::split(s);
-                let up = async { let _ = tokio::io::copy(&mut stdin, &mut w).await; let _ = w.shutdown().await; };
-                let down = async { let _ = tokio::io::copy(&mut r, &mut stdout).await; };
-                tokio::join!(up, down);
-            } else {
-                let s = d.connect(host, *port).await?;
-                let (mut r, mut w) = tokio::io::split(s);
-                let up = async { let _ = tokio::io::copy(&mut stdin, &mut w).await; let _ = w.shutdown().await; };
-                let down = async { let _ = tokio::io::copy(&mut r, &mut stdout).await; };
-                tokio::join!(up, down);
+        Cmd::Connect { host, port, tls, events } => {
+            let r = connect_cmd(o, host, *port, *tls, *events).await;
+            if let Err(e) = &r {
+                if *events {
+                    emit(&error_event(e));
+                }
             }
-            d.shutdown().await;
+            r?;
+            // stdin is read on a blocking thread that can't be cancelled; don't let it hold the process open
+            // after the server has closed the stream.
+            std::process::exit(0);
         }
         Cmd::Bench { url, n, interval } => {
             let url = parse_url(url)?;
@@ -420,6 +419,124 @@ async fn run(cli: Cli) -> Result<(), Error> {
     }
     Ok(())
 }
+
+/// One status line on stderr (JSON, for programs driving `nymdial connect --events`).
+fn emit(v: &serde_json::Value) {
+    use std::io::Write;
+    let mut e = std::io::stderr().lock();
+    let _ = writeln!(e, "{v}");
+    let _ = e.flush();
+}
+
+fn attempt_event(a: &nymdial::rotate::Attempt) -> serde_json::Value {
+    serde_json::json!({
+        "event": "attempt",
+        "node_id": a.node_id,
+        "label": a.label,
+        "elapsed_s": a.elapsed.as_secs_f64(),
+        "ok": a.error.is_none(),
+        "error": a.error,
+    })
+}
+
+fn connected_event(info: &nymdial::ExitInfo, host: &str, port: u16, tls: bool, tunnel: Duration, connect: Duration) -> serde_json::Value {
+    serde_json::json!({
+        "event": "connected",
+        "host": host,
+        "port": port,
+        "tls": tls,
+        "exit": {
+            "node_id": info.exit.node_id,
+            "country": info.exit.country,
+            "identity": info.exit.identity,
+            "version": info.exit.version,
+            "ips": info.exit.ips,
+            "label": info.exit.label(),
+        },
+        "generation": info.generation,
+        "tunnel_s": tunnel.as_secs_f64(),
+        "connect_s": connect.as_secs_f64(),
+    })
+}
+
+fn error_event(e: &Error) -> serde_json::Value {
+    let step = match e {
+        Error::Directory(_) => "directory",
+        Error::NoExit(_) | Error::ExitsExhausted { .. } => "exit",
+        Error::Dns { .. } | Error::NoIpv4(_) => "dns",
+        Error::ConnectTimeout { .. } | Error::Connect { .. } => "tcp",
+        Error::Tls { .. } => "tls",
+        Error::Invalid(_) => "input",
+    };
+    serde_json::json!({ "event": "error", "step": step, "message": e.to_string() })
+}
+
+/// Copy `input` to `stream` and `stream` to `output` until the server closes the stream. When `input` ends
+/// first, the write side is shut down (TCP FIN / TLS close_notify) and the answer is still read to the end.
+/// Returns the bytes sent (`None` if the input was still open) and received.
+async fn pipe<S, I, O>(stream: S, mut input: I, mut output: O) -> (Option<u64>, u64)
+where
+    S: AsyncRead + AsyncWrite + Send + 'static,
+    I: AsyncRead + Unpin + Send + 'static,
+    O: AsyncWrite + Unpin,
+{
+    let (mut r, mut w) = tokio::io::split(stream);
+    let (tx, mut rx) = tokio::sync::oneshot::channel();
+    let up = tokio::spawn(async move {
+        let n = tokio::io::copy(&mut input, &mut w).await.unwrap_or(0);
+        let _ = tx.send(n);
+        let _ = w.shutdown().await;
+    });
+    let down = tokio::io::copy(&mut r, &mut output).await.unwrap_or(0);
+    let _ = output.flush().await;
+    let sent = rx.try_recv().ok();
+    up.abort();
+    (sent, down)
+}
+
+async fn connect_cmd(o: &Opts, host: &str, port: u16, tls: bool, events: bool) -> Result<(), Error> {
+    let t = Instant::now();
+    let d = dial(o).await;
+    if events {
+        // A failed dial has no Dialer to ask; its error carries the attempt count instead.
+        if let Ok(d) = &d {
+            for a in d.attempts().await {
+                emit(&attempt_event(&a));
+            }
+        }
+    }
+    let d = d?;
+    let tunnel = t.elapsed();
+    let t2 = Instant::now();
+    let (stdin, stdout) = (tokio::io::stdin(), tokio::io::stdout());
+    let r = if tls {
+        d.connect_tls(host, port).await.map(|s| Box::new(s) as Box<dyn Stream>)
+    } else {
+        d.connect(host, port).await.map(|s| Box::new(s) as Box<dyn Stream>)
+    };
+    let s = match r {
+        Ok(s) => s,
+        Err(e) => {
+            d.shutdown().await;
+            return Err(e);
+        }
+    };
+    let info = d.exit().expect("connected");
+    if events {
+        emit(&connected_event(&info, host, port, tls, tunnel, t2.elapsed()));
+    }
+    eprintln!("connected to {host}:{port}{} via exit {} in {}", if tls { " (TLS)" } else { "" }, info.exit.label(), secs(t.elapsed()));
+    let (sent, recvd) = pipe(s, stdin, stdout).await;
+    match sent {
+        Some(n) => eprintln!("closed by the server: {n} bytes sent, {recvd} received"),
+        None => eprintln!("closed by the server: {recvd} bytes received (input still open)"),
+    }
+    d.shutdown().await;
+    Ok(())
+}
+
+trait Stream: AsyncRead + AsyncWrite + Send + Unpin {}
+impl<T: AsyncRead + AsyncWrite + Send + Unpin> Stream for T {}
 
 /// SOCKS5 CONNECT with a domain name (resolved at the network requester), minimal client.
 async fn socks5_connect(proxy: SocketAddr, host: &str, port: u16) -> std::io::Result<tokio::net::TcpStream> {
@@ -550,6 +667,67 @@ mod tests {
         assert!(!u.https && u.port == 8080 && u.path == "/");
         assert!(parse_url("ftp://x").is_err());
         assert!(parse_url("https://").is_err());
+    }
+
+    #[tokio::test]
+    async fn pipe_sends_input_and_returns_on_server_close() {
+        let (client, mut server) = tokio::io::duplex(1024);
+        let srv = tokio::spawn(async move {
+            let mut req = vec![0u8; 5];
+            server.read_exact(&mut req).await.unwrap();
+            server.write_all(b"pong:").await.unwrap();
+            server.write_all(&req).await.unwrap();
+            // server closes; the client's input is still open
+        });
+        let (input, mut feed) = tokio::io::duplex(64);
+        feed.write_all(b"hello").await.unwrap(); // `feed` stays open, like stdin of a live parent
+        let mut out = Vec::new();
+        let (_, recvd) = tokio::time::timeout(Duration::from_secs(5), pipe(client, input, &mut out)).await.expect("pipe must end when the server closes");
+        srv.await.unwrap();
+        assert_eq!(out, b"pong:hello");
+        assert_eq!(recvd, 10);
+        drop(feed);
+    }
+
+    #[tokio::test]
+    async fn pipe_half_closes_when_input_ends() {
+        let (client, mut server) = tokio::io::duplex(1024);
+        let srv = tokio::spawn(async move {
+            let mut req = Vec::new();
+            server.read_to_end(&mut req).await.unwrap(); // only ends if the client shut its write side
+            server.write_all(&req).await.unwrap();
+        });
+        let mut out = Vec::new();
+        let (sent, _) = tokio::time::timeout(Duration::from_secs(5), pipe(client, &b"GET / HTTP/1.0\r\n\r\n"[..], &mut out)).await.unwrap();
+        srv.await.unwrap();
+        assert_eq!(out, b"GET / HTTP/1.0\r\n\r\n");
+        assert_eq!(sent, Some(18));
+    }
+
+    #[test]
+    fn events_are_one_line_json_with_the_exit() {
+        let exit = exits::Exit {
+            node_id: 2205,
+            identity: "GwId".into(),
+            ipr_address: "a.b@GwId".into(),
+            performance: 1.0,
+            version: "1.30.0".into(),
+            country: Some("FR".into()),
+            ips: vec!["192.0.2.7".parse().unwrap()],
+        };
+        let info = nymdial::ExitInfo { exit, tunnel_ipv4: "10.0.0.2".parse().unwrap(), setup: Duration::from_secs(5), generation: 1 };
+        let v = connected_event(&info, "mempool.space", 443, false, Duration::from_millis(5250), Duration::from_millis(1500));
+        let line = v.to_string();
+        assert!(!line.contains('\n'));
+        assert_eq!(v["event"], "connected");
+        assert_eq!(v["exit"]["node_id"], 2205);
+        assert_eq!(v["exit"]["country"], "FR");
+        assert_eq!(v["exit"]["ips"][0], "192.0.2.7");
+        assert_eq!(v["tunnel_s"], 5.25);
+        let e = error_event(&Error::Dns { host: "x".into(), reason: "no answer".into() });
+        assert_eq!((e["event"].as_str(), e["step"].as_str()), (Some("error"), Some("dns")));
+        let e = error_event(&Error::ExitsExhausted { attempts: 3, last: "timeout".into() });
+        assert_eq!(e["step"], "exit");
     }
 
     #[test]
