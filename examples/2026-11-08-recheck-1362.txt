@@ -1,0 +1,16 @@
+2026-11-08T10:46:34Z
+$ nymdial -v --exit 1362 --pinned-only --health-timeout 60 --attempt-timeout 150 whoami
+2026-11-08T10:46:35.346506Z  INFO nymdial::dialer: nym-api lists 100 IPR exits
+2026-11-08T10:46:36.745102Z  WARN nym_gateway_client::client: Not enough bandwidth. Trying to get more bandwidth, this might take a while
+2026-11-08T10:46:45.438180Z  INFO nymdial::dialer: health check: DoH via quad9 in 6.0s
+2026-11-08T10:46:45.438315Z  INFO nymdial::rotate: node 1362 (US): tunnel up in 10.1s
+  exit node 1362 (US)           up after 10.09s (incl. health check)
+tunnel up via node 1362 (US) [217.28.130.227] in 10.65s (tunnel IP 10.0.47.175)
+2026-11-08T10:47:00.439780Z  WARN nymdial::dns: DoH quad9: no answer within 15s; trying the next resolver
+2026-11-08T10:47:15.440050Z  WARN nymdial::dns: DoH mullvad: no answer within 15s; trying the next resolver
+2026-11-08T10:47:30.441917Z  WARN nymdial::dns: DoH cloudflare: no answer within 15s; trying the next resolver
+2026-11-08T10:47:30.441993Z  WARN nymdial::dialer: failover from node 1362 (US): DNS failed at every resolver: quad9: no answer within 15s; mullvad: no answer within 15s; cloudflare: no answer within 15s
+2026-11-08T10:47:31.211408Z  WARN nym_gateway_client::client: Not enough bandwidth. Trying to get more bandwidth, this might take a while
+2026-11-08T10:49:33.621442Z  WARN nymdial::rotate: node 1362 (US): IPR handshake ok, but the health check failed (quad9: no answer within 60s; mullvad: no answer within 60s) after 123.2s; trying the next exit
+nymdial: no working exit after 1 attempts (last: node 1362 (US): IPR handshake ok, but the health check failed (quad9: no answer within 60s; mullvad: no answer within 60s))
+exit=1 wall=178.839253736s

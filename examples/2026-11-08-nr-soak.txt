@@ -1,0 +1,33 @@
+2026-11-08T10:57:46Z
+$ nymdial -v whoami-nr -n 8 --interval 15
+2026-11-08T10:57:47.301886Z  INFO nym_sdk::mixnet::socks5_discovery: Found 892 network requesters (892 after country filter)
+2026-11-08T10:57:47.301923Z  INFO nym_sdk::mixnet::socks5_discovery: Using network requester: 82w4aSQKuHQDrvTsCrkDuqNfK5ty9RGyULzC48hhoSfD.4kM6q3xHUzKEzrNKVV1rY5QjcTPAY557msozeELhg4LM@9jQQV9vQ2mFFXywwVhACCKefjUFpyBoCU6KXNfjAEi45 (Gateway: 9jQQV9vQ2mFFXywwVhACCKefjUFpyBoCU6KXNfjAEi45, Country: Some("AU"), Performance: 92)
+2026-11-08T10:57:48.007178Z  WARN nym_gateway_client::client: Not enough bandwidth. Trying to get more bandwidth, this might take a while
+nym-sdk Socks5MixnetClient up in 1.49s (SOCKS5 on 127.0.0.1:11080)
+[+    0s] 2026-11-08T10:57:48.032061Z  WARN nym_client_core::client::real_messages_control::acknowledgement_control::input_message_listener: failed to send a plain message - no node with identity 9jQQV9vQ2mFFXywwVhACCKefjUFpyBoCU6KXNfjAEi45 is known
+2026-11-08T10:57:48.032595Z  WARN nym_client_core::client::real_messages_control::acknowledgement_control::input_message_listener: failed to send a plain message - no node with identity 9jQQV9vQ2mFFXywwVhACCKefjUFpyBoCU6KXNfjAEi45 is known
+2026-11-08T10:58:48.033232Z  WARN nym_client_core::client::real_messages_control::acknowledgement_control::input_message_listener: failed to send a plain message - no node with identity 9jQQV9vQ2mFFXywwVhACCKefjUFpyBoCU6KXNfjAEi45 is known
+network requester path: no answer within 120 s
+2026-11-08T10:59:48.032459Z  WARN nym_client_core::client::real_messages_control::acknowledgement_control::input_message_listener: failed to send a plain message - no node with identity 9jQQV9vQ2mFFXywwVhACCKefjUFpyBoCU6KXNfjAEi45 is known
+2026-11-08T10:59:48.032946Z  WARN nym_client_core::client::real_messages_control::acknowledgement_control::input_message_listener: failed to send a plain message - no node with identity 9jQQV9vQ2mFFXywwVhACCKefjUFpyBoCU6KXNfjAEi45 is known
+[+  135s] 2026-11-08T11:00:03.033839Z  WARN nym_client_core::client::real_messages_control::acknowledgement_control::input_message_listener: failed to send a plain message - no node with identity 9jQQV9vQ2mFFXywwVhACCKefjUFpyBoCU6KXNfjAEi45 is known
+2026-11-08T11:00:03.034358Z  WARN nym_client_core::client::real_messages_control::acknowledgement_control::input_message_listener: failed to send a plain message - no node with identity 9jQQV9vQ2mFFXywwVhACCKefjUFpyBoCU6KXNfjAEi45 is known
+2026-11-08T11:01:03.035071Z  WARN nym_client_core::client::real_messages_control::acknowledgement_control::input_message_listener: failed to send a plain message - no node with identity 9jQQV9vQ2mFFXywwVhACCKefjUFpyBoCU6KXNfjAEi45 is known
+network requester path: no answer within 120 s
+2026-11-08T11:02:03.034345Z  WARN nym_client_core::client::real_messages_control::acknowledgement_control::input_message_listener: failed to send a plain message - no node with identity 9jQQV9vQ2mFFXywwVhACCKefjUFpyBoCU6KXNfjAEi45 is known
+2026-11-08T11:02:03.034884Z  WARN nym_client_core::client::real_messages_control::acknowledgement_control::input_message_listener: failed to send a plain message - no node with identity 9jQQV9vQ2mFFXywwVhACCKefjUFpyBoCU6KXNfjAEi45 is known
+[+  270s] 2026-11-08T11:02:18.035998Z  WARN nym_client_core::client::real_messages_control::acknowledgement_control::input_message_listener: failed to send a plain message - no node with identity 9jQQV9vQ2mFFXywwVhACCKefjUFpyBoCU6KXNfjAEi45 is known
+2026-11-08T11:02:18.036499Z  WARN nym_client_core::client::real_messages_control::acknowledgement_control::input_message_listener: failed to send a plain message - no node with identity 9jQQV9vQ2mFFXywwVhACCKefjUFpyBoCU6KXNfjAEi45 is known
+2026-11-08T11:03:18.036779Z  WARN nym_client_core::client::real_messages_control::acknowledgement_control::input_message_listener: failed to send a plain message - no node with identity 9jQQV9vQ2mFFXywwVhACCKefjUFpyBoCU6KXNfjAEi45 is known
+network requester path: no answer within 120 s
+2026-11-08T11:04:18.037117Z  WARN nym_client_core::client::real_messages_control::acknowledgement_control::input_message_listener: failed to send a plain message - no node with identity 9jQQV9vQ2mFFXywwVhACCKefjUFpyBoCU6KXNfjAEi45 is known
+2026-11-08T11:04:18.037644Z  WARN nym_client_core::client::real_messages_control::acknowledgement_control::input_message_listener: failed to send a plain message - no node with identity 9jQQV9vQ2mFFXywwVhACCKefjUFpyBoCU6KXNfjAEi45 is known
+[+  405s] 2026-11-08T11:04:33.038662Z  WARN nym_client_core::client::real_messages_control::acknowledgement_control::input_message_listener: failed to send a plain message - no node with identity 9jQQV9vQ2mFFXywwVhACCKefjUFpyBoCU6KXNfjAEi45 is known
+2026-11-08T11:04:33.039311Z  WARN nym_client_core::client::real_messages_control::acknowledgement_control::input_message_listener: failed to send a plain message - no node with identity 9jQQV9vQ2mFFXywwVhACCKefjUFpyBoCU6KXNfjAEi45 is known
+2026-11-08T11:05:33.039631Z  WARN nym_client_core::client::real_messages_control::acknowledgement_control::input_message_listener: failed to send a plain message - no node with identity 9jQQV9vQ2mFFXywwVhACCKefjUFpyBoCU6KXNfjAEi45 is known
+network requester path: no answer within 120 s
+2026-11-08T11:06:33.040088Z  WARN nym_client_core::client::real_messages_control::acknowledgement_control::input_message_listener: failed to send a plain message - no node with identity 9jQQV9vQ2mFFXywwVhACCKefjUFpyBoCU6KXNfjAEi45 is known
+2026-11-08T11:06:33.040793Z  WARN nym_client_core::client::real_messages_control::acknowledgement_control::input_message_listener: failed to send a plain message - no node with identity 9jQQV9vQ2mFFXywwVhACCKefjUFpyBoCU6KXNfjAEi45 is known
+[+  540s] 2026-11-08T11:06:48.040521Z  WARN nym_client_core::client::real_messages_control::acknowledgement_control::input_message_listener: failed to send a plain message - no node with identity 9jQQV9vQ2mFFXywwVhACCKefjUFpyBoCU6KXNfjAEi45 is known
+2026-11-08T11:06:48.041022Z  WARN nym_client_core::client::real_messages_control::acknowledgement_control::input_message_listener: failed to send a plain message - no node with identity 9jQQV9vQ2mFFXywwVhACCKefjUFpyBoCU6KXNfjAEi45 is known
+exit=124 wall=600.002611200s

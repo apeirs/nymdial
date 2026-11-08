@@ -1,0 +1,40 @@
+# earlier build (per-exit budget 60 s, health check up to 3 x 20 s)
+2026-11-08T10:17:09Z
+2026-11-08T10:17:10.370816Z  INFO nymdial::dialer: nym-api lists 100 IPR exits
+2026-11-08T10:17:14.208765Z  WARN nym_gateway_client::client: Not enough bandwidth. Trying to get more bandwidth, this might take a while
+2026-11-08T10:17:36.950240Z  WARN nymdial::dns: DoH quad9: no answer within 20s; trying the next resolver
+2026-11-08T10:17:56.951015Z  WARN nymdial::dns: DoH mullvad: no answer within 20s; trying the next resolver
+2026-11-08T10:18:10.372515Z  WARN nymdial::rotate: node 2300 (US): no answer within 60s after 60.0s; trying the next exit
+2026-11-08T10:18:11.189145Z  WARN nym_gateway_client::client: Not enough bandwidth. Trying to get more bandwidth, this might take a while
+2026-11-08T10:18:16.062427Z  INFO nymdial::dialer: health check: DoH via quad9 in 4.1s
+2026-11-08T10:18:16.062602Z  INFO nymdial::rotate: node 2871 (GR): tunnel up in 5.7s
+  exit node 2300 (US)           failed after 60.00s: no answer within 60s
+  exit node 2871 (GR)           up after 5.69s (incl. health check)
+tunnel up via node 2871 (GR) [85.113.71.124, 2001:df1:801:a022::1e8:a] in 66.13s (tunnel IP 10.0.73.86)
+2026-11-08T10:18:16.952591Z  WARN nymdial::dns: DoH cloudflare: no answer within 20s; trying the next resolver
+GET cloudflare.com -> HTTP 200 via exit node 2871 (GR) (tunnel #1; call took 3.51s: DNS+TCP+TLS 2.82s, request 0.69s)
+  the server saw 85.113.71.124 = Nym node 2871 (GR) in the nym-api node list
+killing the tunnel through node 2871 (GR) underneath the dialer
+2026-11-08T10:19:10.051696Z  WARN nymdial::dns: DoH quad9: no answer within 20s; trying the next resolver
+2026-11-08T10:19:10.051790Z  WARN nymdial::dialer: failover from node 2871 (GR): TCP connect to 104.16.133.229:443 timed out and the health check failed
+2026-11-08T10:19:11.441667Z  WARN nym_gateway_client::client: Not enough bandwidth. Trying to get more bandwidth, this might take a while
+2026-11-08T10:19:32.422520Z  WARN nymdial::dns: DoH quad9: no answer within 20s; trying the next resolver
+2026-11-08T10:19:52.425749Z  WARN nymdial::dns: DoH mullvad: no answer within 20s; trying the next resolver
+2026-11-08T10:20:10.052592Z  WARN nymdial::rotate: node 2205 (FR): no answer within 60s after 60.0s; trying the next exit
+2026-11-08T10:20:11.570027Z  WARN nym_gateway_client::client: Not enough bandwidth. Trying to get more bandwidth, this might take a while
+2026-11-08T10:20:12.427084Z  WARN nymdial::dns: DoH cloudflare: no answer within 20s; trying the next resolver
+2026-11-08T10:20:32.736252Z  WARN nymdial::dns: DoH quad9: no answer within 20s; trying the next resolver
+2026-11-08T10:20:52.737378Z  WARN nymdial::dns: DoH mullvad: no answer within 20s; trying the next resolver
+2026-11-08T10:21:10.053649Z  WARN nymdial::rotate: node 3379 (NL): no answer within 60s after 60.0s; trying the next exit
+2026-11-08T10:21:12.673388Z  WARN nym_gateway_client::client: Not enough bandwidth. Trying to get more bandwidth, this might take a while
+2026-11-08T10:21:12.737683Z  WARN nymdial::dns: DoH cloudflare: no answer within 20s; trying the next resolver
+2026-11-08T10:21:19.664883Z  INFO nymdial::dialer: health check: DoH via quad9 in 5.7s
+2026-11-08T10:21:19.665034Z  INFO nymdial::rotate: node 1791 (ES): tunnel up in 9.6s
+GET cloudflare.com -> HTTP 200 via exit node 1791 (ES) (tunnel #2; call took 184.90s: DNS+TCP+TLS 183.94s, request 0.97s)
+  the server saw 5.188.181.140 = Nym node 1791 (ES) in the nym-api node list
+  attempt: node 2300 (US) 60.00s no answer within 60s
+  attempt: node 2871 (GR) 5.69s ok
+  attempt: node 2205 (FR) 60.00s no answer within 60s
+  attempt: node 3379 (NL) 60.00s no answer within 60s
+  attempt: node 1791 (ES) 9.61s ok
+exit=0 wall=255.496899483s

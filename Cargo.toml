@@ -1,0 +1,123 @@
+[package]
+name = "nymdial"
+version = "0.1.0"
+edition = "2021"
+rust-version = "1.85"
+description = "Dial TCP and TLS connections through the Nym mixnet from inside your process: exit selection, failover and DNS over the mixnet, on top of nym-smolmix"
+license = "MIT"
+repository = "https://github.com/apeirs/nymdial"
+readme = "README.md"
+keywords = ["nym", "mixnet", "privacy", "wallet", "tcp"]
+categories = ["network-programming", "cryptography"]
+
+[dependencies]
+nym-smolmix = "=1.21.6"
+nym-sdk = "=1.21.6"
+tokio = { version = "1.47", features = ["rt-multi-thread", "macros", "time", "io-util", "io-std", "sync", "net"] }
+tokio-rustls = { version = "0.26", default-features = false, features = ["ring", "tls12", "logging"] }
+rustls = { version = "0.23", default-features = false, features = ["ring", "std", "tls12", "logging"] }
+webpki-roots = "0.26"
+hyper = { version = "1", features = ["client", "http1", "http2"] }
+hyper-util = { version = "0.1", features = ["tokio"] }
+http-body-util = "0.1"
+hickory-proto = { version = "0.26.1", default-features = false }
+reqwest = { version = "0.12", default-features = false, features = ["json", "rustls-tls"] }
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+rand = "0.8"
+base64 = "0.22"
+thiserror = "2"
+tracing = "0.1"
+tracing-subscriber = { version = "0.3", features = ["env-filter", "fmt"] }
+clap = { version = "4.5", features = ["derive"] }
+
+# Version pins. nym-sdk 1.21.6 asks for its sibling crates as "^1.21.6", and a fresh resolution picks the
+# 1.22.x ones, which do not compile against it (nym-client-core 1.22.1: unresolved imports, checked 2026-11-08).
+# Pinning the whole family here makes `cargo add nymdial` build without a lock file. Nothing extra is compiled:
+# these are all in the tree already, and default features stay off.
+nym-api-requests = { version = "=1.21.6", default-features = false }
+nym-bandwidth-controller = { version = "=1.21.6", default-features = false }
+nym-bandwidth-fetcher = { version = "=1.21.6", default-features = false }
+nym-bin-common = { version = "=1.21.6", default-features = false }
+nym-bls12_381-fork = { version = "=0.8.0-forked", default-features = false }
+nym-client-core = { version = "=1.21.6", default-features = false }
+nym-client-core-config-types = { version = "=1.21.6", default-features = false }
+nym-client-core-gateways-storage = { version = "=1.21.6", default-features = false }
+nym-client-core-surb-storage = { version = "=1.21.6", default-features = false }
+nym-coconut-dkg-common = { version = "=1.21.6", default-features = false }
+nym-common = { version = "=1.21.6", default-features = false }
+nym-compact-ecash = { version = "=1.21.6", default-features = false }
+nym-config = { version = "=1.21.6", default-features = false }
+nym-contracts-common = { version = "=1.21.6", default-features = false }
+nym-credential-storage = { version = "=1.21.6", default-features = false }
+nym-credentials = { version = "=1.21.6", default-features = false }
+nym-credentials-interface = { version = "=1.21.6", default-features = false }
+nym-crypto = { version = "=1.21.6", default-features = false }
+nym-directory-attestation = { version = "=1.21.6", default-features = false }
+nym-directory-contract-common = { version = "=1.21.6", default-features = false }
+nym-ecash-contract-common = { version = "=1.21.6", default-features = false }
+nym-ecash-signer-check-types = { version = "=1.21.6", default-features = false }
+nym-ecash-time = { version = "=1.21.6", default-features = false }
+nym-exit-policy = { version = "=1.21.6", default-features = false }
+nym-gateway-client = { version = "=1.21.6", default-features = false }
+nym-gateway-requests = { version = "=1.21.6", default-features = false }
+nym-geolocation-contract-common = { version = "=1.21.6", default-features = false }
+nym-group-contract-common = { version = "=1.21.6", default-features = false }
+nym-http-api-client = { version = "=1.21.6", default-features = false }
+nym-http-api-client-macro = { version = "=1.21.6", default-features = false }
+nym-http-api-common = { version = "=1.21.6", default-features = false }
+nym-id = { version = "=1.21.6", default-features = false }
+nym-ip-packet-requests = { version = "=1.21.6", default-features = false }
+nym-kkt-ciphersuite = { version = "=1.21.6", default-features = false }
+nym-lp-data = { version = "=1.21.6", default-features = false }
+nym-lthash = { version = "=1.21.6", default-features = false }
+nym-metrics = { version = "=1.21.6", default-features = false }
+nym-mixnet-client = { version = "=1.21.6", default-features = false }
+nym-mixnet-contract-common = { version = "=1.21.6", default-features = false }
+nym-multisig-contract-common = { version = "=1.21.6", default-features = false }
+nym-network-defaults = { version = "=1.21.6", default-features = false }
+nym-network-monitors-contract-common = { version = "=1.21.6", default-features = false }
+nym-node-families-contract-common = { version = "=1.21.6", default-features = false }
+nym-node-requests = { version = "=1.21.6", default-features = false }
+nym-noise = { version = "=1.21.6", default-features = false }
+nym-noise-keys = { version = "=1.21.6", default-features = false }
+nym-nonexhaustive-delayqueue = { version = "=1.21.6", default-features = false }
+nym-ordered-buffer = { version = "=1.21.6", default-features = false }
+nym-pemstore = { version = "=1.21.6", default-features = false }
+nym-performance-contract-common = { version = "=1.21.6", default-features = false }
+nym-serde-helpers = { version = "=1.21.6", default-features = false }
+nym-service-provider-requests-common = { version = "=1.21.6", default-features = false }
+nym-service-providers-common = { version = "=1.21.6", default-features = false }
+nym-smol-core = { version = "=1.21.6", default-features = false }
+nym-socks5-client-core = { version = "=1.21.6", default-features = false }
+nym-socks5-proxy-helpers = { version = "=1.21.6", default-features = false }
+nym-socks5-requests = { version = "=1.21.6", default-features = false }
+nym-sphinx = { version = "=1.21.6", default-features = false }
+nym-sphinx-acknowledgements = { version = "=1.21.6", default-features = false }
+nym-sphinx-addressing = { version = "=1.21.6", default-features = false }
+nym-sphinx-anonymous-replies = { version = "=1.21.6", default-features = false }
+nym-sphinx-chunking = { version = "=1.21.6", default-features = false }
+nym-sphinx-cover = { version = "=1.21.6", default-features = false }
+nym-sphinx-forwarding = { version = "=1.21.6", default-features = false }
+nym-sphinx-framing = { version = "=1.21.6", default-features = false }
+nym-sphinx-params = { version = "=1.21.6", default-features = false }
+nym-sphinx-routing = { version = "=1.21.6", default-features = false }
+nym-sphinx-types = { version = "=1.21.6", default-features = false }
+nym-sqlx-pool-guard = { version = "=1.21.6", default-features = false }
+nym-statistics-common = { version = "=1.21.6", default-features = false }
+nym-task = { version = "=1.21.6", default-features = false }
+nym-ticketbooks-merkle = { version = "=1.21.6", default-features = false }
+nym-topology = { version = "=1.21.6", default-features = false }
+nym-upgrade-mode-check = { version = "=1.21.6", default-features = false }
+nym-validator-client = { version = "=1.21.6", default-features = false }
+nym-vesting-contract-common = { version = "=1.21.6", default-features = false }
+nym-wasm-utils = { version = "=1.21.6", default-features = false }
+nym-wireguard-types = { version = "=1.21.6", default-features = false }
+
+
+[dev-dependencies]
+tokio = { version = "1.47", features = ["test-util", "macros", "rt-multi-thread"] }
+
+[[bin]]
+name = "nymdial"
+path = "src/bin/nymdial.rs"

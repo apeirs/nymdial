@@ -1,0 +1,41 @@
+2026-11-08T10:49:33Z
+$ nymdial -v bench https://blockstream.info/api/blocks/tip/height -n 5
+2026-11-08T10:49:35.252914Z  INFO nymdial::dialer: nym-api lists 100 IPR exits
+2026-11-08T10:49:36.617376Z  WARN nym_gateway_client::client: Not enough bandwidth. Trying to get more bandwidth, this might take a while
+2026-11-08T10:50:01.396720Z  WARN nymdial::rotate: node 2785 (HU): IPR handshake ok, but the health check failed (quad9: no answer within 12s; mullvad: no answer within 12s) after 26.1s; trying the next exit
+2026-11-08T10:50:11.330215Z  WARN nym_gateway_client::client: Not enough bandwidth. Trying to get more bandwidth, this might take a while
+2026-11-08T10:50:36.115839Z  WARN nymdial::rotate: node 2734 (DE): IPR handshake ok, but the health check failed (quad9: no answer within 12s; mullvad: no answer within 12s) after 34.7s; trying the next exit
+2026-11-08T10:50:37.396620Z  WARN nym_gateway_client::client: Not enough bandwidth. Trying to get more bandwidth, this might take a while
+2026-11-08T10:50:45.861775Z  INFO nymdial::dialer: health check: DoH via quad9 in 5.9s
+2026-11-08T10:50:45.861926Z  INFO nymdial::rotate: node 2620 (FI): tunnel up in 9.7s
+  exit node 2785 (HU)           failed after 26.14s: IPR handshake ok, but the health check failed (quad9: no answer within 12s; mullvad: no answer within 12s)
+  exit node 2734 (DE)           failed after 34.72s: IPR handshake ok, but the health check failed (quad9: no answer within 12s; mullvad: no answer within 12s)
+  exit node 2620 (FI)           up after 9.75s (incl. health check)
+tunnel up via node 2620 (FI) [157.180.47.116] in 72.23s (tunnel IP 10.0.161.83)
+  1  HTTP 200        6 B  connect 6.09s  request 2.30s  total 8.39s
+  2  error after 31.14s: TLS with blockstream.info: no handshake within 30s
+2026-11-08T10:51:40.391389Z  WARN nymdial::dns: DoH quad9: no answer within 15s; trying the next resolver
+2026-11-08T10:51:55.391902Z  WARN nymdial::dns: DoH mullvad: no answer within 15s; trying the next resolver
+2026-11-08T10:52:10.392931Z  WARN nymdial::dns: DoH cloudflare: no answer within 15s; trying the next resolver
+2026-11-08T10:52:10.392965Z  WARN nymdial::dialer: failover from node 2620 (FI): DNS failed at every resolver: quad9: no answer within 15s; mullvad: no answer within 15s; cloudflare: no answer within 15s
+2026-11-08T10:52:11.520951Z  WARN nym_gateway_client::client: Not enough bandwidth. Trying to get more bandwidth, this might take a while
+2026-11-08T10:52:17.366960Z  INFO nymdial::dialer: health check: DoH via quad9 in 5.0s
+2026-11-08T10:52:17.367019Z  INFO nymdial::rotate: node 3229 (RO): tunnel up in 7.0s
+  3  error after 83.42s: TLS with blockstream.info: no handshake within 30s
+2026-11-08T10:53:42.819005Z  WARN nymdial::dialer: failover from node 3229 (RO): TCP connect to 23.155.96.128:443 timed out and the health check failed
+2026-11-08T10:53:43.457350Z  WARN nym_gateway_client::client::websockets: Main endpoint failed ws://at1.pierrot-nym.net:9000/ : connection failed: ws://at1.pierrot-nym.net:9000/: IO error: Network is unreachable (os error 101), trying fallback : ws://152.53.1.203:9000/
+2026-11-08T10:53:43.956057Z  WARN nym_gateway_client::client: Not enough bandwidth. Trying to get more bandwidth, this might take a while
+2026-11-08T10:54:08.692977Z  WARN nymdial::rotate: node 2721 (US): IPR handshake ok, but the health check failed (quad9: no answer within 12s; mullvad: no answer within 12s) after 25.9s; trying the next exit
+2026-11-08T10:54:09.319280Z  WARN nym_gateway_client::client: Not enough bandwidth. Trying to get more bandwidth, this might take a while
+2026-11-08T10:54:33.904359Z  WARN nymdial::rotate: node 2764 (CA): IPR handshake ok, but the health check failed (quad9: no answer within 12s; mullvad: no answer within 12s) after 25.2s; trying the next exit
+2026-11-08T10:54:34.200365Z  WARN nym_http_api_client::dns: primary DNS failed w/ error: stream closed
+2026-11-08T10:54:34.200390Z  WARN nym_gateway_client::client::websockets: Main endpoint failed ws://pulse5.nymgateway.com:9000/ : resolution failed: hickory-dns resolver error: stream closed, trying fallback : ws://103.82.101.69:9000/
+2026-11-08T10:54:34.572938Z  WARN nym_gateway_client::client::websockets: Main endpoint failed ws://pulse5.nymgateway.com:9000/ : resolution failed: hickory-dns resolver error: DNS error: no records found for Query { name: Name("pulse5.nymgateway.com."), query_type: AAAA, query_class: IN }, trying fallback : ws://103.82.101.69:9000/
+2026-11-08T10:54:34.702923Z  WARN nym_gateway_client::client: Not enough bandwidth. Trying to get more bandwidth, this might take a while
+2026-11-08T10:54:42.030370Z  INFO nymdial::dialer: health check: DoH via quad9 in 6.5s
+2026-11-08T10:54:42.030409Z  INFO nymdial::rotate: node 1953: tunnel up in 8.1s
+  4  HTTP 200        6 B  connect 120.29s  request 2.69s  total 122.98s
+  5  error after 31.01s: TLS with blockstream.info: no handshake within 30s
+ok 2/5  median 122.98s  min 8.39s  max 122.98s
+[3]   Done                       run nr-3 -v whoami-nr
+exit=0 wall=349.183457830s

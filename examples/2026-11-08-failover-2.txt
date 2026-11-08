@@ -1,0 +1,27 @@
+2026-11-08T10:37:12Z
+$ nymdial -v --dead-first whoami
+forcing a dead exit first: 5ZAaA8fmVyEe...@CTLwgiM4pCeD7CTRu5yqQJaVCmv6cxfKETfUL1rXHgkE
+2026-11-08T10:37:13.523932Z  INFO nymdial::dialer: nym-api lists 100 IPR exits
+2026-11-08T10:37:15.066288Z  WARN nym_gateway_client::client: Not enough bandwidth. Trying to get more bandwidth, this might take a while
+2026-11-08T10:37:58.525144Z  WARN nymdial::rotate: unlisted exit @CTLwgiM4: no answer within 45s after 45.0s; trying the next exit
+2026-11-08T10:37:59.287813Z  WARN nym_gateway_client::client: Not enough bandwidth. Trying to get more bandwidth, this might take a while
+2026-11-08T10:38:24.363087Z  WARN nymdial::rotate: node 1362 (US): IPR handshake ok, but the health check failed (quad9: no answer within 12s; mullvad: no answer within 12s) after 25.8s; trying the next exit
+2026-11-08T10:38:27.567245Z  WARN nym_gateway_client::client: Not enough bandwidth. Trying to get more bandwidth, this might take a while
+2026-11-08T10:38:52.831852Z  WARN nymdial::rotate: node 3173 (MD): IPR handshake ok, but the health check failed (quad9: no answer within 12s; mullvad: no answer within 12s) after 28.5s; trying the next exit
+2026-11-08T10:38:53.845630Z  WARN nym_gateway_client::client: Not enough bandwidth. Trying to get more bandwidth, this might take a while
+2026-11-08T10:39:18.658805Z  WARN nymdial::rotate: node 2702 (SK): IPR handshake ok, but the health check failed (quad9: no answer within 12s; mullvad: no answer within 12s) after 25.8s; trying the next exit
+2026-11-08T10:39:19.638755Z  WARN nym_gateway_client::client: Not enough bandwidth. Trying to get more bandwidth, this might take a while
+2026-11-08T10:39:44.245657Z  WARN nymdial::rotate: node 1706 (FR): IPR handshake ok, but the health check failed (quad9: no answer within 12s; mullvad: no answer within 12s) after 25.6s; trying the next exit
+2026-11-08T10:39:45.739791Z  WARN nym_gateway_client::client: Not enough bandwidth. Trying to get more bandwidth, this might take a while
+2026-11-08T10:39:50.907237Z  INFO nymdial::dialer: health check: DoH via quad9 in 4.4s
+2026-11-08T10:39:50.907389Z  INFO nymdial::rotate: node 2693 (NL): tunnel up in 6.7s
+  exit unlisted exit @CTLwgiM4  failed after 45.00s: no answer within 45s
+  exit node 1362 (US)           failed after 25.84s: IPR handshake ok, but the health check failed (quad9: no answer within 12s; mullvad: no answer within 12s)
+  exit node 3173 (MD)           failed after 28.47s: IPR handshake ok, but the health check failed (quad9: no answer within 12s; mullvad: no answer within 12s)
+  exit node 2702 (SK)           failed after 25.83s: IPR handshake ok, but the health check failed (quad9: no answer within 12s; mullvad: no answer within 12s)
+  exit node 1706 (FR)           failed after 25.59s: IPR handshake ok, but the health check failed (quad9: no answer within 12s; mullvad: no answer within 12s)
+  exit node 2693 (NL)           up after 6.66s (incl. health check)
+tunnel up via node 2693 (NL) [152.53.105.109, 2a0a:4cc0:40:c19:c8e0:27ff:fe2f:9ef4] in 157.95s (tunnel IP 10.0.42.188)
+GET https://cloudflare.com/cdn-cgi/trace -> HTTP 200 via exit node 2693 (NL) (DNS+TCP+TLS 3.25s, request 0.61s)
+  the server saw 152.53.105.109 = Nym node 2693 (NL) in the nym-api node list
+exit=0 wall=162.887610917s

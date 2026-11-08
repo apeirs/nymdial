@@ -1,0 +1,17 @@
+2026-11-08T10:37:12Z
+$ nymdial -v whoami --rotate
+2026-11-08T10:37:12.937623Z  INFO nymdial::dialer: nym-api lists 100 IPR exits
+2026-11-08T10:37:14.469672Z  WARN nym_gateway_client::client: Not enough bandwidth. Trying to get more bandwidth, this might take a while
+2026-11-08T10:37:22.820291Z  INFO nymdial::dialer: health check: DoH via quad9 in 7.5s
+2026-11-08T10:37:22.820409Z  INFO nymdial::rotate: node 3464 (AT): tunnel up in 9.9s
+  exit node 3464 (AT)           up after 9.88s (incl. health check)
+tunnel up via node 3464 (AT) [188.137.153.141] in 10.48s (tunnel IP 10.0.193.227)
+GET https://cloudflare.com/cdn-cgi/trace -> HTTP 200 via exit node 3464 (AT) (DNS+TCP+TLS 2.70s, request 2.16s)
+  the server saw 188.137.153.141 = Nym node 3464 (AT) in the nym-api node list
+2026-11-08T10:37:29.082370Z  WARN nym_gateway_client::client: Not enough bandwidth. Trying to get more bandwidth, this might take a while
+2026-11-08T10:37:33.525354Z  INFO nymdial::dialer: health check: DoH via quad9 in 3.7s
+2026-11-08T10:37:33.525533Z  INFO nymdial::rotate: node 3092 (FR): tunnel up in 5.4s
+rotated to node 3092 (FR) in 5.38s
+GET https://cloudflare.com/cdn-cgi/trace -> HTTP 200 via exit node 3092 (FR) (DNS+TCP+TLS 2.04s, request 0.78s)
+  the server saw 87.106.222.6 = Nym node 3092 (FR) in the nym-api node list
+exit=0 wall=24.530708709s

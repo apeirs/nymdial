@@ -1,0 +1,443 @@
+{
+ "pagination": {
+  "total": 6,
+  "page": 0,
+  "size": 6
+ },
+ "data": [
+  {
+   "node_id": 2871,
+   "contract_node_type": "nym_node",
+   "description": {
+    "last_polled": "2026-11-08 09:57:28.966164302 +00:00:00",
+    "host_information": {
+     "ip_address": [
+      "85.113.71.124",
+      "2001:df1:801:a022::1e8:a"
+     ],
+     "hostname": null,
+     "keys": {
+      "ed25519": "gmCMurCqu5r3ugBh43ti5zw98SzLKzL6Ldh4TrChwJf",
+      "x25519": "F6wNXpgDWL2roNM3J6kECHa3R33Cp44NSz7Mpg9TbNSw",
+      "current_x25519_sphinx_key": {
+       "rotation_id": 486,
+       "public_key": "F6wNXpgDWL2roNM3J6kECHa3R33Cp44NSz7Mpg9TbNSw"
+      },
+      "pre_announced_x25519_sphinx_key": null,
+      "x25519_versioned_noise": {
+       "supported_version": 1,
+       "x25519_pubkey": "FNdRHj3MXZuaYPKi7FxjNbZVw1tDPHT1Xtgm2ZzyMeG7"
+      }
+     }
+    },
+    "declared_role": {
+     "mixnode": false,
+     "entry": true,
+     "exit_nr": true,
+     "exit_ipr": true
+    },
+    "auxiliary_details": {
+     "location": "GR",
+     "announce_ports": {
+      "verloc_port": 1790,
+      "mix_port": 1789
+     },
+     "accepted_operator_terms_and_conditions": true
+    },
+    "build_information": {
+     "binary_name": "nym-node",
+     "build_timestamp": "2026-10-28T16:15:33.395437008Z",
+     "build_version": "1.43.0",
+     "commit_sha": "f92749c5f45bf1fdaacb824f9796bca2d641c6f9",
+     "commit_timestamp": "2026-10-28T17:13:38.000000000+01:00",
+     "commit_branch": "HEAD",
+     "rustc_version": "1.97.0",
+     "rustc_channel": "stable",
+     "cargo_profile": "release",
+     "cargo_triple": "x86_64-unknown-linux-gnu"
+    },
+    "network_requester": {
+     "address": "29981FVyB9x3cbCPAfcbeSRDkd9roaavR1Nzx2Gq7aNV.9QS5dwyqNxwWXcRiL4SC5LSv5zPeQyXgaCbrpTcue7wm@gmCMurCqu5r3ugBh43ti5zw98SzLKzL6Ldh4TrChwJf",
+     "uses_exit_policy": true
+    },
+    "ip_packet_router": {
+     "address": "5JDwLB5ftxuKm8kQ6tJqPpeJSgRAGwoS33XcB4GoL9fr.1NeHzqSPmb5EPZ4rEQqhuQzwUok1ZqmX7ed9U74ceaq@gmCMurCqu5r3ugBh43ti5zw98SzLKzL6Ldh4TrChwJf"
+    },
+    "authenticator": {
+     "address": "7i2wEtvfGU7S3MXmmxJsaGbSpELer1ehb6V5YNnzTwpB.FeYZRF4RgfxnZCbZRDiPLcCmcBoKTZ4yAmC597R84iL3@gmCMurCqu5r3ugBh43ti5zw98SzLKzL6Ldh4TrChwJf"
+    },
+    "wireguard": {
+     "port": 51822,
+     "tunnel_port": 51822,
+     "metadata_port": 51830,
+     "public_key": "HcHNq8EvPmkEMEdD4UmbDHpSGM4CvwXbN9PdijS7ddte"
+    },
+    "mixnet_websockets": {
+     "ws_port": 9000,
+     "wss_port": null
+    }
+   }
+  },
+  {
+   "node_id": 3287,
+   "contract_node_type": "nym_node",
+   "description": {
+    "last_polled": "2026-11-08 09:58:21.125154642 +00:00:00",
+    "host_information": {
+     "ip_address": [
+      "131.123.42.67"
+     ],
+     "hostname": "silentrelay12.testnet25.capetown",
+     "keys": {
+      "ed25519": "Du9HzfWBLBYA4KsKTEGVPqjRMeLRAfd4jygSV3QDhu1X",
+      "x25519": "4rSyGk97gkyXcrzN7eRiDyACxzeETd6D9vRj95SgKA6L",
+      "current_x25519_sphinx_key": {
+       "rotation_id": 486,
+       "public_key": "4rSyGk97gkyXcrzN7eRiDyACxzeETd6D9vRj95SgKA6L"
+      },
+      "pre_announced_x25519_sphinx_key": null,
+      "x25519_versioned_noise": {
+       "supported_version": 1,
+       "x25519_pubkey": "95BEXEvhQyWbHK6hdswP2CrKb6UHT8nkoykXFHoTUL1r"
+      }
+     }
+    },
+    "declared_role": {
+     "mixnode": false,
+     "entry": true,
+     "exit_nr": true,
+     "exit_ipr": true
+    },
+    "auxiliary_details": {
+     "location": "BG",
+     "announce_ports": {
+      "verloc_port": 1790,
+      "mix_port": 1789
+     },
+     "accepted_operator_terms_and_conditions": true
+    },
+    "build_information": {
+     "binary_name": "nym-node",
+     "build_timestamp": "2026-10-28T16:15:33.395437008Z",
+     "build_version": "1.43.0",
+     "commit_sha": "f92749c5f45bf1fdaacb824f9796bca2d641c6f9",
+     "commit_timestamp": "2026-10-28T17:13:38.000000000+01:00",
+     "commit_branch": "HEAD",
+     "rustc_version": "1.97.0",
+     "rustc_channel": "stable",
+     "cargo_profile": "release",
+     "cargo_triple": "x86_64-unknown-linux-gnu"
+    },
+    "network_requester": {
+     "address": "7jfmoMEfp5Knd3YLSg8JE4SdGvhaqHvas3LLmgxvv65u.9yAjzjYsBNGTkYEh9dULdj1RgqaLBFV2fgMZRrcaHvK7@Du9HzfWBLBYA4KsKTEGVPqjRMeLRAfd4jygSV3QDhu1X",
+     "uses_exit_policy": true
+    },
+    "ip_packet_router": {
+     "address": "8dXRG14ApYygvJYHPLdy3wJqC7BMDnJW23NLmks6teGB.8nZncnZn1tP8Qx1uYMng6XXbnLqruXc7ss5fCG8hVSo5@Du9HzfWBLBYA4KsKTEGVPqjRMeLRAfd4jygSV3QDhu1X"
+    },
+    "authenticator": {
+     "address": "3oTdB4s9Qv1jR8hu9ggVdiU7zNKDLuyGQeQ1usgMGNwh.9eWSaFHnwm4VW4PHMi5orEd8uh8FN3NLT8Zzixn5LCXy@Du9HzfWBLBYA4KsKTEGVPqjRMeLRAfd4jygSV3QDhu1X"
+    },
+    "wireguard": {
+     "port": 51822,
+     "tunnel_port": 51822,
+     "metadata_port": 51830,
+     "public_key": "7zQs2TQK5qedqxK9wq2BVwzE2qf7sWKBPNArtGMGQa31"
+    },
+    "mixnet_websockets": {
+     "ws_port": 9000,
+     "wss_port": 9001
+    }
+   }
+  },
+  {
+   "node_id": 2716,
+   "contract_node_type": "nym_node",
+   "description": {
+    "last_polled": "2026-11-08 09:57:22.234056257 +00:00:00",
+    "host_information": {
+     "ip_address": [
+      "57.131.24.48",
+      "2001:41d0:2005:100::4af"
+     ],
+     "hostname": "nym-exit.it-node1.oceanus.li",
+     "keys": {
+      "ed25519": "76xhXwYE2hTGebJD21ynsuUHENnm4SwQq6GSPSunSDVm",
+      "x25519": "7XJLcsGRZXWbki5pDrBcB7CB73uWuJGUYT9gbvxMEzLy",
+      "current_x25519_sphinx_key": {
+       "rotation_id": 486,
+       "public_key": "7XJLcsGRZXWbki5pDrBcB7CB73uWuJGUYT9gbvxMEzLy"
+      },
+      "pre_announced_x25519_sphinx_key": null,
+      "x25519_versioned_noise": {
+       "supported_version": 1,
+       "x25519_pubkey": "DxVi6mbFYEcideGcBar2yjTF6CUFKCKkTUGhd7YcuyYE"
+      }
+     }
+    },
+    "declared_role": {
+     "mixnode": false,
+     "entry": true,
+     "exit_nr": true,
+     "exit_ipr": true
+    },
+    "auxiliary_details": {
+     "location": "IT",
+     "announce_ports": {
+      "verloc_port": 1790,
+      "mix_port": 1789
+     },
+     "accepted_operator_terms_and_conditions": true
+    },
+    "build_information": {
+     "binary_name": "nym-node",
+     "build_timestamp": "2026-10-28T16:15:33.395437008Z",
+     "build_version": "1.43.0",
+     "commit_sha": "f92749c5f45bf1fdaacb824f9796bca2d641c6f9",
+     "commit_timestamp": "2026-10-28T17:13:38.000000000+01:00",
+     "commit_branch": "HEAD",
+     "rustc_version": "1.97.0",
+     "rustc_channel": "stable",
+     "cargo_profile": "release",
+     "cargo_triple": "x86_64-unknown-linux-gnu"
+    },
+    "network_requester": {
+     "address": "HiigtxNP6ZoV3FGuJhZuvb4QyWfXGxmx9xusod2YQPCg.Gc2JHbV7ZRPyKmL3d5vVsMmQaS171xy849BJWH6vt9AP@76xhXwYE2hTGebJD21ynsuUHENnm4SwQq6GSPSunSDVm",
+     "uses_exit_policy": true
+    },
+    "ip_packet_router": {
+     "address": "9HqqY9qBaCjCS9gMPWT9W4vVEteRviYaKF3sZE8Jcw2k.5wCGknH6qit8bDCVU8z8wmsTHGYpkskNagFK1V3ZBcnL@76xhXwYE2hTGebJD21ynsuUHENnm4SwQq6GSPSunSDVm"
+    },
+    "authenticator": {
+     "address": "AF864wHeS299848Z3UfkAcpbUzKHzpYJijXb9Zoe1Xfe.GRUqz721wxGhL5h9C3yJ8iBLpsXM29rsfDvuy2ShCLMS@76xhXwYE2hTGebJD21ynsuUHENnm4SwQq6GSPSunSDVm"
+    },
+    "wireguard": {
+     "port": 51822,
+     "tunnel_port": 51822,
+     "metadata_port": 51830,
+     "public_key": "FSfiKuiP1bBRwp96drH64vcn4hKhNn9cbqCigZLu8SSh"
+    },
+    "mixnet_websockets": {
+     "ws_port": 9000,
+     "wss_port": 9001
+    }
+   }
+  },
+  {
+   "node_id": 9001,
+   "contract_node_type": "nym_node",
+   "description": {
+    "last_polled": "2026-11-08 09:57:28.966164302 +00:00:00",
+    "host_information": {
+     "ip_address": [
+      "192.0.2.1"
+     ],
+     "hostname": null,
+     "keys": {
+      "ed25519": "gmCMurCqu5r3ugBh43ti5zw98SzLKzL6Ldh4TrChwJf",
+      "x25519": "F6wNXpgDWL2roNM3J6kECHa3R33Cp44NSz7Mpg9TbNSw",
+      "current_x25519_sphinx_key": {
+       "rotation_id": 486,
+       "public_key": "F6wNXpgDWL2roNM3J6kECHa3R33Cp44NSz7Mpg9TbNSw"
+      },
+      "pre_announced_x25519_sphinx_key": null,
+      "x25519_versioned_noise": {
+       "supported_version": 1,
+       "x25519_pubkey": "FNdRHj3MXZuaYPKi7FxjNbZVw1tDPHT1Xtgm2ZzyMeG7"
+      }
+     }
+    },
+    "declared_role": {
+     "mixnode": false,
+     "entry": true,
+     "exit_nr": true,
+     "exit_ipr": true
+    },
+    "auxiliary_details": {
+     "location": "GR",
+     "announce_ports": {
+      "verloc_port": 1790,
+      "mix_port": 1789
+     },
+     "accepted_operator_terms_and_conditions": true
+    },
+    "build_information": {
+     "binary_name": "nym-node",
+     "build_timestamp": "2026-10-28T16:15:33.395437008Z",
+     "build_version": "1.43.0",
+     "commit_sha": "f92749c5f45bf1fdaacb824f9796bca2d641c6f9",
+     "commit_timestamp": "2026-10-28T17:13:38.000000000+01:00",
+     "commit_branch": "HEAD",
+     "rustc_version": "1.97.0",
+     "rustc_channel": "stable",
+     "cargo_profile": "release",
+     "cargo_triple": "x86_64-unknown-linux-gnu"
+    },
+    "network_requester": {
+     "address": "29981FVyB9x3cbCPAfcbeSRDkd9roaavR1Nzx2Gq7aNV.9QS5dwyqNxwWXcRiL4SC5LSv5zPeQyXgaCbrpTcue7wm@gmCMurCqu5r3ugBh43ti5zw98SzLKzL6Ldh4TrChwJf",
+     "uses_exit_policy": true
+    },
+    "ip_packet_router": {
+     "address": "5JDwLB5ftxuKm8kQ6tJqPpeJSgRAGwoS33XcB4GoL9fr.1NeHzqSPmb5EPZ4rEQqhuQzwUok1ZqmX7ed9U74ceaq@Node9001xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+    },
+    "authenticator": {
+     "address": "7i2wEtvfGU7S3MXmmxJsaGbSpELer1ehb6V5YNnzTwpB.FeYZRF4RgfxnZCbZRDiPLcCmcBoKTZ4yAmC597R84iL3@gmCMurCqu5r3ugBh43ti5zw98SzLKzL6Ldh4TrChwJf"
+    },
+    "wireguard": {
+     "port": 51822,
+     "tunnel_port": 51822,
+     "metadata_port": 51830,
+     "public_key": "HcHNq8EvPmkEMEdD4UmbDHpSGM4CvwXbN9PdijS7ddte"
+    },
+    "mixnet_websockets": {
+     "ws_port": 9000,
+     "wss_port": null
+    }
+   }
+  },
+  {
+   "node_id": 9003,
+   "contract_node_type": "nym_node",
+   "description": {
+    "last_polled": "2026-11-08 09:57:28.966164302 +00:00:00",
+    "host_information": {
+     "ip_address": [
+      "192.0.2.3"
+     ],
+     "hostname": null,
+     "keys": {
+      "ed25519": "gmCMurCqu5r3ugBh43ti5zw98SzLKzL6Ldh4TrChwJf",
+      "x25519": "F6wNXpgDWL2roNM3J6kECHa3R33Cp44NSz7Mpg9TbNSw",
+      "current_x25519_sphinx_key": {
+       "rotation_id": 486,
+       "public_key": "F6wNXpgDWL2roNM3J6kECHa3R33Cp44NSz7Mpg9TbNSw"
+      },
+      "pre_announced_x25519_sphinx_key": null,
+      "x25519_versioned_noise": {
+       "supported_version": 1,
+       "x25519_pubkey": "FNdRHj3MXZuaYPKi7FxjNbZVw1tDPHT1Xtgm2ZzyMeG7"
+      }
+     }
+    },
+    "declared_role": {
+     "mixnode": false,
+     "entry": true,
+     "exit_nr": true,
+     "exit_ipr": true
+    },
+    "auxiliary_details": {
+     "location": "GR",
+     "announce_ports": {
+      "verloc_port": 1790,
+      "mix_port": 1789
+     },
+     "accepted_operator_terms_and_conditions": true
+    },
+    "build_information": {
+     "binary_name": "nym-node",
+     "build_timestamp": "2026-10-28T16:15:33.395437008Z",
+     "build_version": "1.1.86",
+     "commit_sha": "f92749c5f45bf1fdaacb824f9796bca2d641c6f9",
+     "commit_timestamp": "2026-10-28T17:13:38.000000000+01:00",
+     "commit_branch": "HEAD",
+     "rustc_version": "1.97.0",
+     "rustc_channel": "stable",
+     "cargo_profile": "release",
+     "cargo_triple": "x86_64-unknown-linux-gnu"
+    },
+    "network_requester": {
+     "address": "29981FVyB9x3cbCPAfcbeSRDkd9roaavR1Nzx2Gq7aNV.9QS5dwyqNxwWXcRiL4SC5LSv5zPeQyXgaCbrpTcue7wm@gmCMurCqu5r3ugBh43ti5zw98SzLKzL6Ldh4TrChwJf",
+     "uses_exit_policy": true
+    },
+    "ip_packet_router": {
+     "address": "5JDwLB5ftxuKm8kQ6tJqPpeJSgRAGwoS33XcB4GoL9fr.1NeHzqSPmb5EPZ4rEQqhuQzwUok1ZqmX7ed9U74ceaq@Node9003xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+    },
+    "authenticator": {
+     "address": "7i2wEtvfGU7S3MXmmxJsaGbSpELer1ehb6V5YNnzTwpB.FeYZRF4RgfxnZCbZRDiPLcCmcBoKTZ4yAmC597R84iL3@gmCMurCqu5r3ugBh43ti5zw98SzLKzL6Ldh4TrChwJf"
+    },
+    "wireguard": {
+     "port": 51822,
+     "tunnel_port": 51822,
+     "metadata_port": 51830,
+     "public_key": "HcHNq8EvPmkEMEdD4UmbDHpSGM4CvwXbN9PdijS7ddte"
+    },
+    "mixnet_websockets": {
+     "ws_port": 9000,
+     "wss_port": null
+    }
+   }
+  },
+  {
+   "node_id": 9004,
+   "contract_node_type": "nym_node",
+   "description": {
+    "last_polled": "2026-11-08 09:57:28.966164302 +00:00:00",
+    "host_information": {
+     "ip_address": [
+      "192.0.2.4"
+     ],
+     "hostname": null,
+     "keys": {
+      "ed25519": "gmCMurCqu5r3ugBh43ti5zw98SzLKzL6Ldh4TrChwJf",
+      "x25519": "F6wNXpgDWL2roNM3J6kECHa3R33Cp44NSz7Mpg9TbNSw",
+      "current_x25519_sphinx_key": {
+       "rotation_id": 486,
+       "public_key": "F6wNXpgDWL2roNM3J6kECHa3R33Cp44NSz7Mpg9TbNSw"
+      },
+      "pre_announced_x25519_sphinx_key": null,
+      "x25519_versioned_noise": {
+       "supported_version": 1,
+       "x25519_pubkey": "FNdRHj3MXZuaYPKi7FxjNbZVw1tDPHT1Xtgm2ZzyMeG7"
+      }
+     }
+    },
+    "declared_role": {
+     "mixnode": false,
+     "entry": true,
+     "exit_nr": true,
+     "exit_ipr": true
+    },
+    "auxiliary_details": {
+     "location": "GR",
+     "announce_ports": {
+      "verloc_port": 1790,
+      "mix_port": 1789
+     },
+     "accepted_operator_terms_and_conditions": true
+    },
+    "build_information": {
+     "binary_name": "nym-node",
+     "build_timestamp": "2026-10-28T16:15:33.395437008Z",
+     "build_version": "1.43.0",
+     "commit_sha": "f92749c5f45bf1fdaacb824f9796bca2d641c6f9",
+     "commit_timestamp": "2026-10-28T17:13:38.000000000+01:00",
+     "commit_branch": "HEAD",
+     "rustc_version": "1.97.0",
+     "rustc_channel": "stable",
+     "cargo_profile": "release",
+     "cargo_triple": "x86_64-unknown-linux-gnu"
+    },
+    "network_requester": {
+     "address": "29981FVyB9x3cbCPAfcbeSRDkd9roaavR1Nzx2Gq7aNV.9QS5dwyqNxwWXcRiL4SC5LSv5zPeQyXgaCbrpTcue7wm@gmCMurCqu5r3ugBh43ti5zw98SzLKzL6Ldh4TrChwJf",
+     "uses_exit_policy": true
+    },
+    "ip_packet_router": {
+     "address": "5JDwLB5ftxuKm8kQ6tJqPpeJSgRAGwoS33XcB4GoL9fr.1NeHzqSPmb5EPZ4rEQqhuQzwUok1ZqmX7ed9U74ceaq@gmCMurCqu5r3ugBh43ti5zw98SzLKzL6Ldh4TrChwJf"
+    },
+    "authenticator": {
+     "address": "7i2wEtvfGU7S3MXmmxJsaGbSpELer1ehb6V5YNnzTwpB.FeYZRF4RgfxnZCbZRDiPLcCmcBoKTZ4yAmC597R84iL3@gmCMurCqu5r3ugBh43ti5zw98SzLKzL6Ldh4TrChwJf"
+    },
+    "wireguard": {
+     "port": 51822,
+     "tunnel_port": 51822,
+     "metadata_port": 51830,
+     "public_key": "HcHNq8EvPmkEMEdD4UmbDHpSGM4CvwXbN9PdijS7ddte"
+    },
+    "mixnet_websockets": {
+     "ws_port": 9000,
+     "wss_port": null
+    }
+   }
+  }
+ ]
+}

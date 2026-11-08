@@ -1,0 +1,725 @@
+2026-11-08T10:53:13Z
+2026-11-08T10:53:13.974038Z  INFO nymdial::dialer: nym-api lists 100 IPR exits
+2026-11-08T10:53:15.507247Z  INFO perform_initial_authentication{gateway=71MEMpLaVFDcS4d2qCxmDQ2hH8eDbYL9FHUm1ezcms44 gateway_address=ws://norway1.nymgateway.com:9000/}: nym_gateway_client::bandwidth: remaining bandwidth: 0.00 B. in 'upgrade mode': false
+2026-11-08T10:53:15.507276Z  INFO nym_gateway_client::client: Claiming more bandwidth with existing credentials. Stop the process now if you don't want that to happen.
+2026-11-08T10:53:15.507280Z  WARN nym_gateway_client::client: Not enough bandwidth. Trying to get more bandwidth, this might take a while
+2026-11-08T10:53:15.507281Z  INFO nym_gateway_client::client: The client is running in disabled credentials mode - attempting to claim bandwidth without a credential
+2026-11-08T10:53:15.557598Z  INFO nym_gateway_client::client: managed to claim testnet bandwidth
+2026-11-08T10:53:15.557771Z  INFO nym_sdk::ipr_wrapper::ip_mix_stream: Connecting to IP packet router at 3odN11rtt7pnQnTGjnTXEK7opFma2rvuSzSgnTTLqH64.B56M43RhYrCVJKoFNvN9KHKDLGsK2Z6iodvedSaWdSii@6V6Y18i3UbYWWrGpSW41gT1rjx5umXSpFzJWH6cnCKS3
+2026-11-08T10:53:15.557796Z DEBUG nym_sdk::ipr_wrapper::ip_mix_stream: Sending v10 connect request with ID: 15789876523261099443
+2026-11-08T10:53:16.522363Z  INFO nym_sdk::ipr_wrapper::ip_mix_stream: Connected — IPv4: 10.0.11.38, IPv6: fc00::b26, MTU: 1500
+2026-11-08T10:53:16.522420Z  INFO nym_smolmix::tunnel: Tunnel ready, allocated IP: 10.0.11.38
+2026-11-08T10:53:16.522430Z  INFO nym_smolmix::bridge: Starting bridge
+2026-11-08T10:53:16.523556Z DEBUG nym_smolmix::bridge: Packet sent packets_sent=1
+2026-11-08T10:53:17.058834Z DEBUG nym_sdk::ipr_wrapper::ip_mix_stream: Extracted 1 IP packets
+2026-11-08T10:53:17.058874Z DEBUG nym_smolmix::bridge: Packets received packets_received=1
+2026-11-08T10:53:17.058908Z DEBUG nym_smolmix::bridge: Packet sent packets_sent=2
+2026-11-08T10:53:17.058986Z DEBUG nym_smolmix::bridge: Packet sent packets_sent=3
+2026-11-08T10:53:17.898728Z DEBUG nym_smolmix::bridge: Packet sent packets_sent=4
+2026-11-08T10:53:18.047885Z DEBUG nym_sdk::ipr_wrapper::ip_mix_stream: Extracted 1 IP packets
+2026-11-08T10:53:18.047911Z DEBUG nym_smolmix::bridge: Packets received packets_received=2
+2026-11-08T10:53:18.047936Z DEBUG nym_smolmix::bridge: Packet sent packets_sent=5
+2026-11-08T10:53:18.562341Z DEBUG nym_sdk::ipr_wrapper::ip_mix_stream: Extracted 1 IP packets
+2026-11-08T10:53:18.562372Z DEBUG nym_smolmix::bridge: Packets received packets_received=3
+2026-11-08T10:53:18.562376Z DEBUG nym_sdk::ipr_wrapper::ip_mix_stream: Extracted 1 IP packets
+2026-11-08T10:53:18.562378Z DEBUG nym_smolmix::bridge: Packets received packets_received=4
+2026-11-08T10:53:18.562385Z DEBUG nym_sdk::ipr_wrapper::ip_mix_stream: Extracted 1 IP packets
+2026-11-08T10:53:18.562387Z DEBUG nym_smolmix::bridge: Packets received packets_received=5
+2026-11-08T10:53:18.562389Z DEBUG nym_sdk::ipr_wrapper::ip_mix_stream: Extracted 1 IP packets
+2026-11-08T10:53:18.562390Z DEBUG nym_smolmix::bridge: Packets received packets_received=6
+2026-11-08T10:53:18.562413Z DEBUG nym_smolmix::bridge: Packet sent packets_sent=6
+2026-11-08T10:53:18.564075Z DEBUG nym_smolmix::bridge: Packet sent packets_sent=7
+2026-11-08T10:53:19.243023Z DEBUG nym_sdk::ipr_wrapper::ip_mix_stream: Extracted 3 IP packets
+2026-11-08T10:53:19.243048Z DEBUG nym_smolmix::bridge: Packets received packets_received=9
+2026-11-08T10:53:19.243130Z DEBUG nym_smolmix::bridge: Packet sent packets_sent=8
+2026-11-08T10:53:19.315081Z DEBUG nym_sdk::ipr_wrapper::ip_mix_stream: Extracted 1 IP packets
+2026-11-08T10:53:19.315114Z DEBUG nym_smolmix::bridge: Packets received packets_received=10
+2026-11-08T10:53:19.857696Z DEBUG nym_sdk::ipr_wrapper::ip_mix_stream: Extracted 1 IP packets
+2026-11-08T10:53:19.857732Z DEBUG nym_smolmix::bridge: Packets received packets_received=11
+2026-11-08T10:53:19.857769Z DEBUG nym_smolmix::bridge: Packet sent packets_sent=9
+2026-11-08T10:53:20.188296Z DEBUG nym_sdk::ipr_wrapper::ip_mix_stream: Extracted 1 IP packets
+2026-11-08T10:53:20.188320Z DEBUG nym_smolmix::bridge: Packets received packets_received=12
+2026-11-08T10:53:20.332201Z DEBUG nym_sdk::ipr_wrapper::ip_mix_stream: Extracted 1 IP packets
+2026-11-08T10:53:20.332224Z DEBUG nym_smolmix::bridge: Packets received packets_received=13
+2026-11-08T10:53:20.332331Z  INFO nymdial::dialer: health check: DoH via quad9 in 3.8s
+2026-11-08T10:53:20.332427Z  INFO nymdial::rotate: node 724: tunnel up in 6.4s
+  exit node 724                 up after 6.36s (incl. health check)
+tunnel up via node 724 [62.169.20.108] in 6.80s (tunnel IP 10.0.11.38)
+2026-11-08T10:53:20.332561Z DEBUG nym_smolmix::bridge: Packet sent packets_sent=10
+2026-11-08T10:53:21.340355Z DEBUG nym_smolmix::bridge: Packet sent packets_sent=11
+2026-11-08T10:53:21.633480Z DEBUG nym_sdk::ipr_wrapper::ip_mix_stream: Extracted 1 IP packets
+2026-11-08T10:53:21.633507Z DEBUG nym_smolmix::bridge: Packets received packets_received=14
+2026-11-08T10:53:21.633542Z DEBUG nym_smolmix::bridge: Packet sent packets_sent=12
+2026-11-08T10:53:21.901700Z DEBUG nym_sdk::ipr_wrapper::ip_mix_stream: Extracted 1 IP packets
+2026-11-08T10:53:21.901724Z DEBUG nym_smolmix::bridge: Packets received packets_received=15
+2026-11-08T10:53:21.901931Z DEBUG nym_smolmix::bridge: Packet sent packets_sent=13
+2026-11-08T10:53:21.912706Z DEBUG nym_smolmix::bridge: Packet sent packets_sent=14
+2026-11-08T10:53:22.332131Z DEBUG nym_sdk::ipr_wrapper::ip_mix_stream: Extracted 1 IP packets
+2026-11-08T10:53:22.332165Z DEBUG nym_smolmix::bridge: Packets received packets_received=16
+2026-11-08T10:53:22.602452Z DEBUG nym_smolmix::bridge: Packet sent packets_sent=15
+2026-11-08T10:53:23.303243Z DEBUG nym_smolmix::bridge: Packet sent packets_sent=16
+2026-11-08T10:53:23.331121Z DEBUG nym_sdk::ipr_wrapper::ip_mix_stream: Extracted 1 IP packets
+2026-11-08T10:53:23.331140Z DEBUG nym_smolmix::bridge: Packets received packets_received=17
+2026-11-08T10:53:23.331166Z DEBUG nym_smolmix::bridge: Packet sent packets_sent=17
+2026-11-08T10:53:23.331292Z DEBUG nym_smolmix::bridge: Packet sent packets_sent=18
+2026-11-08T10:53:23.987965Z DEBUG nym_sdk::ipr_wrapper::ip_mix_stream: Extracted 1 IP packets
+2026-11-08T10:53:23.987987Z DEBUG nym_smolmix::bridge: Packets received packets_received=18
+2026-11-08T10:53:23.988018Z DEBUG nym_smolmix::bridge: Packet sent packets_sent=19
+2026-11-08T10:53:24.033030Z DEBUG nym_smolmix::bridge: Packet sent packets_sent=20
+2026-11-08T10:53:24.121931Z DEBUG nym_sdk::ipr_wrapper::ip_mix_stream: Extracted 1 IP packets
+2026-11-08T10:53:24.121956Z DEBUG nym_smolmix::bridge: Packets received packets_received=19
+2026-11-08T10:53:24.121960Z DEBUG nym_sdk::ipr_wrapper::ip_mix_stream: Extracted 1 IP packets
+2026-11-08T10:53:24.121962Z DEBUG nym_smolmix::bridge: Packets received packets_received=20
+2026-11-08T10:53:24.121964Z DEBUG nym_sdk::ipr_wrapper::ip_mix_stream: Extracted 1 IP packets
+2026-11-08T10:53:24.121966Z DEBUG nym_smolmix::bridge: Packets received packets_received=21
+2026-11-08T10:53:24.122029Z DEBUG nym_smolmix::bridge: Packet sent packets_sent=21
+2026-11-08T10:53:24.123011Z DEBUG nym_smolmix::bridge: Packet sent packets_sent=22
+2026-11-08T10:53:24.812879Z DEBUG nym_sdk::ipr_wrapper::ip_mix_stream: Extracted 1 IP packets
+2026-11-08T10:53:24.812909Z DEBUG nym_smolmix::bridge: Packets received packets_received=22
+2026-11-08T10:53:24.856683Z DEBUG nym_sdk::ipr_wrapper::ip_mix_stream: Extracted 1 IP packets
+2026-11-08T10:53:24.856706Z DEBUG nym_smolmix::bridge: Packets received packets_received=23
+2026-11-08T10:53:24.856709Z DEBUG nym_sdk::ipr_wrapper::ip_mix_stream: Extracted 1 IP packets
+2026-11-08T10:53:24.856711Z DEBUG nym_smolmix::bridge: Packets received packets_received=24
+2026-11-08T10:53:24.856783Z DEBUG nym_smolmix::bridge: Packet sent packets_sent=23
+2026-11-08T10:53:25.417229Z DEBUG nym_sdk::ipr_wrapper::ip_mix_stream: Extracted 2 IP packets
+2026-11-08T10:53:25.417253Z DEBUG nym_smolmix::bridge: Packets received packets_received=26
+  1  HTTP 200      207 B  connect 4.52s  request 0.56s  total 5.08s
+2026-11-08T10:53:25.417366Z DEBUG nym_smolmix::bridge: Packet sent packets_sent=24
+2026-11-08T10:53:25.417513Z DEBUG nym_smolmix::bridge: Packet sent packets_sent=25
+2026-11-08T10:53:25.537360Z DEBUG nym_sdk::ipr_wrapper::ip_mix_stream: Extracted 2 IP packets
+2026-11-08T10:53:25.537399Z DEBUG nym_smolmix::bridge: Packets received packets_received=28
+2026-11-08T10:53:25.537405Z DEBUG nym_sdk::ipr_wrapper::ip_mix_stream: Extracted 1 IP packets
+2026-11-08T10:53:25.537407Z DEBUG nym_smolmix::bridge: Packets received packets_received=29
+2026-11-08T10:53:25.548533Z DEBUG nym_smolmix::bridge: Packet sent packets_sent=26
+2026-11-08T10:53:26.108035Z DEBUG nym_sdk::ipr_wrapper::ip_mix_stream: Extracted 1 IP packets
+2026-11-08T10:53:26.108057Z DEBUG nym_smolmix::bridge: Packets received packets_received=30
+2026-11-08T10:53:26.108086Z DEBUG nym_smolmix::bridge: Packet sent packets_sent=27
+2026-11-08T10:53:26.108152Z DEBUG nym_smolmix::bridge: Packet sent packets_sent=28
+2026-11-08T10:53:26.498298Z DEBUG nym_sdk::ipr_wrapper::ip_mix_stream: Extracted 1 IP packets
+2026-11-08T10:53:26.498324Z DEBUG nym_smolmix::bridge: Packets received packets_received=31
+2026-11-08T10:53:27.102045Z DEBUG nym_smolmix::bridge: Packet sent packets_sent=29
+2026-11-08T10:53:28.001786Z DEBUG nym_sdk::ipr_wrapper::ip_mix_stream: Extracted 1 IP packets
+2026-11-08T10:53:28.001807Z DEBUG nym_smolmix::bridge: Packets received packets_received=32
+2026-11-08T10:53:28.001810Z DEBUG nym_sdk::ipr_wrapper::ip_mix_stream: Extracted 1 IP packets
+2026-11-08T10:53:28.001812Z DEBUG nym_smolmix::bridge: Packets received packets_received=33
+2026-11-08T10:53:28.001814Z DEBUG nym_sdk::ipr_wrapper::ip_mix_stream: Extracted 1 IP packets
+2026-11-08T10:53:28.001815Z DEBUG nym_smolmix::bridge: Packets received packets_received=34
+2026-11-08T10:53:28.001843Z DEBUG nym_smolmix::bridge: Packet sent packets_sent=30
+2026-11-08T10:53:28.002790Z DEBUG nym_smolmix::bridge: Packet sent packets_sent=31
+2026-11-08T10:53:28.420209Z DEBUG nym_sdk::ipr_wrapper::ip_mix_stream: Extracted 1 IP packets
+2026-11-08T10:53:28.420231Z DEBUG nym_smolmix::bridge: Packets received packets_received=35
+2026-11-08T10:53:28.634474Z DEBUG nym_sdk::ipr_wrapper::ip_mix_stream: Extracted 1 IP packets
+2026-11-08T10:53:28.634498Z DEBUG nym_smolmix::bridge: Packets received packets_received=36
+2026-11-08T10:53:28.634558Z DEBUG nym_smolmix::bridge: Packet sent packets_sent=32
+2026-11-08T10:53:29.615691Z DEBUG nym_sdk::ipr_wrapper::ip_mix_stream: Extracted 1 IP packets
+2026-11-08T10:53:29.615716Z DEBUG nym_smolmix::bridge: Packets received packets_received=37
+2026-11-08T10:53:29.615720Z DEBUG nym_sdk::ipr_wrapper::ip_mix_stream: Extracted 2 IP packets
+2026-11-08T10:53:29.615722Z DEBUG nym_smolmix::bridge: Packets received packets_received=39
+2026-11-08T10:53:29.615809Z DEBUG nym_smolmix::bridge: Packet sent packets_sent=33
+  2  HTTP 200      202 B  connect 3.22s  request 0.98s  total 4.20s
+2026-11-08T10:53:29.615942Z DEBUG nym_smolmix::bridge: Packet sent packets_sent=34
+2026-11-08T10:53:30.316348Z DEBUG nym_smolmix::bridge: Packet sent packets_sent=35
+2026-11-08T10:53:31.017900Z DEBUG nym_smolmix::bridge: Packet sent packets_sent=36
+2026-11-08T10:53:31.148345Z DEBUG nym_smolmix::bridge: Packet sent packets_sent=37
+2026-11-08T10:53:31.718633Z DEBUG nym_smolmix::bridge: Packet sent packets_sent=38
+2026-11-08T10:53:32.681902Z DEBUG nym_smolmix::bridge: Packet sent packets_sent=39
+2026-11-08T10:53:32.719702Z DEBUG nym_smolmix::bridge: Packet sent packets_sent=40
+2026-11-08T10:53:33.720643Z DEBUG nym_smolmix::bridge: Packet sent packets_sent=41
+2026-11-08T10:53:34.214348Z DEBUG nym_smolmix::bridge: Packet sent packets_sent=42
+2026-11-08T10:53:34.721878Z DEBUG nym_smolmix::bridge: Packet sent packets_sent=43
+2026-11-08T10:53:36.207402Z DEBUG nym_smolmix::bridge: Packet sent packets_sent=44
+2026-11-08T10:53:36.322917Z DEBUG nym_smolmix::bridge: Packet sent packets_sent=45
+2026-11-08T10:53:37.923883Z DEBUG nym_smolmix::bridge: Packet sent packets_sent=46
+2026-11-08T10:53:38.200217Z DEBUG nym_smolmix::bridge: Packet sent packets_sent=47
+2026-11-08T10:53:39.524476Z DEBUG nym_smolmix::bridge: Packet sent packets_sent=48
+2026-11-08T10:53:40.193675Z DEBUG nym_smolmix::bridge: Packet sent packets_sent=49
+2026-11-08T10:53:42.325948Z DEBUG nym_smolmix::bridge: Packet sent packets_sent=50
+2026-11-08T10:53:43.106202Z DEBUG nym_smolmix::bridge: Packet sent packets_sent=51
+2026-11-08T10:53:45.127034Z DEBUG nym_smolmix::bridge: Packet sent packets_sent=52
+2026-11-08T10:53:46.019811Z DEBUG nym_smolmix::bridge: Packet sent packets_sent=53
+2026-11-08T10:53:47.928889Z DEBUG nym_smolmix::bridge: Packet sent packets_sent=54
+2026-11-08T10:53:48.932151Z DEBUG nym_smolmix::bridge: Packet sent packets_sent=55
+2026-11-08T10:53:53.129096Z DEBUG nym_smolmix::bridge: Packet sent packets_sent=56
+2026-11-08T10:53:53.685715Z DEBUG nym_smolmix::bridge: Packet sent packets_sent=57
+2026-11-08T10:53:58.330372Z DEBUG nym_smolmix::bridge: Packet sent packets_sent=58
+2026-11-08T10:53:58.438859Z DEBUG nym_smolmix::bridge: Packet sent packets_sent=59
+2026-11-08T10:53:59.616271Z DEBUG nym_smolmix::bridge: Packet sent packets_sent=60
+2026-11-08T10:54:00.624610Z DEBUG nym_smolmix::bridge: Packet sent packets_sent=61
+2026-11-08T10:54:01.632656Z DEBUG nym_smolmix::bridge: Packet sent packets_sent=62
+2026-11-08T10:54:03.035206Z DEBUG nym_smolmix::bridge: Packet sent packets_sent=63
+2026-11-08T10:54:03.191375Z DEBUG nym_smolmix::bridge: Packet sent packets_sent=64
+2026-11-08T10:54:04.438537Z DEBUG nym_smolmix::bridge: Packet sent packets_sent=65
+2026-11-08T10:54:05.841882Z DEBUG nym_smolmix::bridge: Packet sent packets_sent=66
+2026-11-08T10:54:08.034147Z DEBUG nym_smolmix::bridge: Packet sent packets_sent=67
+2026-11-08T10:54:10.227767Z DEBUG nym_smolmix::bridge: Packet sent packets_sent=68
+2026-11-08T10:54:11.617901Z DEBUG nym_smolmix::bridge: Packet sent packets_sent=69
+2026-11-08T10:54:11.624804Z DEBUG nym_smolmix::bridge: Packet sent packets_sent=70
+2026-11-08T10:54:12.318057Z DEBUG nym_smolmix::bridge: Packet sent packets_sent=71
+2026-11-08T10:54:12.420518Z DEBUG nym_smolmix::bridge: Packet sent packets_sent=72
+2026-11-08T10:54:13.019078Z DEBUG nym_smolmix::bridge: Packet sent packets_sent=73
+2026-11-08T10:54:13.720870Z DEBUG nym_smolmix::bridge: Packet sent packets_sent=74
+2026-11-08T10:54:14.721335Z DEBUG nym_smolmix::bridge: Packet sent packets_sent=75
+2026-11-08T10:54:15.722827Z DEBUG nym_smolmix::bridge: Packet sent packets_sent=76
+2026-11-08T10:54:16.193724Z DEBUG nym_smolmix::bridge: Packet sent packets_sent=77
+2026-11-08T10:54:16.724118Z DEBUG nym_smolmix::bridge: Packet sent packets_sent=78
+2026-11-08T10:54:18.325491Z DEBUG nym_smolmix::bridge: Packet sent packets_sent=79
+2026-11-08T10:54:19.927106Z DEBUG nym_smolmix::bridge: Packet sent packets_sent=80
+2026-11-08T10:54:19.966181Z DEBUG nym_smolmix::bridge: Packet sent packets_sent=81
+2026-11-08T10:54:20.057240Z DEBUG nym_smolmix::bridge: Packet sent packets_sent=82
+2026-11-08T10:54:21.528885Z DEBUG nym_smolmix::bridge: Packet sent packets_sent=83
+2026-11-08T10:54:23.618759Z  WARN nymdial::dialer: failover from node 724: TCP connect to 104.16.132.229:443 timed out and the health check failed
+2026-11-08T10:54:23.618807Z  INFO nym_smolmix::tunnel: Shutting down tunnel
+2026-11-08T10:54:23.618829Z  INFO nym_smolmix::bridge: Bridge received shutdown signal packets_sent=83 packets_received=39
+2026-11-08T10:54:23.618832Z  INFO nym_smolmix::bridge: Disconnecting from mixnet...
+2026-11-08T10:54:23.618834Z DEBUG nym_sdk::ipr_wrapper::ip_mix_stream: Disconnecting
+2026-11-08T10:54:23.618967Z DEBUG nym_sdk::ipr_wrapper::ip_mix_stream: Disconnected
+2026-11-08T10:54:23.618985Z  INFO nym_smolmix::bridge: Disconnected
+2026-11-08T10:54:23.618991Z  INFO nym_smolmix::tunnel: Tunnel shut down
+2026-11-08T10:54:24.498567Z  INFO perform_initial_authentication{gateway=ZXSDhRTKU5HgMpH8ma78FftvLiKyZ6jWL1e2U7GD7gQ gateway_address=ws://meeli.onchainaustria.at:9000/}: nym_gateway_client::bandwidth: remaining bandwidth: 0.00 B. in 'upgrade mode': false
+2026-11-08T10:54:24.498593Z  INFO nym_gateway_client::client: Claiming more bandwidth with existing credentials. Stop the process now if you don't want that to happen.
+2026-11-08T10:54:24.498602Z  WARN nym_gateway_client::client: Not enough bandwidth. Trying to get more bandwidth, this might take a while
+2026-11-08T10:54:24.498604Z  INFO nym_gateway_client::client: The client is running in disabled credentials mode - attempting to claim bandwidth without a credential
+2026-11-08T10:54:24.518612Z  INFO nym_gateway_client::client: managed to claim testnet bandwidth
+2026-11-08T10:54:24.518740Z  INFO nym_sdk::ipr_wrapper::ip_mix_stream: Connecting to IP packet router at 5auCm9vy2GStXeiVZcPhmnN13m6fs2m7hz9ZjdUBCWZs.H1jvR2HuzUW6rhLQxFoqAshdyw9y7w1SHKoSHLB59mZJ@GH9HWLvPYJyaoPvPTHB4QY6LAykVYTG7YR6t6LPWu8gJ
+2026-11-08T10:54:24.518754Z DEBUG nym_sdk::ipr_wrapper::ip_mix_stream: Sending v10 connect request with ID: 4755857496852672407
+2026-11-08T10:54:26.711092Z  INFO nym_sdk::ipr_wrapper::ip_mix_stream: Connected — IPv4: 10.0.193.85, IPv6: fc00::c155, MTU: 1500
+2026-11-08T10:54:26.711127Z  INFO nym_smolmix::tunnel: Tunnel ready, allocated IP: 10.0.193.85
+2026-11-08T10:54:26.711153Z  INFO nym_smolmix::bridge: Starting bridge
+2026-11-08T10:54:26.712288Z DEBUG nym_smolmix::bridge: Packet sent packets_sent=1
+2026-11-08T10:54:27.377488Z DEBUG nym_sdk::ipr_wrapper::ip_mix_stream: Extracted 1 IP packets
+2026-11-08T10:54:27.377512Z DEBUG nym_smolmix::bridge: Packets received packets_received=1
+2026-11-08T10:54:27.377549Z DEBUG nym_smolmix::bridge: Packet sent packets_sent=2
+2026-11-08T10:54:27.377608Z DEBUG nym_smolmix::bridge: Packet sent packets_sent=3
+2026-11-08T10:54:28.160254Z DEBUG nym_sdk::ipr_wrapper::ip_mix_stream: Extracted 1 IP packets
+2026-11-08T10:54:28.160280Z DEBUG nym_smolmix::bridge: Packets received packets_received=2
+2026-11-08T10:54:28.160307Z DEBUG nym_smolmix::bridge: Packet sent packets_sent=4
+2026-11-08T10:54:28.344509Z DEBUG nym_smolmix::bridge: Packet sent packets_sent=5
+2026-11-08T10:54:28.957067Z DEBUG nym_sdk::ipr_wrapper::ip_mix_stream: Extracted 1 IP packets
+2026-11-08T10:54:28.957092Z DEBUG nym_smolmix::bridge: Packets received packets_received=3
+2026-11-08T10:54:29.107225Z DEBUG nym_sdk::ipr_wrapper::ip_mix_stream: Extracted 1 IP packets
+2026-11-08T10:54:29.107248Z DEBUG nym_smolmix::bridge: Packets received packets_received=4
+2026-11-08T10:54:29.107252Z DEBUG nym_sdk::ipr_wrapper::ip_mix_stream: Extracted 1 IP packets
+2026-11-08T10:54:29.107255Z DEBUG nym_smolmix::bridge: Packets received packets_received=5
+2026-11-08T10:54:29.107258Z DEBUG nym_sdk::ipr_wrapper::ip_mix_stream: Extracted 1 IP packets
+2026-11-08T10:54:29.107259Z DEBUG nym_smolmix::bridge: Packets received packets_received=6
+2026-11-08T10:54:29.107283Z DEBUG nym_smolmix::bridge: Packet sent packets_sent=6
+2026-11-08T10:54:29.108742Z DEBUG nym_smolmix::bridge: Packet sent packets_sent=7
+2026-11-08T10:54:29.465569Z DEBUG nym_sdk::ipr_wrapper::ip_mix_stream: Extracted 1 IP packets
+2026-11-08T10:54:29.465592Z DEBUG nym_smolmix::bridge: Packets received packets_received=7
+2026-11-08T10:54:29.465618Z DEBUG nym_smolmix::bridge: Packet sent packets_sent=8
+2026-11-08T10:54:29.477579Z DEBUG nym_sdk::ipr_wrapper::ip_mix_stream: Extracted 1 IP packets
+2026-11-08T10:54:29.477595Z DEBUG nym_smolmix::bridge: Packets received packets_received=8
+2026-11-08T10:54:29.569676Z DEBUG nym_sdk::ipr_wrapper::ip_mix_stream: Extracted 3 IP packets
+2026-11-08T10:54:29.569699Z DEBUG nym_smolmix::bridge: Packets received packets_received=11
+2026-11-08T10:54:29.569769Z DEBUG nym_smolmix::bridge: Packet sent packets_sent=9
+2026-11-08T10:54:30.020755Z DEBUG nym_sdk::ipr_wrapper::ip_mix_stream: Extracted 1 IP packets
+2026-11-08T10:54:30.020777Z DEBUG nym_smolmix::bridge: Packets received packets_received=12
+2026-11-08T10:54:30.020780Z DEBUG nym_sdk::ipr_wrapper::ip_mix_stream: Extracted 1 IP packets
+2026-11-08T10:54:30.020781Z DEBUG nym_smolmix::bridge: Packets received packets_received=13
+2026-11-08T10:54:30.442552Z DEBUG nym_sdk::ipr_wrapper::ip_mix_stream: Extracted 1 IP packets
+2026-11-08T10:54:30.442574Z DEBUG nym_smolmix::bridge: Packets received packets_received=14
+2026-11-08T10:54:30.442603Z DEBUG nym_smolmix::bridge: Packet sent packets_sent=10
+2026-11-08T10:54:31.099207Z DEBUG nym_sdk::ipr_wrapper::ip_mix_stream: Extracted 2 IP packets
+2026-11-08T10:54:31.099229Z DEBUG nym_smolmix::bridge: Packets received packets_received=16
+2026-11-08T10:54:31.267411Z DEBUG nym_sdk::ipr_wrapper::ip_mix_stream: Extracted 1 IP packets
+2026-11-08T10:54:31.267433Z DEBUG nym_smolmix::bridge: Packets received packets_received=17
+2026-11-08T10:54:31.267525Z  INFO nymdial::dialer: health check: DoH via quad9 in 4.6s
+2026-11-08T10:54:31.267548Z  INFO nymdial::rotate: node 2393 (AT): tunnel up in 7.6s
+2026-11-08T10:54:31.267626Z DEBUG nym_smolmix::bridge: Packet sent packets_sent=11
+2026-11-08T10:54:31.278426Z DEBUG nym_smolmix::bridge: Packet sent packets_sent=12
+2026-11-08T10:54:31.968114Z DEBUG nym_smolmix::bridge: Packet sent packets_sent=13
+2026-11-08T10:54:32.669867Z DEBUG nym_smolmix::bridge: Packet sent packets_sent=14
+2026-11-08T10:54:33.370764Z DEBUG nym_smolmix::bridge: Packet sent packets_sent=15
+2026-11-08T10:54:34.371620Z DEBUG nym_smolmix::bridge: Packet sent packets_sent=16
+2026-11-08T10:54:35.372775Z DEBUG nym_smolmix::bridge: Packet sent packets_sent=17
+2026-11-08T10:54:36.373697Z DEBUG nym_smolmix::bridge: Packet sent packets_sent=18
+2026-11-08T10:54:37.974569Z DEBUG nym_smolmix::bridge: Packet sent packets_sent=19
+2026-11-08T10:54:39.576032Z DEBUG nym_smolmix::bridge: Packet sent packets_sent=20
+2026-11-08T10:54:41.177702Z DEBUG nym_smolmix::bridge: Packet sent packets_sent=21
+2026-11-08T10:54:43.978224Z DEBUG nym_smolmix::bridge: Packet sent packets_sent=22
+2026-11-08T10:54:46.779136Z DEBUG nym_smolmix::bridge: Packet sent packets_sent=23
+2026-11-08T10:54:49.580887Z DEBUG nym_smolmix::bridge: Packet sent packets_sent=24
+2026-11-08T10:54:54.781206Z DEBUG nym_smolmix::bridge: Packet sent packets_sent=25
+2026-11-08T10:54:59.982231Z DEBUG nym_smolmix::bridge: Packet sent packets_sent=26
+  3  error after 91.65s: TCP connect to 104.16.132.229:443 timed out after 30s
+2026-11-08T10:55:01.268725Z DEBUG nym_smolmix::bridge: Packet sent packets_sent=27
+2026-11-08T10:55:01.969360Z DEBUG nym_smolmix::bridge: Packet sent packets_sent=28
+2026-11-08T10:55:02.670138Z DEBUG nym_smolmix::bridge: Packet sent packets_sent=29
+2026-11-08T10:55:03.371925Z DEBUG nym_smolmix::bridge: Packet sent packets_sent=30
+2026-11-08T10:55:04.372237Z DEBUG nym_smolmix::bridge: Packet sent packets_sent=31
+2026-11-08T10:55:05.373003Z DEBUG nym_smolmix::bridge: Packet sent packets_sent=32
+2026-11-08T10:55:06.374061Z DEBUG nym_smolmix::bridge: Packet sent packets_sent=33
+2026-11-08T10:55:07.975618Z DEBUG nym_smolmix::bridge: Packet sent packets_sent=34
+2026-11-08T10:55:09.576004Z DEBUG nym_smolmix::bridge: Packet sent packets_sent=35
+2026-11-08T10:55:11.177627Z DEBUG nym_smolmix::bridge: Packet sent packets_sent=36
+2026-11-08T10:55:13.978433Z DEBUG nym_smolmix::bridge: Packet sent packets_sent=37
+2026-11-08T10:55:16.779414Z DEBUG nym_smolmix::bridge: Packet sent packets_sent=38
+2026-11-08T10:55:19.580456Z DEBUG nym_smolmix::bridge: Packet sent packets_sent=39
+2026-11-08T10:55:24.781086Z DEBUG nym_smolmix::bridge: Packet sent packets_sent=40
+2026-11-08T10:55:29.982501Z DEBUG nym_smolmix::bridge: Packet sent packets_sent=41
+2026-11-08T10:55:31.269699Z DEBUG nym_smolmix::bridge: Packet sent packets_sent=42
+2026-11-08T10:55:32.580178Z DEBUG nym_smolmix::bridge: Packet sent packets_sent=43
+2026-11-08T10:55:33.891503Z DEBUG nym_smolmix::bridge: Packet sent packets_sent=44
+2026-11-08T10:55:35.202110Z DEBUG nym_smolmix::bridge: Packet sent packets_sent=45
+2026-11-08T10:55:36.967824Z DEBUG nym_smolmix::bridge: Packet sent packets_sent=46
+2026-11-08T10:55:38.732359Z DEBUG nym_smolmix::bridge: Packet sent packets_sent=47
+2026-11-08T10:55:40.497107Z DEBUG nym_smolmix::bridge: Packet sent packets_sent=48
+2026-11-08T10:55:43.170725Z DEBUG nym_smolmix::bridge: Packet sent packets_sent=49
+2026-11-08T10:55:43.270215Z DEBUG nym_smolmix::bridge: Packet sent packets_sent=50
+2026-11-08T10:55:43.971135Z DEBUG nym_smolmix::bridge: Packet sent packets_sent=51
+2026-11-08T10:55:44.672223Z DEBUG nym_smolmix::bridge: Packet sent packets_sent=52
+2026-11-08T10:55:45.373179Z DEBUG nym_smolmix::bridge: Packet sent packets_sent=53
+2026-11-08T10:55:45.843439Z DEBUG nym_smolmix::bridge: Packet sent packets_sent=54
+2026-11-08T10:55:46.374648Z DEBUG nym_smolmix::bridge: Packet sent packets_sent=55
+2026-11-08T10:55:47.375180Z DEBUG nym_smolmix::bridge: Packet sent packets_sent=56
+2026-11-08T10:55:48.376420Z DEBUG nym_smolmix::bridge: Packet sent packets_sent=57
+2026-11-08T10:55:48.516178Z DEBUG nym_smolmix::bridge: Packet sent packets_sent=58
+2026-11-08T10:55:49.977701Z DEBUG nym_smolmix::bridge: Packet sent packets_sent=59
+2026-11-08T10:55:51.578165Z DEBUG nym_smolmix::bridge: Packet sent packets_sent=60
+2026-11-08T10:55:53.005841Z DEBUG nym_smolmix::bridge: Packet sent packets_sent=61
+2026-11-08T10:55:53.179103Z DEBUG nym_smolmix::bridge: Packet sent packets_sent=62
+2026-11-08T10:55:55.271831Z  WARN nymdial::dialer: failover from node 2393 (AT): TCP connect to 104.16.132.229:443 timed out and the health check failed
+2026-11-08T10:55:55.271868Z  INFO nym_smolmix::tunnel: Shutting down tunnel
+2026-11-08T10:55:55.271884Z  INFO nym_smolmix::bridge: Bridge received shutdown signal packets_sent=62 packets_received=17
+2026-11-08T10:55:55.271887Z  INFO nym_smolmix::bridge: Disconnecting from mixnet...
+2026-11-08T10:55:55.271888Z DEBUG nym_sdk::ipr_wrapper::ip_mix_stream: Disconnecting
+2026-11-08T10:55:55.272083Z DEBUG nym_sdk::ipr_wrapper::ip_mix_stream: Disconnected
+2026-11-08T10:55:55.272095Z  INFO nym_smolmix::bridge: Disconnected
+2026-11-08T10:55:55.272099Z  INFO nym_smolmix::tunnel: Tunnel shut down
+2026-11-08T10:55:55.730571Z  WARN nym_client_core::init::types: Malformed fallback listener, none will be used : invalid port number
+2026-11-08T10:55:58.008246Z  INFO perform_initial_authentication{gateway=gmCMurCqu5r3ugBh43ti5zw98SzLKzL6Ldh4TrChwJf gateway_address=ws://85.113.71.124:9000/}: nym_gateway_client::bandwidth: remaining bandwidth: 0.00 B. in 'upgrade mode': false
+2026-11-08T10:55:58.008278Z  INFO nym_gateway_client::client: Claiming more bandwidth with existing credentials. Stop the process now if you don't want that to happen.
+2026-11-08T10:55:58.008281Z  WARN nym_gateway_client::client: Not enough bandwidth. Trying to get more bandwidth, this might take a while
+2026-11-08T10:55:58.008282Z  INFO nym_gateway_client::client: The client is running in disabled credentials mode - attempting to claim bandwidth without a credential
+2026-11-08T10:55:58.213858Z  INFO nym_gateway_client::client: managed to claim testnet bandwidth
+2026-11-08T10:55:58.214049Z  INFO nym_sdk::ipr_wrapper::ip_mix_stream: Connecting to IP packet router at ActdzESwb5RxngmLe8VB39Bs6eVyNrn2cWt8gpG6GAFJ.9AfPffnp4DLJyLTBauXyHZZzutLoJGsdDC8UMd4DQZB6@3HY4rZkqroM5hmqKNwEHm44BPJsRRDuQLx4r3Z1SzRAe
+2026-11-08T10:55:58.214714Z DEBUG nym_sdk::ipr_wrapper::ip_mix_stream: Sending v10 connect request with ID: 4151084881198383215
+2026-11-08T10:56:00.200995Z  INFO nym_sdk::ipr_wrapper::ip_mix_stream: Connected — IPv4: 10.0.165.198, IPv6: fc00::a5c6, MTU: 1500
+2026-11-08T10:56:00.201027Z  INFO nym_smolmix::tunnel: Tunnel ready, allocated IP: 10.0.165.198
+2026-11-08T10:56:00.201032Z  INFO nym_smolmix::bridge: Starting bridge
+2026-11-08T10:56:00.202167Z DEBUG nym_smolmix::bridge: Packet sent packets_sent=1
+2026-11-08T10:56:00.899546Z DEBUG nym_sdk::ipr_wrapper::ip_mix_stream: Extracted 1 IP packets
+2026-11-08T10:56:00.899570Z DEBUG nym_smolmix::bridge: Packets received packets_received=1
+2026-11-08T10:56:00.899601Z DEBUG nym_smolmix::bridge: Packet sent packets_sent=2
+2026-11-08T10:56:00.899656Z DEBUG nym_smolmix::bridge: Packet sent packets_sent=3
+2026-11-08T10:56:01.898747Z DEBUG nym_smolmix::bridge: Packet sent packets_sent=4
+2026-11-08T10:56:01.944609Z DEBUG nym_sdk::ipr_wrapper::ip_mix_stream: Extracted 1 IP packets
+2026-11-08T10:56:01.944636Z DEBUG nym_smolmix::bridge: Packets received packets_received=2
+2026-11-08T10:56:01.944668Z DEBUG nym_smolmix::bridge: Packet sent packets_sent=5
+2026-11-08T10:56:02.823485Z DEBUG nym_sdk::ipr_wrapper::ip_mix_stream: Extracted 1 IP packets
+2026-11-08T10:56:02.823518Z DEBUG nym_smolmix::bridge: Packets received packets_received=3
+2026-11-08T10:56:02.823522Z DEBUG nym_sdk::ipr_wrapper::ip_mix_stream: Extracted 1 IP packets
+2026-11-08T10:56:02.823524Z DEBUG nym_smolmix::bridge: Packets received packets_received=4
+2026-11-08T10:56:02.823526Z DEBUG nym_sdk::ipr_wrapper::ip_mix_stream: Extracted 1 IP packets
+2026-11-08T10:56:02.823528Z DEBUG nym_smolmix::bridge: Packets received packets_received=5
+2026-11-08T10:56:02.823551Z DEBUG nym_smolmix::bridge: Packet sent packets_sent=6
+2026-11-08T10:56:02.823633Z DEBUG nym_smolmix::bridge: Packet sent packets_sent=7
+2026-11-08T10:56:02.827529Z DEBUG nym_sdk::ipr_wrapper::ip_mix_stream: Extracted 1 IP packets
+2026-11-08T10:56:02.827541Z DEBUG nym_smolmix::bridge: Packets received packets_received=6
+2026-11-08T10:56:02.839011Z DEBUG nym_smolmix::bridge: Packet sent packets_sent=8
+2026-11-08T10:56:03.079739Z DEBUG nym_sdk::ipr_wrapper::ip_mix_stream: Extracted 1 IP packets
+2026-11-08T10:56:03.079761Z DEBUG nym_smolmix::bridge: Packets received packets_received=7
+2026-11-08T10:56:03.079785Z DEBUG nym_smolmix::bridge: Packet sent packets_sent=9
+2026-11-08T10:56:03.325999Z DEBUG nym_sdk::ipr_wrapper::ip_mix_stream: Extracted 1 IP packets
+2026-11-08T10:56:03.326025Z DEBUG nym_smolmix::bridge: Packets received packets_received=8
+2026-11-08T10:56:03.434937Z DEBUG nym_sdk::ipr_wrapper::ip_mix_stream: Extracted 1 IP packets
+2026-11-08T10:56:03.434958Z DEBUG nym_smolmix::bridge: Packets received packets_received=9
+2026-11-08T10:56:03.700344Z DEBUG nym_sdk::ipr_wrapper::ip_mix_stream: Extracted 1 IP packets
+2026-11-08T10:56:03.700364Z DEBUG nym_smolmix::bridge: Packets received packets_received=10
+2026-11-08T10:56:03.822850Z DEBUG nym_smolmix::bridge: Packet sent packets_sent=10
+2026-11-08T10:56:03.974666Z DEBUG nym_sdk::ipr_wrapper::ip_mix_stream: Extracted 4 IP packets
+2026-11-08T10:56:03.974688Z DEBUG nym_smolmix::bridge: Packets received packets_received=14
+2026-11-08T10:56:03.974755Z DEBUG nym_smolmix::bridge: Packet sent packets_sent=11
+2026-11-08T10:56:05.339402Z DEBUG nym_smolmix::bridge: Packet sent packets_sent=12
+2026-11-08T10:56:06.704578Z DEBUG nym_smolmix::bridge: Packet sent packets_sent=13
+2026-11-08T10:56:08.485169Z DEBUG nym_smolmix::bridge: Packet sent packets_sent=14
+2026-11-08T10:56:10.266979Z DEBUG nym_smolmix::bridge: Packet sent packets_sent=15
+2026-11-08T10:56:12.047912Z DEBUG nym_smolmix::bridge: Packet sent packets_sent=16
+2026-11-08T10:56:12.203057Z DEBUG nym_smolmix::bridge: Packet sent packets_sent=17
+2026-11-08T10:56:12.904742Z DEBUG nym_smolmix::bridge: Packet sent packets_sent=18
+2026-11-08T10:56:13.605549Z DEBUG nym_smolmix::bridge: Packet sent packets_sent=19
+2026-11-08T10:56:14.306379Z DEBUG nym_smolmix::bridge: Packet sent packets_sent=20
+2026-11-08T10:56:14.660964Z DEBUG nym_smolmix::bridge: Packet sent packets_sent=21
+2026-11-08T10:56:15.307272Z DEBUG nym_smolmix::bridge: Packet sent packets_sent=22
+2026-11-08T10:56:16.308258Z DEBUG nym_smolmix::bridge: Packet sent packets_sent=23
+2026-11-08T10:56:17.273041Z DEBUG nym_smolmix::bridge: Packet sent packets_sent=24
+2026-11-08T10:56:17.309087Z DEBUG nym_smolmix::bridge: Packet sent packets_sent=25
+2026-11-08T10:56:18.603361Z DEBUG nym_sdk::ipr_wrapper::ip_mix_stream: Extracted 2 IP packets
+2026-11-08T10:56:18.603397Z DEBUG nym_smolmix::bridge: Packets received packets_received=16
+2026-11-08T10:56:18.603400Z DEBUG nym_sdk::ipr_wrapper::ip_mix_stream: Extracted 1 IP packets
+2026-11-08T10:56:18.603401Z DEBUG nym_smolmix::bridge: Packets received packets_received=17
+2026-11-08T10:56:18.603403Z DEBUG nym_sdk::ipr_wrapper::ip_mix_stream: Extracted 1 IP packets
+2026-11-08T10:56:18.603404Z DEBUG nym_smolmix::bridge: Packets received packets_received=18
+2026-11-08T10:56:18.603405Z DEBUG nym_sdk::ipr_wrapper::ip_mix_stream: Extracted 1 IP packets
+2026-11-08T10:56:18.603406Z DEBUG nym_smolmix::bridge: Packets received packets_received=19
+2026-11-08T10:56:18.603408Z DEBUG nym_sdk::ipr_wrapper::ip_mix_stream: Extracted 1 IP packets
+2026-11-08T10:56:18.603409Z DEBUG nym_smolmix::bridge: Packets received packets_received=20
+2026-11-08T10:56:18.603425Z DEBUG nym_sdk::ipr_wrapper::ip_mix_stream: Extracted 1 IP packets
+2026-11-08T10:56:18.603426Z DEBUG nym_smolmix::bridge: Packets received packets_received=21
+2026-11-08T10:56:18.603431Z DEBUG nym_sdk::ipr_wrapper::ip_mix_stream: Extracted 1 IP packets
+2026-11-08T10:56:18.603437Z DEBUG nym_smolmix::bridge: Packets received packets_received=22
+2026-11-08T10:56:18.603439Z DEBUG nym_sdk::ipr_wrapper::ip_mix_stream: Extracted 1 IP packets
+2026-11-08T10:56:18.603440Z DEBUG nym_smolmix::bridge: Packets received packets_received=23
+2026-11-08T10:56:18.603442Z DEBUG nym_sdk::ipr_wrapper::ip_mix_stream: Extracted 1 IP packets
+2026-11-08T10:56:18.603443Z DEBUG nym_smolmix::bridge: Packets received packets_received=24
+2026-11-08T10:56:18.603444Z DEBUG nym_sdk::ipr_wrapper::ip_mix_stream: Extracted 1 IP packets
+2026-11-08T10:56:18.603445Z DEBUG nym_smolmix::bridge: Packets received packets_received=25
+2026-11-08T10:56:18.603447Z DEBUG nym_sdk::ipr_wrapper::ip_mix_stream: Extracted 1 IP packets
+2026-11-08T10:56:18.603448Z DEBUG nym_smolmix::bridge: Packets received packets_received=26
+2026-11-08T10:56:18.603497Z DEBUG nym_smolmix::bridge: Packet sent packets_sent=26
+2026-11-08T10:56:18.611825Z DEBUG nym_smolmix::bridge: Packet sent packets_sent=27
+2026-11-08T10:56:18.911444Z DEBUG nym_smolmix::bridge: Packet sent packets_sent=28
+2026-11-08T10:56:20.512452Z DEBUG nym_smolmix::bridge: Packet sent packets_sent=29
+2026-11-08T10:56:22.113291Z DEBUG nym_smolmix::bridge: Packet sent packets_sent=30
+2026-11-08T10:56:22.880743Z DEBUG nym_smolmix::bridge: Packet sent packets_sent=31
+2026-11-08T10:56:24.203322Z  INFO nym_smolmix::tunnel: Shutting down tunnel
+2026-11-08T10:56:24.203347Z  INFO nym_smolmix::bridge: Bridge received shutdown signal packets_sent=31 packets_received=26
+2026-11-08T10:56:24.203350Z  INFO nym_smolmix::bridge: Disconnecting from mixnet...
+2026-11-08T10:56:24.203352Z DEBUG nym_sdk::ipr_wrapper::ip_mix_stream: Disconnecting
+2026-11-08T10:56:24.203525Z DEBUG nym_sdk::ipr_wrapper::ip_mix_stream: Disconnected
+2026-11-08T10:56:24.203538Z  INFO nym_smolmix::bridge: Disconnected
+2026-11-08T10:56:24.203545Z  INFO nym_smolmix::tunnel: Tunnel shut down
+2026-11-08T10:56:24.203565Z  WARN nymdial::rotate: node 2943 (NL): IPR handshake ok, but the health check failed (quad9: no answer within 12s; mullvad: no answer within 12s) after 28.9s; trying the next exit
+2026-11-08T10:56:24.991988Z  INFO perform_initial_authentication{gateway=AFtoVgdNc2p7vJGBxUJMtseBQSKQgVKPJMvXBjyy4Wir gateway_address=ws://exit14.nym.works:9000/}: nym_gateway_client::bandwidth: remaining bandwidth: 0.00 B. in 'upgrade mode': false
+2026-11-08T10:56:24.992021Z  INFO nym_gateway_client::client: Claiming more bandwidth with existing credentials. Stop the process now if you don't want that to happen.
+2026-11-08T10:56:24.992023Z  WARN nym_gateway_client::client: Not enough bandwidth. Trying to get more bandwidth, this might take a while
+2026-11-08T10:56:24.992025Z  INFO nym_gateway_client::client: The client is running in disabled credentials mode - attempting to claim bandwidth without a credential
+2026-11-08T10:56:25.019780Z  INFO nym_gateway_client::client: managed to claim testnet bandwidth
+2026-11-08T10:56:25.019896Z  INFO nym_sdk::ipr_wrapper::ip_mix_stream: Connecting to IP packet router at 2oKASfj7MU6bQP25srwxwfS3JtmN7w16TpxGqsuVUpts.8XVeeAC8oAjgdphccu6Ur4MoCoMRCxeuLHbWJkFieNgJ@DSVDp5ZLd31VLHUwfv1AU3kw4hD8Qcjsd3mStXYxwYKY
+2026-11-08T10:56:25.019908Z DEBUG nym_sdk::ipr_wrapper::ip_mix_stream: Sending v10 connect request with ID: 13897353651406768936
+2026-11-08T10:56:25.434225Z  INFO nym_sdk::ipr_wrapper::ip_mix_stream: Connected — IPv4: 10.0.17.24, IPv6: fc00::1118, MTU: 1500
+2026-11-08T10:56:25.434261Z  INFO nym_smolmix::tunnel: Tunnel ready, allocated IP: 10.0.17.24
+2026-11-08T10:56:25.434259Z  INFO nym_smolmix::bridge: Starting bridge
+2026-11-08T10:56:25.434345Z DEBUG nym_smolmix::bridge: Packet sent packets_sent=1
+2026-11-08T10:56:26.136036Z DEBUG nym_smolmix::bridge: Packet sent packets_sent=2
+2026-11-08T10:56:26.837451Z DEBUG nym_smolmix::bridge: Packet sent packets_sent=3
+2026-11-08T10:56:27.538325Z DEBUG nym_smolmix::bridge: Packet sent packets_sent=4
+2026-11-08T10:56:28.539433Z DEBUG nym_smolmix::bridge: Packet sent packets_sent=5
+2026-11-08T10:56:29.540684Z DEBUG nym_smolmix::bridge: Packet sent packets_sent=6
+2026-11-08T10:56:30.541493Z DEBUG nym_smolmix::bridge: Packet sent packets_sent=7
+2026-11-08T10:56:32.142620Z DEBUG nym_smolmix::bridge: Packet sent packets_sent=8
+2026-11-08T10:56:33.743032Z DEBUG nym_smolmix::bridge: Packet sent packets_sent=9
+2026-11-08T10:56:35.344179Z DEBUG nym_smolmix::bridge: Packet sent packets_sent=10
+2026-11-08T10:56:37.436102Z DEBUG nym_smolmix::bridge: Packet sent packets_sent=11
+2026-11-08T10:56:38.137051Z DEBUG nym_smolmix::bridge: Packet sent packets_sent=12
+2026-11-08T10:56:38.838686Z DEBUG nym_smolmix::bridge: Packet sent packets_sent=13
+2026-11-08T10:56:39.539496Z DEBUG nym_smolmix::bridge: Packet sent packets_sent=14
+2026-11-08T10:56:40.540525Z DEBUG nym_smolmix::bridge: Packet sent packets_sent=15
+2026-11-08T10:56:41.541645Z DEBUG nym_smolmix::bridge: Packet sent packets_sent=16
+2026-11-08T10:56:42.542469Z DEBUG nym_smolmix::bridge: Packet sent packets_sent=17
+2026-11-08T10:56:44.143058Z DEBUG nym_smolmix::bridge: Packet sent packets_sent=18
+2026-11-08T10:56:45.744796Z DEBUG nym_smolmix::bridge: Packet sent packets_sent=19
+2026-11-08T10:56:47.345237Z DEBUG nym_smolmix::bridge: Packet sent packets_sent=20
+2026-11-08T10:56:49.437451Z  INFO nym_smolmix::tunnel: Shutting down tunnel
+2026-11-08T10:56:49.437482Z  INFO nym_smolmix::bridge: Bridge received shutdown signal packets_sent=20 packets_received=0
+2026-11-08T10:56:49.437487Z  INFO nym_smolmix::bridge: Disconnecting from mixnet...
+2026-11-08T10:56:49.437489Z DEBUG nym_sdk::ipr_wrapper::ip_mix_stream: Disconnecting
+2026-11-08T10:56:49.438482Z DEBUG nym_sdk::ipr_wrapper::ip_mix_stream: Disconnected
+2026-11-08T10:56:49.438498Z  INFO nym_smolmix::bridge: Disconnected
+2026-11-08T10:56:49.438505Z  INFO nym_smolmix::tunnel: Tunnel shut down
+2026-11-08T10:56:49.438528Z  WARN nymdial::rotate: node 3199: IPR handshake ok, but the health check failed (quad9: no answer within 12s; mullvad: no answer within 12s) after 25.2s; trying the next exit
+2026-11-08T10:56:50.549409Z  INFO perform_initial_authentication{gateway=GY7FyvoynykJu1h644g4n7vRBfAxMnqJdxBzZeuzTms6 gateway_address=ws://nym-exit.ro-2.lunardao.net:9000/}: nym_gateway_client::bandwidth: remaining bandwidth: 0.00 B. in 'upgrade mode': false
+2026-11-08T10:56:50.549439Z  INFO nym_gateway_client::client: Claiming more bandwidth with existing credentials. Stop the process now if you don't want that to happen.
+2026-11-08T10:56:50.549441Z  WARN nym_gateway_client::client: Not enough bandwidth. Trying to get more bandwidth, this might take a while
+2026-11-08T10:56:50.549443Z  INFO nym_gateway_client::client: The client is running in disabled credentials mode - attempting to claim bandwidth without a credential
+2026-11-08T10:56:50.591699Z  INFO nym_gateway_client::client: managed to claim testnet bandwidth
+2026-11-08T10:56:50.591864Z  INFO nym_sdk::ipr_wrapper::ip_mix_stream: Connecting to IP packet router at EQ2kzqTG341rpPd7JrBvngG9DcxotPuzKcSogLuDtfJs.AtvfBpEzMcevFcBvoqpq6e8xC5G1du6nhqaVeUvsZJ2y@CTLwgiM4pCeD7CTRu5yqQJaVCmv6cxfKETfUL1rXHgkE
+2026-11-08T10:56:50.591879Z DEBUG nym_sdk::ipr_wrapper::ip_mix_stream: Sending v10 connect request with ID: 16970834364079372699
+2026-11-08T10:56:52.607501Z  INFO nym_sdk::ipr_wrapper::ip_mix_stream: Connected — IPv4: 10.0.95.86, IPv6: fc00::5f56, MTU: 1500
+2026-11-08T10:56:52.607539Z  INFO nym_smolmix::tunnel: Tunnel ready, allocated IP: 10.0.95.86
+2026-11-08T10:56:52.607546Z  INFO nym_smolmix::bridge: Starting bridge
+2026-11-08T10:56:52.608678Z DEBUG nym_smolmix::bridge: Packet sent packets_sent=1
+2026-11-08T10:56:53.309260Z DEBUG nym_smolmix::bridge: Packet sent packets_sent=2
+2026-11-08T10:56:54.010045Z DEBUG nym_smolmix::bridge: Packet sent packets_sent=3
+2026-11-08T10:56:54.711129Z DEBUG nym_smolmix::bridge: Packet sent packets_sent=4
+2026-11-08T10:56:55.712724Z DEBUG nym_smolmix::bridge: Packet sent packets_sent=5
+2026-11-08T10:56:56.713809Z DEBUG nym_smolmix::bridge: Packet sent packets_sent=6
+2026-11-08T10:56:57.714676Z DEBUG nym_smolmix::bridge: Packet sent packets_sent=7
+2026-11-08T10:56:59.315397Z DEBUG nym_smolmix::bridge: Packet sent packets_sent=8
+2026-11-08T10:57:00.916345Z DEBUG nym_smolmix::bridge: Packet sent packets_sent=9
+2026-11-08T10:57:02.517523Z DEBUG nym_smolmix::bridge: Packet sent packets_sent=10
+2026-11-08T10:57:04.608663Z DEBUG nym_smolmix::bridge: Packet sent packets_sent=11
+2026-11-08T10:57:05.310006Z DEBUG nym_smolmix::bridge: Packet sent packets_sent=12
+2026-11-08T10:57:06.011345Z DEBUG nym_smolmix::bridge: Packet sent packets_sent=13
+2026-11-08T10:57:06.712979Z DEBUG nym_smolmix::bridge: Packet sent packets_sent=14
+2026-11-08T10:57:07.713898Z DEBUG nym_smolmix::bridge: Packet sent packets_sent=15
+2026-11-08T10:57:08.714152Z DEBUG nym_smolmix::bridge: Packet sent packets_sent=16
+2026-11-08T10:57:09.715761Z DEBUG nym_smolmix::bridge: Packet sent packets_sent=17
+2026-11-08T10:57:11.316355Z DEBUG nym_smolmix::bridge: Packet sent packets_sent=18
+2026-11-08T10:57:12.918009Z DEBUG nym_smolmix::bridge: Packet sent packets_sent=19
+2026-11-08T10:57:14.519584Z DEBUG nym_smolmix::bridge: Packet sent packets_sent=20
+2026-11-08T10:57:16.609722Z  INFO nym_smolmix::tunnel: Shutting down tunnel
+2026-11-08T10:57:16.609755Z  INFO nym_smolmix::bridge: Bridge received shutdown signal packets_sent=20 packets_received=0
+2026-11-08T10:57:16.609760Z  INFO nym_smolmix::bridge: Disconnecting from mixnet...
+2026-11-08T10:57:16.609762Z DEBUG nym_sdk::ipr_wrapper::ip_mix_stream: Disconnecting
+2026-11-08T10:57:16.611089Z DEBUG nym_sdk::ipr_wrapper::ip_mix_stream: Disconnected
+2026-11-08T10:57:16.611105Z  INFO nym_smolmix::bridge: Disconnected
+2026-11-08T10:57:16.611112Z  INFO nym_smolmix::tunnel: Tunnel shut down
+2026-11-08T10:57:16.611136Z  WARN nymdial::rotate: node 3165 (IS): IPR handshake ok, but the health check failed (quad9: no answer within 12s; mullvad: no answer within 12s) after 27.2s; trying the next exit
+2026-11-08T10:57:17.326313Z  INFO perform_initial_authentication{gateway=pnXc67jyZCL6vnUaL2abmeCiXhT9cKzc1ScFBp3oAXz gateway_address=ws://gw-de-05.nym.aethergate.org:9000/}: nym_gateway_client::bandwidth: remaining bandwidth: 0.00 B. in 'upgrade mode': false
+2026-11-08T10:57:17.326344Z  INFO nym_gateway_client::client: Claiming more bandwidth with existing credentials. Stop the process now if you don't want that to happen.
+2026-11-08T10:57:17.326347Z  WARN nym_gateway_client::client: Not enough bandwidth. Trying to get more bandwidth, this might take a while
+2026-11-08T10:57:17.326349Z  INFO nym_gateway_client::client: The client is running in disabled credentials mode - attempting to claim bandwidth without a credential
+2026-11-08T10:57:17.350364Z  INFO nym_gateway_client::client: managed to claim testnet bandwidth
+2026-11-08T10:57:17.350483Z  INFO nym_sdk::ipr_wrapper::ip_mix_stream: Connecting to IP packet router at 7WjgP5HZo5MqV7wmkWUQamM4mig2rvXK8xgzm3PbtGD9.33uJ9D7f7Z7NEimXZmDEN82ZX8RiDDezEWa1BDvpwVp7@3ts3snXyuyJLw9vCMXfQQ4BWV8nqPzPuVpQFHw1jnAaF
+2026-11-08T10:57:17.350496Z DEBUG nym_sdk::ipr_wrapper::ip_mix_stream: Sending v10 connect request with ID: 17028140729698784599
+2026-11-08T10:57:17.786828Z  INFO nym_sdk::ipr_wrapper::ip_mix_stream: Connected — IPv4: 10.0.123.12, IPv6: fc00::7b0c, MTU: 1500
+2026-11-08T10:57:17.786861Z  INFO nym_smolmix::bridge: Starting bridge
+2026-11-08T10:57:17.786864Z  INFO nym_smolmix::tunnel: Tunnel ready, allocated IP: 10.0.123.12
+2026-11-08T10:57:17.786949Z DEBUG nym_smolmix::bridge: Packet sent packets_sent=1
+2026-11-08T10:57:18.487530Z DEBUG nym_smolmix::bridge: Packet sent packets_sent=2
+2026-11-08T10:57:19.188416Z DEBUG nym_smolmix::bridge: Packet sent packets_sent=3
+2026-11-08T10:57:19.889987Z DEBUG nym_smolmix::bridge: Packet sent packets_sent=4
+2026-11-08T10:57:20.890086Z DEBUG nym_smolmix::bridge: Packet sent packets_sent=5
+2026-11-08T10:57:21.891070Z DEBUG nym_smolmix::bridge: Packet sent packets_sent=6
+2026-11-08T10:57:22.892056Z DEBUG nym_smolmix::bridge: Packet sent packets_sent=7
+2026-11-08T10:57:24.493708Z DEBUG nym_smolmix::bridge: Packet sent packets_sent=8
+2026-11-08T10:57:26.094323Z DEBUG nym_smolmix::bridge: Packet sent packets_sent=9
+2026-11-08T10:57:27.695864Z DEBUG nym_smolmix::bridge: Packet sent packets_sent=10
+2026-11-08T10:57:29.788073Z DEBUG nym_smolmix::bridge: Packet sent packets_sent=11
+2026-11-08T10:57:30.489557Z DEBUG nym_smolmix::bridge: Packet sent packets_sent=12
+2026-11-08T10:57:31.190489Z DEBUG nym_smolmix::bridge: Packet sent packets_sent=13
+2026-11-08T10:57:31.891043Z DEBUG nym_smolmix::bridge: Packet sent packets_sent=14
+2026-11-08T10:57:32.892486Z DEBUG nym_smolmix::bridge: Packet sent packets_sent=15
+2026-11-08T10:57:33.893138Z DEBUG nym_smolmix::bridge: Packet sent packets_sent=16
+2026-11-08T10:57:34.894109Z DEBUG nym_smolmix::bridge: Packet sent packets_sent=17
+2026-11-08T10:57:36.495652Z DEBUG nym_smolmix::bridge: Packet sent packets_sent=18
+2026-11-08T10:57:38.096273Z DEBUG nym_smolmix::bridge: Packet sent packets_sent=19
+2026-11-08T10:57:39.697215Z DEBUG nym_smolmix::bridge: Packet sent packets_sent=20
+2026-11-08T10:57:41.789103Z  INFO nym_smolmix::tunnel: Shutting down tunnel
+2026-11-08T10:57:41.789127Z  INFO nym_smolmix::bridge: Bridge received shutdown signal packets_sent=20 packets_received=0
+2026-11-08T10:57:41.789130Z  INFO nym_smolmix::bridge: Disconnecting from mixnet...
+2026-11-08T10:57:41.789132Z DEBUG nym_sdk::ipr_wrapper::ip_mix_stream: Disconnecting
+2026-11-08T10:57:41.789292Z DEBUG nym_sdk::ipr_wrapper::ip_mix_stream: Disconnected
+2026-11-08T10:57:41.789308Z  INFO nym_smolmix::bridge: Disconnected
+2026-11-08T10:57:41.789317Z  INFO nym_smolmix::tunnel: Tunnel shut down
+2026-11-08T10:57:41.789359Z  WARN nymdial::rotate: node 3091 (BA): IPR handshake ok, but the health check failed (quad9: no answer within 12s; mullvad: no answer within 12s) after 25.2s; trying the next exit
+2026-11-08T10:57:42.811995Z  INFO perform_initial_authentication{gateway=ES962rrdsZNhE15dKYnkCtMSPJZZz2B411GUmpyyxkp7 gateway_address=ws://nym-exit.ro-6.lunardao.net:9000/}: nym_gateway_client::bandwidth: remaining bandwidth: 0.00 B. in 'upgrade mode': false
+2026-11-08T10:57:42.812029Z  INFO nym_gateway_client::client: Claiming more bandwidth with existing credentials. Stop the process now if you don't want that to happen.
+2026-11-08T10:57:42.812033Z  WARN nym_gateway_client::client: Not enough bandwidth. Trying to get more bandwidth, this might take a while
+2026-11-08T10:57:42.812034Z  INFO nym_gateway_client::client: The client is running in disabled credentials mode - attempting to claim bandwidth without a credential
+2026-11-08T10:57:42.854129Z  INFO nym_gateway_client::client: managed to claim testnet bandwidth
+2026-11-08T10:57:42.854249Z  INFO nym_sdk::ipr_wrapper::ip_mix_stream: Connecting to IP packet router at GZD4WoeoFzAsETzKwzLrYAW6oj5WjyBZDVymVryjH6gD.BzH289Rfx1GaDnrgnrUVJSLqo3AXyYjh1fBqN56fANTG@2TSaJhTD8DehrymqeFMRVy5zqquQLp4c4TpKrUMFichy
+2026-11-08T10:57:42.854281Z DEBUG nym_sdk::ipr_wrapper::ip_mix_stream: Sending v10 connect request with ID: 15065562545819955815
+2026-11-08T10:57:44.085307Z  INFO nym_sdk::ipr_wrapper::ip_mix_stream: Connected — IPv4: 10.0.192.195, IPv6: fc00::c0c3, MTU: 1500
+2026-11-08T10:57:44.085351Z  INFO nym_smolmix::tunnel: Tunnel ready, allocated IP: 10.0.192.195
+2026-11-08T10:57:44.085357Z  INFO nym_smolmix::bridge: Starting bridge
+2026-11-08T10:57:44.086506Z DEBUG nym_smolmix::bridge: Packet sent packets_sent=1
+2026-11-08T10:57:44.597768Z DEBUG nym_sdk::ipr_wrapper::ip_mix_stream: Extracted 1 IP packets
+2026-11-08T10:57:44.597794Z DEBUG nym_smolmix::bridge: Packets received packets_received=1
+2026-11-08T10:57:44.597830Z DEBUG nym_smolmix::bridge: Packet sent packets_sent=2
+2026-11-08T10:57:44.597893Z DEBUG nym_smolmix::bridge: Packet sent packets_sent=3
+2026-11-08T10:57:45.264482Z DEBUG nym_sdk::ipr_wrapper::ip_mix_stream: Extracted 1 IP packets
+2026-11-08T10:57:45.264502Z DEBUG nym_smolmix::bridge: Packets received packets_received=2
+2026-11-08T10:57:45.264520Z DEBUG nym_sdk::ipr_wrapper::ip_mix_stream: Extracted 1 IP packets
+2026-11-08T10:57:45.264521Z DEBUG nym_smolmix::bridge: Packets received packets_received=3
+2026-11-08T10:57:45.264523Z DEBUG nym_sdk::ipr_wrapper::ip_mix_stream: Extracted 1 IP packets
+2026-11-08T10:57:45.264524Z DEBUG nym_smolmix::bridge: Packets received packets_received=4
+2026-11-08T10:57:45.264562Z DEBUG nym_smolmix::bridge: Packet sent packets_sent=4
+2026-11-08T10:57:45.264634Z DEBUG nym_smolmix::bridge: Packet sent packets_sent=5
+2026-11-08T10:57:45.282534Z DEBUG nym_sdk::ipr_wrapper::ip_mix_stream: Extracted 1 IP packets
+2026-11-08T10:57:45.282551Z DEBUG nym_smolmix::bridge: Packets received packets_received=5
+2026-11-08T10:57:45.293813Z DEBUG nym_smolmix::bridge: Packet sent packets_sent=6
+2026-11-08T10:57:45.871155Z DEBUG nym_sdk::ipr_wrapper::ip_mix_stream: Extracted 4 IP packets
+2026-11-08T10:57:45.871179Z DEBUG nym_smolmix::bridge: Packets received packets_received=9
+2026-11-08T10:57:45.871247Z DEBUG nym_smolmix::bridge: Packet sent packets_sent=7
+2026-11-08T10:57:46.339658Z DEBUG nym_sdk::ipr_wrapper::ip_mix_stream: Extracted 1 IP packets
+2026-11-08T10:57:46.339681Z DEBUG nym_smolmix::bridge: Packets received packets_received=10
+2026-11-08T10:57:46.339708Z DEBUG nym_smolmix::bridge: Packet sent packets_sent=8
+2026-11-08T10:57:46.753961Z DEBUG nym_sdk::ipr_wrapper::ip_mix_stream: Extracted 1 IP packets
+2026-11-08T10:57:46.754000Z DEBUG nym_smolmix::bridge: Packets received packets_received=11
+2026-11-08T10:57:46.754006Z DEBUG nym_sdk::ipr_wrapper::ip_mix_stream: Extracted 2 IP packets
+2026-11-08T10:57:46.754008Z DEBUG nym_smolmix::bridge: Packets received packets_received=13
+2026-11-08T10:57:46.754153Z  INFO nymdial::dialer: health check: DoH via quad9 in 2.7s
+2026-11-08T10:57:46.754184Z  INFO nymdial::rotate: node 3375 (NL): tunnel up in 5.0s
+2026-11-08T10:57:46.754312Z DEBUG nym_smolmix::bridge: Packet sent packets_sent=9
+2026-11-08T10:57:47.258471Z DEBUG nym_sdk::ipr_wrapper::ip_mix_stream: Extracted 1 IP packets
+2026-11-08T10:57:47.258494Z DEBUG nym_smolmix::bridge: Packets received packets_received=14
+2026-11-08T10:57:47.258661Z DEBUG nym_smolmix::bridge: Packet sent packets_sent=10
+2026-11-08T10:57:47.269640Z DEBUG nym_smolmix::bridge: Packet sent packets_sent=11
+2026-11-08T10:57:47.897233Z DEBUG nym_sdk::ipr_wrapper::ip_mix_stream: Extracted 1 IP packets
+2026-11-08T10:57:47.897254Z DEBUG nym_smolmix::bridge: Packets received packets_received=15
+2026-11-08T10:57:47.897283Z DEBUG nym_smolmix::bridge: Packet sent packets_sent=12
+2026-11-08T10:57:47.897341Z DEBUG nym_smolmix::bridge: Packet sent packets_sent=13
+2026-11-08T10:57:48.784102Z DEBUG nym_sdk::ipr_wrapper::ip_mix_stream: Extracted 1 IP packets
+2026-11-08T10:57:48.784127Z DEBUG nym_smolmix::bridge: Packets received packets_received=16
+2026-11-08T10:57:49.016284Z DEBUG nym_sdk::ipr_wrapper::ip_mix_stream: Extracted 1 IP packets
+2026-11-08T10:57:49.016312Z DEBUG nym_smolmix::bridge: Packets received packets_received=17
+2026-11-08T10:57:49.016315Z DEBUG nym_sdk::ipr_wrapper::ip_mix_stream: Extracted 1 IP packets
+2026-11-08T10:57:49.016317Z DEBUG nym_smolmix::bridge: Packets received packets_received=18
+2026-11-08T10:57:49.016351Z DEBUG nym_smolmix::bridge: Packet sent packets_sent=14
+2026-11-08T10:57:49.017289Z DEBUG nym_smolmix::bridge: Packet sent packets_sent=15
+2026-11-08T10:57:49.042129Z DEBUG nym_sdk::ipr_wrapper::ip_mix_stream: Extracted 1 IP packets
+2026-11-08T10:57:49.042158Z DEBUG nym_smolmix::bridge: Packets received packets_received=19
+2026-11-08T10:57:49.759070Z DEBUG nym_sdk::ipr_wrapper::ip_mix_stream: Extracted 1 IP packets
+2026-11-08T10:57:49.759092Z DEBUG nym_smolmix::bridge: Packets received packets_received=20
+2026-11-08T10:57:49.759095Z DEBUG nym_sdk::ipr_wrapper::ip_mix_stream: Extracted 1 IP packets
+2026-11-08T10:57:49.759096Z DEBUG nym_smolmix::bridge: Packets received packets_received=21
+2026-11-08T10:57:49.759155Z DEBUG nym_smolmix::bridge: Packet sent packets_sent=16
+2026-11-08T10:57:50.200057Z DEBUG nym_sdk::ipr_wrapper::ip_mix_stream: Extracted 2 IP packets
+2026-11-08T10:57:50.200089Z DEBUG nym_smolmix::bridge: Packets received packets_received=23
+  4  HTTP 200      207 B  connect 168.49s  request 0.44s  total 168.93s
+2026-11-08T10:57:50.200172Z DEBUG nym_smolmix::bridge: Packet sent packets_sent=17
+2026-11-08T10:57:50.200416Z DEBUG nym_smolmix::bridge: Packet sent packets_sent=18
+2026-11-08T10:57:50.321556Z DEBUG nym_sdk::ipr_wrapper::ip_mix_stream: Extracted 1 IP packets
+2026-11-08T10:57:50.321579Z DEBUG nym_smolmix::bridge: Packets received packets_received=24
+2026-11-08T10:57:50.332910Z DEBUG nym_smolmix::bridge: Packet sent packets_sent=19
+2026-11-08T10:57:50.669907Z DEBUG nym_sdk::ipr_wrapper::ip_mix_stream: Extracted 1 IP packets
+2026-11-08T10:57:50.669930Z DEBUG nym_smolmix::bridge: Packets received packets_received=25
+2026-11-08T10:57:50.901153Z DEBUG nym_smolmix::bridge: Packet sent packets_sent=20
+2026-11-08T10:57:51.602846Z DEBUG nym_smolmix::bridge: Packet sent packets_sent=21
+2026-11-08T10:57:51.616867Z DEBUG nym_sdk::ipr_wrapper::ip_mix_stream: Extracted 1 IP packets
+2026-11-08T10:57:51.616883Z DEBUG nym_smolmix::bridge: Packets received packets_received=26
+2026-11-08T10:57:51.616908Z DEBUG nym_smolmix::bridge: Packet sent packets_sent=22
+2026-11-08T10:57:51.616978Z DEBUG nym_smolmix::bridge: Packet sent packets_sent=23
+2026-11-08T10:57:52.163562Z DEBUG nym_sdk::ipr_wrapper::ip_mix_stream: Extracted 1 IP packets
+2026-11-08T10:57:52.163583Z DEBUG nym_smolmix::bridge: Packets received packets_received=27
+2026-11-08T10:57:52.163614Z DEBUG nym_smolmix::bridge: Packet sent packets_sent=24
+2026-11-08T10:57:52.318275Z DEBUG nym_smolmix::bridge: Packet sent packets_sent=25
+2026-11-08T10:57:53.319664Z DEBUG nym_smolmix::bridge: Packet sent packets_sent=26
+2026-11-08T10:57:54.320686Z DEBUG nym_smolmix::bridge: Packet sent packets_sent=27
+2026-11-08T10:57:55.321682Z DEBUG nym_smolmix::bridge: Packet sent packets_sent=28
+2026-11-08T10:57:56.922139Z DEBUG nym_smolmix::bridge: Packet sent packets_sent=29
+2026-11-08T10:57:58.523727Z DEBUG nym_smolmix::bridge: Packet sent packets_sent=30
+2026-11-08T10:58:00.124601Z DEBUG nym_smolmix::bridge: Packet sent packets_sent=31
+2026-11-08T10:58:02.925492Z DEBUG nym_smolmix::bridge: Packet sent packets_sent=32
+2026-11-08T10:58:05.726164Z DEBUG nym_smolmix::bridge: Packet sent packets_sent=33
+2026-11-08T10:58:08.527020Z DEBUG nym_smolmix::bridge: Packet sent packets_sent=34
+2026-11-08T10:58:13.728192Z DEBUG nym_smolmix::bridge: Packet sent packets_sent=35
+2026-11-08T10:58:18.929331Z DEBUG nym_smolmix::bridge: Packet sent packets_sent=36
+  5  error after 31.42s: TLS with cloudflare.com: no handshake within 30s
+2026-11-08T10:58:21.617622Z DEBUG nym_smolmix::bridge: Packet sent packets_sent=37
+2026-11-08T10:58:22.318807Z DEBUG nym_smolmix::bridge: Packet sent packets_sent=38
+2026-11-08T10:58:23.019735Z DEBUG nym_smolmix::bridge: Packet sent packets_sent=39
+2026-11-08T10:58:23.720695Z DEBUG nym_smolmix::bridge: Packet sent packets_sent=40
+2026-11-08T10:58:24.721402Z DEBUG nym_smolmix::bridge: Packet sent packets_sent=41
+2026-11-08T10:58:25.722302Z DEBUG nym_smolmix::bridge: Packet sent packets_sent=42
+2026-11-08T10:58:26.723163Z DEBUG nym_smolmix::bridge: Packet sent packets_sent=43
+2026-11-08T10:58:28.325001Z DEBUG nym_smolmix::bridge: Packet sent packets_sent=44
+2026-11-08T10:58:29.926575Z DEBUG nym_smolmix::bridge: Packet sent packets_sent=45
+2026-11-08T10:58:31.528033Z DEBUG nym_smolmix::bridge: Packet sent packets_sent=46
+2026-11-08T10:58:34.330033Z DEBUG nym_smolmix::bridge: Packet sent packets_sent=47
+2026-11-08T10:58:37.131424Z DEBUG nym_smolmix::bridge: Packet sent packets_sent=48
+2026-11-08T10:58:39.932427Z DEBUG nym_smolmix::bridge: Packet sent packets_sent=49
+2026-11-08T10:58:45.133735Z DEBUG nym_smolmix::bridge: Packet sent packets_sent=50
+2026-11-08T10:58:50.334261Z DEBUG nym_smolmix::bridge: Packet sent packets_sent=51
+2026-11-08T10:58:51.618773Z DEBUG nym_smolmix::bridge: Packet sent packets_sent=52
+2026-11-08T10:58:52.461824Z DEBUG nym_smolmix::bridge: Packet sent packets_sent=53
+2026-11-08T10:58:53.304915Z DEBUG nym_smolmix::bridge: Packet sent packets_sent=54
+2026-11-08T10:58:54.147254Z DEBUG nym_smolmix::bridge: Packet sent packets_sent=55
+2026-11-08T10:58:55.413008Z DEBUG nym_smolmix::bridge: Packet sent packets_sent=56
+2026-11-08T10:58:56.678240Z DEBUG nym_smolmix::bridge: Packet sent packets_sent=57
+2026-11-08T10:58:57.943634Z DEBUG nym_smolmix::bridge: Packet sent packets_sent=58
+2026-11-08T10:59:00.052856Z DEBUG nym_smolmix::bridge: Packet sent packets_sent=59
+2026-11-08T10:59:02.161720Z DEBUG nym_smolmix::bridge: Packet sent packets_sent=60
+2026-11-08T10:59:03.619255Z DEBUG nym_smolmix::bridge: Packet sent packets_sent=61
+2026-11-08T10:59:04.270230Z DEBUG nym_smolmix::bridge: Packet sent packets_sent=62
+2026-11-08T10:59:04.321029Z DEBUG nym_smolmix::bridge: Packet sent packets_sent=63
+2026-11-08T10:59:05.022248Z DEBUG nym_smolmix::bridge: Packet sent packets_sent=64
+2026-11-08T10:59:05.723842Z DEBUG nym_smolmix::bridge: Packet sent packets_sent=65
+2026-11-08T10:59:06.724764Z DEBUG nym_smolmix::bridge: Packet sent packets_sent=66
+2026-11-08T10:59:07.725725Z DEBUG nym_smolmix::bridge: Packet sent packets_sent=67
+2026-11-08T10:59:08.067871Z DEBUG nym_smolmix::bridge: Packet sent packets_sent=68
+2026-11-08T10:59:08.726451Z DEBUG nym_smolmix::bridge: Packet sent packets_sent=69
+2026-11-08T10:59:10.327375Z DEBUG nym_smolmix::bridge: Packet sent packets_sent=70
+2026-11-08T10:59:11.864974Z DEBUG nym_smolmix::bridge: Packet sent packets_sent=71
+2026-11-08T10:59:11.928657Z DEBUG nym_smolmix::bridge: Packet sent packets_sent=72
+2026-11-08T10:59:13.529138Z DEBUG nym_smolmix::bridge: Packet sent packets_sent=73
+2026-11-08T10:59:15.620397Z  WARN nymdial::dialer: failover from node 3375 (NL): TCP connect to 104.16.133.229:443 timed out and the health check failed
+2026-11-08T10:59:15.620430Z  INFO nym_smolmix::tunnel: Shutting down tunnel
+2026-11-08T10:59:15.620444Z  INFO nym_smolmix::bridge: Bridge received shutdown signal packets_sent=73 packets_received=27
+2026-11-08T10:59:15.620447Z  INFO nym_smolmix::bridge: Disconnecting from mixnet...
+2026-11-08T10:59:15.620448Z DEBUG nym_sdk::ipr_wrapper::ip_mix_stream: Disconnecting
+2026-11-08T10:59:15.620606Z DEBUG nym_sdk::ipr_wrapper::ip_mix_stream: Disconnected
+2026-11-08T10:59:15.620615Z  INFO nym_smolmix::bridge: Disconnected
+2026-11-08T10:59:15.620621Z  INFO nym_smolmix::tunnel: Tunnel shut down
+2026-11-08T10:59:18.111834Z  INFO perform_initial_authentication{gateway=H7AgrYp668hQbLEz3s7TZK1MbhD5qCW49nYJMzD7LNNR gateway_address=ws://puertorico.nymgateway.com:9000/}: nym_gateway_client::bandwidth: remaining bandwidth: 0.00 B. in 'upgrade mode': false
+2026-11-08T10:59:18.111873Z  INFO nym_gateway_client::client: Claiming more bandwidth with existing credentials. Stop the process now if you don't want that to happen.
+2026-11-08T10:59:18.111875Z  WARN nym_gateway_client::client: Not enough bandwidth. Trying to get more bandwidth, this might take a while
+2026-11-08T10:59:18.111877Z  INFO nym_gateway_client::client: The client is running in disabled credentials mode - attempting to claim bandwidth without a credential
+2026-11-08T10:59:18.292256Z  INFO nym_gateway_client::client: managed to claim testnet bandwidth
+2026-11-08T10:59:18.292364Z  INFO nym_sdk::ipr_wrapper::ip_mix_stream: Connecting to IP packet router at CPL4sGUv7FcvHhiFhUkcvgb88uyBRQoyaFrVs3hkgjGz.8cqt6WbbN825Er7AFacWZvcZQGrtU5yEbcTNDyxf2KJT@A45AnvDzcY5MJoG2eyAjsS7ohS6comQu255fcc2n2Vuw
+2026-11-08T10:59:18.292379Z DEBUG nym_sdk::ipr_wrapper::ip_mix_stream: Sending v10 connect request with ID: 824749643493094063
+2026-11-08T10:59:19.333125Z  INFO nym_sdk::ipr_wrapper::ip_mix_stream: Connected — IPv4: 10.0.202.190, IPv6: fc00::cabe, MTU: 1500
+2026-11-08T10:59:19.333157Z  INFO nym_smolmix::bridge: Starting bridge
+2026-11-08T10:59:19.333161Z  INFO nym_smolmix::tunnel: Tunnel ready, allocated IP: 10.0.202.190
+2026-11-08T10:59:19.333236Z DEBUG nym_smolmix::bridge: Packet sent packets_sent=1
+2026-11-08T10:59:20.034802Z DEBUG nym_smolmix::bridge: Packet sent packets_sent=2
+2026-11-08T10:59:20.336164Z DEBUG nym_sdk::ipr_wrapper::ip_mix_stream: Extracted 1 IP packets
+2026-11-08T10:59:20.336195Z DEBUG nym_smolmix::bridge: Packets received packets_received=1
+2026-11-08T10:59:20.336225Z DEBUG nym_smolmix::bridge: Packet sent packets_sent=3
+2026-11-08T10:59:20.336279Z DEBUG nym_smolmix::bridge: Packet sent packets_sent=4
+2026-11-08T10:59:21.037570Z DEBUG nym_smolmix::bridge: Packet sent packets_sent=5
+2026-11-08T10:59:21.137149Z DEBUG nym_sdk::ipr_wrapper::ip_mix_stream: Extracted 1 IP packets
+2026-11-08T10:59:21.137174Z DEBUG nym_smolmix::bridge: Packets received packets_received=2
+2026-11-08T10:59:21.276976Z DEBUG nym_sdk::ipr_wrapper::ip_mix_stream: Extracted 1 IP packets
+2026-11-08T10:59:21.277000Z DEBUG nym_smolmix::bridge: Packets received packets_received=3
+2026-11-08T10:59:21.277006Z DEBUG nym_sdk::ipr_wrapper::ip_mix_stream: Extracted 1 IP packets
+2026-11-08T10:59:21.277008Z DEBUG nym_smolmix::bridge: Packets received packets_received=4
+2026-11-08T10:59:21.277010Z DEBUG nym_sdk::ipr_wrapper::ip_mix_stream: Extracted 1 IP packets
+2026-11-08T10:59:21.277012Z DEBUG nym_smolmix::bridge: Packets received packets_received=5
+2026-11-08T10:59:21.277013Z DEBUG nym_sdk::ipr_wrapper::ip_mix_stream: Extracted 1 IP packets
+2026-11-08T10:59:21.277015Z DEBUG nym_smolmix::bridge: Packets received packets_received=6
+2026-11-08T10:59:21.277035Z DEBUG nym_smolmix::bridge: Packet sent packets_sent=6
+2026-11-08T10:59:21.279353Z DEBUG nym_smolmix::bridge: Packet sent packets_sent=7
+2026-11-08T10:59:21.867655Z DEBUG nym_sdk::ipr_wrapper::ip_mix_stream: Extracted 1 IP packets
+2026-11-08T10:59:21.867676Z DEBUG nym_smolmix::bridge: Packets received packets_received=7
+2026-11-08T10:59:21.980368Z DEBUG nym_smolmix::bridge: Packet sent packets_sent=8
+2026-11-08T10:59:22.859048Z DEBUG nym_sdk::ipr_wrapper::ip_mix_stream: Extracted 4 IP packets
+2026-11-08T10:59:22.859089Z DEBUG nym_smolmix::bridge: Packets received packets_received=11
+2026-11-08T10:59:22.859153Z DEBUG nym_smolmix::bridge: Packet sent packets_sent=9
+2026-11-08T10:59:23.573335Z DEBUG nym_sdk::ipr_wrapper::ip_mix_stream: Extracted 1 IP packets
+2026-11-08T10:59:23.573363Z DEBUG nym_smolmix::bridge: Packets received packets_received=12
+2026-11-08T10:59:23.860677Z DEBUG nym_smolmix::bridge: Packet sent packets_sent=10
+2026-11-08T10:59:24.694503Z DEBUG nym_sdk::ipr_wrapper::ip_mix_stream: Extracted 2 IP packets
+2026-11-08T10:59:24.694527Z DEBUG nym_smolmix::bridge: Packets received packets_received=14
+2026-11-08T10:59:24.694636Z  INFO nymdial::dialer: health check: DoH via quad9 in 5.4s
+2026-11-08T10:59:24.694666Z  INFO nymdial::rotate: node 2830 (CY): tunnel up in 9.1s
+2026-11-08T10:59:24.694751Z DEBUG nym_smolmix::bridge: Packet sent packets_sent=11
+2026-11-08T10:59:24.705700Z DEBUG nym_smolmix::bridge: Packet sent packets_sent=12
+2026-11-08T10:59:25.373120Z DEBUG nym_sdk::ipr_wrapper::ip_mix_stream: Extracted 1 IP packets
+2026-11-08T10:59:25.373152Z DEBUG nym_smolmix::bridge: Packets received packets_received=15
+2026-11-08T10:59:25.395175Z DEBUG nym_smolmix::bridge: Packet sent packets_sent=13
+2026-11-08T10:59:25.667438Z DEBUG nym_sdk::ipr_wrapper::ip_mix_stream: Extracted 1 IP packets
+2026-11-08T10:59:25.667472Z DEBUG nym_smolmix::bridge: Packets received packets_received=16
+2026-11-08T10:59:25.667518Z DEBUG nym_smolmix::bridge: Packet sent packets_sent=14
+2026-11-08T10:59:25.667614Z DEBUG nym_smolmix::bridge: Packet sent packets_sent=15
+2026-11-08T10:59:26.123907Z DEBUG nym_sdk::ipr_wrapper::ip_mix_stream: Extracted 1 IP packets
+2026-11-08T10:59:26.123932Z DEBUG nym_smolmix::bridge: Packets received packets_received=17
+2026-11-08T10:59:26.123960Z DEBUG nym_smolmix::bridge: Packet sent packets_sent=16
+2026-11-08T10:59:26.368060Z DEBUG nym_smolmix::bridge: Packet sent packets_sent=17
+2026-11-08T10:59:26.682470Z DEBUG nym_sdk::ipr_wrapper::ip_mix_stream: Extracted 2 IP packets
+2026-11-08T10:59:26.682494Z DEBUG nym_smolmix::bridge: Packets received packets_received=19
+2026-11-08T10:59:26.682498Z DEBUG nym_sdk::ipr_wrapper::ip_mix_stream: Extracted 1 IP packets
+2026-11-08T10:59:26.682500Z DEBUG nym_smolmix::bridge: Packets received packets_received=20
+2026-11-08T10:59:26.682524Z DEBUG nym_smolmix::bridge: Packet sent packets_sent=18
+2026-11-08T10:59:26.682683Z DEBUG nym_smolmix::bridge: Packet sent packets_sent=19
+2026-11-08T10:59:26.744493Z DEBUG nym_sdk::ipr_wrapper::ip_mix_stream: Extracted 1 IP packets
+2026-11-08T10:59:26.744517Z DEBUG nym_smolmix::bridge: Packets received packets_received=21
+2026-11-08T10:59:26.755677Z DEBUG nym_smolmix::bridge: Packet sent packets_sent=20
+2026-11-08T10:59:27.201267Z DEBUG nym_sdk::ipr_wrapper::ip_mix_stream: Extracted 1 IP packets
+2026-11-08T10:59:27.201290Z DEBUG nym_smolmix::bridge: Packets received packets_received=22
+2026-11-08T10:59:27.383546Z DEBUG nym_smolmix::bridge: Packet sent packets_sent=21
+2026-11-08T10:59:27.543317Z DEBUG nym_sdk::ipr_wrapper::ip_mix_stream: Extracted 1 IP packets
+2026-11-08T10:59:27.543337Z DEBUG nym_smolmix::bridge: Packets received packets_received=23
+2026-11-08T10:59:28.228054Z DEBUG nym_sdk::ipr_wrapper::ip_mix_stream: Extracted 1 IP packets
+2026-11-08T10:59:28.228079Z DEBUG nym_smolmix::bridge: Packets received packets_received=24
+2026-11-08T10:59:28.228141Z DEBUG nym_smolmix::bridge: Packet sent packets_sent=22
+2026-11-08T10:59:29.150920Z DEBUG nym_sdk::ipr_wrapper::ip_mix_stream: Extracted 1 IP packets
+2026-11-08T10:59:29.150942Z DEBUG nym_smolmix::bridge: Packets received packets_received=25
+2026-11-08T10:59:29.229180Z DEBUG nym_smolmix::bridge: Packet sent packets_sent=23
+2026-11-08T10:59:30.018142Z DEBUG nym_sdk::ipr_wrapper::ip_mix_stream: Extracted 2 IP packets
+2026-11-08T10:59:30.018165Z DEBUG nym_smolmix::bridge: Packets received packets_received=27
+2026-11-08T10:59:30.018168Z DEBUG nym_sdk::ipr_wrapper::ip_mix_stream: Extracted 2 IP packets
+2026-11-08T10:59:30.018170Z DEBUG nym_smolmix::bridge: Packets received packets_received=29
+2026-11-08T10:59:30.018271Z DEBUG nym_smolmix::bridge: Packet sent packets_sent=24
+  6  HTTP 200      201 B  connect 66.61s  request 1.79s  total 68.40s
+ok 4/6  median 68.40s  min 4.20s  max 168.93s
+2026-11-08T10:59:30.018283Z  INFO nym_smolmix::tunnel: Shutting down tunnel
+2026-11-08T10:59:30.018362Z  INFO nym_smolmix::bridge: Bridge received shutdown signal packets_sent=24 packets_received=29
+2026-11-08T10:59:30.018368Z  INFO nym_smolmix::bridge: Disconnecting from mixnet...
+2026-11-08T10:59:30.018369Z DEBUG nym_sdk::ipr_wrapper::ip_mix_stream: Disconnecting
+2026-11-08T10:59:30.025375Z DEBUG nym_sdk::ipr_wrapper::ip_mix_stream: Disconnected
+2026-11-08T10:59:30.025385Z  INFO nym_smolmix::bridge: Disconnected
+2026-11-08T10:59:30.025411Z  INFO nym_smolmix::tunnel: Tunnel shut down
+exit=0 wall=376.503566876s

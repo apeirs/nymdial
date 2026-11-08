@@ -1,0 +1,168 @@
+{
+ "status": "fresh",
+ "refreshed_at": "2026-11-08 10:00:24.362641531 +00:00:00",
+ "nodes": {
+  "data": [
+   {
+    "node_id": 2871,
+    "ed25519_identity_pubkey": "gmCMurCqu5r3ugBh43ti5zw98SzLKzL6Ldh4TrChwJf",
+    "ip_addresses": [
+     "85.113.71.124",
+     "2001:df1:801:a022::1e8:a"
+    ],
+    "mix_port": 1789,
+    "x25519_sphinx_pubkey": "F6wNXpgDWL2roNM3J6kECHa3R33Cp44NSz7Mpg9TbNSw",
+    "role": "ExitGateway",
+    "supported_roles": {
+     "mixnode": false,
+     "entry": true,
+     "exit_nr": true,
+     "exit_ipr": true
+    },
+    "entry": {
+     "hostname": null,
+     "ws_port": 9000,
+     "wss_port": null
+    },
+    "performance": "0.99"
+   },
+   {
+    "node_id": 3287,
+    "ed25519_identity_pubkey": "Du9HzfWBLBYA4KsKTEGVPqjRMeLRAfd4jygSV3QDhu1X",
+    "ip_addresses": [
+     "131.123.42.67"
+    ],
+    "mix_port": 1789,
+    "x25519_sphinx_pubkey": "4rSyGk97gkyXcrzN7eRiDyACxzeETd6D9vRj95SgKA6L",
+    "role": "ExitGateway",
+    "supported_roles": {
+     "mixnode": false,
+     "entry": true,
+     "exit_nr": true,
+     "exit_ipr": true
+    },
+    "entry": {
+     "hostname": "silentrelay12.testnet25.capetown",
+     "ws_port": 9000,
+     "wss_port": 9001
+    },
+    "performance": 0.99
+   },
+   {
+    "node_id": 2716,
+    "ed25519_identity_pubkey": "76xhXwYE2hTGebJD21ynsuUHENnm4SwQq6GSPSunSDVm",
+    "ip_addresses": [
+     "57.131.24.48",
+     "2001:41d0:2005:100::4af"
+    ],
+    "mix_port": 1789,
+    "x25519_sphinx_pubkey": "7XJLcsGRZXWbki5pDrBcB7CB73uWuJGUYT9gbvxMEzLy",
+    "role": "Inactive",
+    "supported_roles": {
+     "mixnode": false,
+     "entry": true,
+     "exit_nr": true,
+     "exit_ipr": true
+    },
+    "entry": {
+     "hostname": "nym-exit.it-node1.oceanus.li",
+     "ws_port": 9000,
+     "wss_port": 9001
+    },
+    "performance": "0.98"
+   },
+   {
+    "node_id": 9001,
+    "ed25519_identity_pubkey": "Node9001xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+    "ip_addresses": [
+     "85.113.71.124",
+     "2001:df1:801:a022::1e8:a"
+    ],
+    "mix_port": 1789,
+    "x25519_sphinx_pubkey": "F6wNXpgDWL2roNM3J6kECHa3R33Cp44NSz7Mpg9TbNSw",
+    "role": "ExitGateway",
+    "supported_roles": {
+     "mixnode": false,
+     "entry": true,
+     "exit_nr": true,
+     "exit_ipr": false
+    },
+    "entry": {
+     "hostname": null,
+     "ws_port": 9000,
+     "wss_port": null
+    },
+    "performance": "0.99"
+   },
+   {
+    "node_id": 9003,
+    "ed25519_identity_pubkey": "Node9003xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+    "ip_addresses": [
+     "85.113.71.124",
+     "2001:df1:801:a022::1e8:a"
+    ],
+    "mix_port": 1789,
+    "x25519_sphinx_pubkey": "F6wNXpgDWL2roNM3J6kECHa3R33Cp44NSz7Mpg9TbNSw",
+    "role": "ExitGateway",
+    "supported_roles": {
+     "mixnode": false,
+     "entry": true,
+     "exit_nr": true,
+     "exit_ipr": true
+    },
+    "entry": {
+     "hostname": null,
+     "ws_port": 9000,
+     "wss_port": null
+    },
+    "performance": "0.99"
+   },
+   {
+    "node_id": 9004,
+    "ed25519_identity_pubkey": "Node9004xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+    "ip_addresses": [
+     "85.113.71.124",
+     "2001:df1:801:a022::1e8:a"
+    ],
+    "mix_port": 1789,
+    "x25519_sphinx_pubkey": "F6wNXpgDWL2roNM3J6kECHa3R33Cp44NSz7Mpg9TbNSw",
+    "role": "ExitGateway",
+    "supported_roles": {
+     "mixnode": false,
+     "entry": true,
+     "exit_nr": true,
+     "exit_ipr": true
+    },
+    "entry": {
+     "hostname": null,
+     "ws_port": 9000,
+     "wss_port": null
+    },
+    "performance": "0.99"
+   },
+   {
+    "node_id": 9005,
+    "ed25519_identity_pubkey": "Node9005xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+    "ip_addresses": [
+     "85.113.71.124",
+     "2001:df1:801:a022::1e8:a"
+    ],
+    "mix_port": 1789,
+    "x25519_sphinx_pubkey": "F6wNXpgDWL2roNM3J6kECHa3R33Cp44NSz7Mpg9TbNSw",
+    "role": "ExitGateway",
+    "supported_roles": {
+     "mixnode": false,
+     "entry": true,
+     "exit_nr": true,
+     "exit_ipr": true
+    },
+    "entry": {
+     "hostname": null,
+     "ws_port": 9000,
+     "wss_port": null
+    },
+    "performance": "0.99"
+   }
+  ]
+ }
+}

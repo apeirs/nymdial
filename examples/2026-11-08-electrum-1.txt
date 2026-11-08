@@ -1,0 +1,17 @@
+2026-11-08T10:57:46Z
+$ (printf server.version JSON; sleep 40) | nymdial -v connect electrum.blockstream.info 50002 --tls
+2026-11-08T10:57:47.062261Z  INFO nymdial::dialer: nym-api lists 100 IPR exits
+2026-11-08T10:57:50.996207Z  WARN nym_gateway_client::client: Not enough bandwidth. Trying to get more bandwidth, this might take a while
+2026-11-08T10:58:16.542361Z  WARN nymdial::rotate: node 3173 (MD): IPR handshake ok, but the health check failed (quad9: no answer within 12s; mullvad: no answer within 12s) after 29.5s; trying the next exit
+2026-11-08T10:58:17.260648Z  WARN nym_gateway_client::client: Not enough bandwidth. Trying to get more bandwidth, this might take a while
+2026-11-08T10:58:42.033950Z  WARN nymdial::rotate: node 2849 (AU): IPR handshake ok, but the health check failed (quad9: no answer within 12s; mullvad: no answer within 12s) after 25.5s; trying the next exit
+2026-11-08T10:58:43.040551Z  WARN nym_gateway_client::client: Not enough bandwidth. Trying to get more bandwidth, this might take a while
+2026-11-08T10:59:07.943721Z  WARN nymdial::rotate: node 2068 (ES): IPR handshake ok, but the health check failed (quad9: no answer within 12s; mullvad: no answer within 12s) after 25.9s; trying the next exit
+2026-11-08T10:59:10.962594Z  WARN nym_gateway_client::client: Not enough bandwidth. Trying to get more bandwidth, this might take a while
+2026-11-08T10:59:36.312452Z  WARN nymdial::rotate: node 2092 (FR): IPR handshake ok, but the health check failed (quad9: no answer within 12s; mullvad: no answer within 12s) after 28.4s; trying the next exit
+2026-11-08T10:59:38.053828Z  WARN nym_gateway_client::client: Not enough bandwidth. Trying to get more bandwidth, this might take a while
+2026-11-08T11:00:03.036979Z  WARN nymdial::rotate: node 2614: IPR handshake ok, but the health check failed (quad9: no answer within 12s; mullvad: no answer within 12s) after 26.7s; trying the next exit
+2026-11-08T11:00:03.895822Z  WARN nym_gateway_client::client: Not enough bandwidth. Trying to get more bandwidth, this might take a while
+2026-11-08T11:00:30.003216Z  WARN nymdial::rotate: node 2785 (HU): IPR handshake ok, but the health check failed (quad9: no answer within 12s; mullvad: no answer within 12s) after 27.0s; trying the next exit
+nymdial: no working exit after 6 attempts (last: node 2785 (HU): IPR handshake ok, but the health check failed (quad9: no answer within 12s; mullvad: no answer within 12s))
+exit=1 wall=163.468488816s

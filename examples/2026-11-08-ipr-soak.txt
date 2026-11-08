@@ -1,0 +1,49 @@
+2026-11-08T10:57:46Z
+$ nymdial -v bench https://api.ipify.org/?format=json -n 8 --interval 15
+2026-11-08T10:57:47.085820Z  INFO nymdial::dialer: nym-api lists 100 IPR exits
+2026-11-08T10:57:48.235402Z  WARN nym_gateway_client::client: Not enough bandwidth. Trying to get more bandwidth, this might take a while
+2026-11-08T10:58:12.892398Z  WARN nymdial::rotate: node 2894 (FI): IPR handshake ok, but the health check failed (quad9: no answer within 12s; mullvad: no answer within 12s) after 25.8s; trying the next exit
+2026-11-08T10:58:15.208579Z  WARN nym_gateway_client::client: Not enough bandwidth. Trying to get more bandwidth, this might take a while
+2026-11-08T10:58:40.190246Z  WARN nymdial::rotate: node 2524 (FI): IPR handshake ok, but the health check failed (quad9: no answer within 12s; mullvad: no answer within 12s) after 27.3s; trying the next exit
+2026-11-08T10:58:43.629462Z  WARN nym_gateway_client::client: Not enough bandwidth. Trying to get more bandwidth, this might take a while
+2026-11-08T10:59:10.813415Z  WARN nymdial::rotate: node 2074 (IN): IPR handshake ok, but the health check failed (quad9: no answer within 12s; mullvad: no answer within 12s) after 30.6s; trying the next exit
+2026-11-08T10:59:12.963016Z  WARN nym_gateway_client::client: Not enough bandwidth. Trying to get more bandwidth, this might take a while
+2026-11-08T10:59:21.211396Z  INFO nymdial::dialer: health check: DoH via quad9 in 5.7s
+2026-11-08T10:59:21.211451Z  INFO nymdial::rotate: node 3068 (DK): tunnel up in 10.4s
+  exit node 2894 (FI)           failed after 25.81s: IPR handshake ok, but the health check failed (quad9: no answer within 12s; mullvad: no answer within 12s)
+  exit node 2524 (FI)           failed after 27.30s: IPR handshake ok, but the health check failed (quad9: no answer within 12s; mullvad: no answer within 12s)
+  exit node 2074 (IN)           failed after 30.62s: IPR handshake ok, but the health check failed (quad9: no answer within 12s; mullvad: no answer within 12s)
+  exit node 3068 (DK)           up after 10.40s (incl. health check)
+tunnel up via node 3068 (DK) [81.27.109.65, 2a04:3545:8000:1000:d4f7:b3ff:fe6c:14ae] in 94.67s (tunnel IP 10.0.99.211)
+[+    0s, exit node 3068 (DK)]   1  error after 31.73s: TLS with api.ipify.org: no handshake within 30s
+[+   47s, exit node 3068 (DK)] 2026-11-08T11:01:01.948251Z  WARN nymdial::dialer: failover from node 3068 (DK): TCP connect to 104.26.13.205:443 timed out and the health check failed
+2026-11-08T11:01:03.045318Z  WARN nym_gateway_client::client: Not enough bandwidth. Trying to get more bandwidth, this might take a while
+2026-11-08T11:01:27.764917Z  WARN nymdial::rotate: node 2764 (CA): IPR handshake ok, but the health check failed (quad9: no answer within 12s; mullvad: no answer within 12s) after 25.8s; trying the next exit
+2026-11-08T11:01:28.302703Z  WARN nym_gateway_client::client: Not enough bandwidth. Trying to get more bandwidth, this might take a while
+2026-11-08T11:01:36.140703Z  INFO nymdial::dialer: health check: DoH via quad9 in 5.9s
+2026-11-08T11:01:36.140766Z  INFO nymdial::rotate: node 2570: tunnel up in 8.4s
+  2  HTTP 200       23 B  connect 90.62s  request 0.88s  total 91.50s
+[+  153s, exit node 2570]   3  HTTP 200       23 B  connect 4.07s  request 0.57s  total 4.64s
+[+  173s, exit node 2570]   4  HTTP 200       23 B  connect 2.50s  request 0.83s  total 3.33s
+[+  191s, exit node 2570]   5  HTTP 200       23 B  connect 2.01s  request 13.20s  total 15.20s
+[+  221s, exit node 2570]   6  error after 30.91s: TLS with api.ipify.org: no handshake within 30s
+[+  267s, exit node 2570] 2026-11-08T11:04:42.531125Z  WARN nymdial::dialer: failover from node 2570: TCP connect to 104.26.13.205:443 timed out and the health check failed
+2026-11-08T11:04:45.865474Z  WARN nym_gateway_client::client: Not enough bandwidth. Trying to get more bandwidth, this might take a while
+2026-11-08T11:05:11.419266Z  WARN nymdial::rotate: node 1939 (BE): IPR handshake ok, but the health check failed (quad9: no answer within 12s; mullvad: no answer within 12s) after 28.9s; trying the next exit
+2026-11-08T11:05:11.733016Z  WARN nym_http_api_client::dns: primary DNS failed w/ error: receiver was canceled
+2026-11-08T11:05:11.733045Z  WARN nym_gateway_client::client::websockets: Main endpoint failed ws://nym-exit.ca08.bhsysmx.st:9000/ : resolution failed: hickory-dns resolver error: receiver was canceled, trying fallback : ws://138.226.252.54:9000/
+2026-11-08T11:05:13.576960Z  WARN nym_gateway_client::client: Not enough bandwidth. Trying to get more bandwidth, this might take a while
+2026-11-08T11:05:38.660765Z  WARN nymdial::rotate: node 3346 (CH): IPR handshake ok, but the health check failed (quad9: no answer within 12s; mullvad: no answer within 12s) after 27.2s; trying the next exit
+2026-11-08T11:05:38.938141Z  WARN nym_http_api_client::dns: primary DNS failed w/ error: receiver was canceled
+2026-11-08T11:05:38.938167Z  WARN nym_gateway_client::client::websockets: Main endpoint failed ws://nym-exit.ro-19.lunardao.net:9000/ : resolution failed: hickory-dns resolver error: receiver was canceled, trying fallback : ws://185.100.84.200:9000/
+2026-11-08T11:05:39.601305Z  WARN nym_gateway_client::client: Not enough bandwidth. Trying to get more bandwidth, this might take a while
+2026-11-08T11:06:05.426448Z  WARN nymdial::rotate: node 2785 (HU): IPR handshake ok, but the health check failed (quad9: no answer within 12s; mullvad: no answer within 12s) after 26.8s; trying the next exit
+2026-11-08T11:06:06.155959Z  WARN nym_gateway_client::client: Not enough bandwidth. Trying to get more bandwidth, this might take a while
+2026-11-08T11:06:32.172397Z  WARN nymdial::rotate: node 1227 (HK): IPR handshake ok, but the health check failed (quad9: no answer within 12s; mullvad: no answer within 12s) after 26.7s; trying the next exit
+2026-11-08T11:06:37.507565Z  WARN nym_gateway_client::client: Not enough bandwidth. Trying to get more bandwidth, this might take a while
+2026-11-08T11:06:44.876865Z  INFO nymdial::dialer: health check: DoH via quad9 in 6.1s
+2026-11-08T11:06:44.876905Z  INFO nymdial::rotate: node 180 (CZ): tunnel up in 12.7s
+  7  HTTP 200       24 B  connect 181.18s  request 0.88s  total 182.06s
+[+  464s, exit node 180 (CZ)]   8  error after 30.74s: TLS with api.ipify.org: no handshake within 30s
+ok 5/8  median 15.20s  min 3.33s  max 182.06s
+exit=0 wall=589.787635002s

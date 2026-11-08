@@ -1,0 +1,9 @@
+2026-11-08T10:46:34Z
+$ nymdial -v whoami-nr
+2026-11-08T10:46:35.461167Z  INFO nym_sdk::mixnet::socks5_discovery: Found 892 network requesters (892 after country filter)
+2026-11-08T10:46:35.461201Z  INFO nym_sdk::mixnet::socks5_discovery: Using network requester: F5qKqGGj2bZWJ7kTk1XKDDmqb1CPn4RF4oJQKFgpRZYt.7E5SGjTpVPSmrkTBxbWfMpAm5eWKoZGDWovDsDJytNTz@9ebfeBsYX3qCgGDJfrHLhWffAgX2jYyUJzhwQ6eMEJD1 (Gateway: 9ebfeBsYX3qCgGDJfrHLhWffAgX2jYyUJzhwQ6eMEJD1, Country: Some("GR"), Performance: 98)
+2026-11-08T10:46:38.464657Z  WARN nym_gateway_client::client: Not enough bandwidth. Trying to get more bandwidth, this might take a while
+nym-sdk Socks5MixnetClient up in 3.95s (SOCKS5 on 127.0.0.1:11080)
+GET https://api.ipify.org/?format=json -> HTTP 200 via network requester (SOCKS5 CONNECT 0.00s, +TLS 0.86s, total 2.00s)
+  the server saw 45.154.206.253 = Nym node 2284 (GR) in the nym-api node list
+exit=0 wall=7.147557774s

@@ -1,0 +1,7 @@
+2026-11-08T10:37:12Z
+$ nymdial -v whoami-nr
+2026-11-08T10:37:13.580626Z  WARN nym_gateway_client::client: Not enough bandwidth. Trying to get more bandwidth, this might take a while
+nym-sdk Socks5MixnetClient up in 1.27s (SOCKS5 on 127.0.0.1:11080)
+GET https://cloudflare.com/cdn-cgi/trace -> HTTP 200 via network requester (SOCKS5 CONNECT 0.00s, +TLS 1.84s, total 2.71s)
+  the server saw 2a06:1700:0:4d::e: NOT a Nym node in the nym-api list
+exit=0 wall=4.421855589s

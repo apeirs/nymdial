@@ -1,0 +1,15 @@
+# earlier build (per-exit budget 60 s, health check up to 3 x 20 s)
+forcing a dead exit first: 8LvBvUx2uMAu...@5rXcNe2a44vXisK3uqLHCzpzvEwcnsijDMU7hg4fcYk8
+2026-11-08T10:15:44.154468Z  INFO nymdial::dialer: nym-api lists 100 IPR exits
+2026-11-08T10:15:44.928659Z  WARN nym_gateway_client::client::websockets: Main endpoint failed ws://nym-exit-2.openstake.net:9000/ : resolution failed: hickory-dns resolver error: DNS error: no records found for Query { name: Name("nym-exit-2.openstake.net."), query_type: AAAA, query_class: IN }, trying fallback : ws://23.132.28.66:9000/
+2026-11-08T10:15:46.109459Z  WARN nym_gateway_client::client: Not enough bandwidth. Trying to get more bandwidth, this might take a while
+2026-11-08T10:16:14.158040Z  WARN nymdial::rotate: node 0: no answer within 30s after 30.0s; trying the next exit
+2026-11-08T10:16:15.004503Z  WARN nym_gateway_client::client: Not enough bandwidth. Trying to get more bandwidth, this might take a while
+2026-11-08T10:16:20.125908Z  INFO nymdial::dialer: health check: DoH via quad9 in 4.4s
+2026-11-08T10:16:20.126013Z  INFO nymdial::rotate: node 2296 (IN): tunnel up in 6.0s
+  exit node 0                   failed after 30.00s: no answer within 30s
+  exit node 2296 (IN)           up after 5.97s (incl. health check)
+tunnel up via node 2296 (IN) [64.227.155.82, 2400:6180:100:d0:0:1:5ed9:f001] in 36.43s (tunnel IP 10.0.194.82)
+GET https://cloudflare.com/cdn-cgi/trace -> HTTP 200 via exit node 2296 (IN) (DNS+TCP+TLS 3.00s, request 0.67s)
+  the server saw 64.227.155.82 = Nym node 2296 (IN) in the nym-api node list
+exit=0 wall=41.039275448s
