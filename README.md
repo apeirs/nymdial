@@ -202,8 +202,8 @@ never arrives, and 55, 56, … 77 pile up behind it (22 pending) while the probe
 
 **Fix, measured.** The same repro on an SDK patched to skip a gap once later frames have waited 1.5 s: **10 of
 10 tunnels lived the full 120 s**, 174 of 175 probes answered, with 29 gaps skipped along the way. For IP packets
-that is safe: TCP retransmits what was in the lost frame. The patch, the logs and a ready issue for Nym are
-in this build's notes. Until Nym ships a fix, nymdial depends on stock nym-sdk.
+that is safe: TCP retransmits what was in the lost frame. The patch and the logs are in
+[nymtech/nym#7400](https://github.com/nymtech/nym/issues/7400). Until Nym ships a fix, nymdial depends on stock nym-sdk.
 
 **Mitigation in nymdial.** A tunnel that hasn't proved it is alive for 10 s gets a quick DoH probe (8 s budget)
 before the next connect, and is replaced at once if the probe fails (`Config::liveness_after`). Noticing a stall
